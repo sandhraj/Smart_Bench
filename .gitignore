@@ -1,0 +1,9 @@
+CLAUDE.md
+tmp/
+*.log
+__pycache__/
+.venv/
+/build/
+sdkconfig
+sdkconfig.old
+Claude Workbench.md
