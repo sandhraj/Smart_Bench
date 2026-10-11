@@ -89,7 +89,7 @@ Provenance: [owner] stated by the owner, [derived] computed from owner statement
 |----|-------------|-------------|------|--------|
 | R-020 | A press released in under 400 ms is a tap; a press held 400 ms or longer is a hold. [owner] | Button classifier test at 399 ms and 400 ms | host | green@62cb8a0 |
 | R-021 | A button 4 press shorter than 3 s advances to the next display pattern and wraps after the last. [owner] | Pattern-cycle test | host | green@62cb8a0 |
-| R-022 | The selectable pattern list, in order, is: VU bar, peak bar, zone bar, gravity dot, standby. Spectrum styles join in a later batch. [owner] | Pattern table test | host | todo |
+| R-022 | The selectable pattern list, in order, is: VU bar, peak bar, zone bar, gravity dot, standby. Spectrum styles join in a later batch. [owner] | Pattern table test | host | green@15d1196 |
 
 ### Display styles (first batch)
 
@@ -103,11 +103,11 @@ All numbers live in one configuration header so they can be retuned by eye. Test
 | R-043 | Peak bar: displayed level jumps to a higher input on the next frame. [owner] | Frame-stepped test | host | green@f1b71db |
 | R-044 | Peak bar: with zero input the displayed level falls from full scale to zero in 1.0 s, linearly. [owner] | Time-stepped test | host | green@f1b71db |
 | R-045 | Peak bar: a peak-hold LED stays at the highest recent level for 600 ms, then falls with the bar. [owner] | Time-stepped test | host | green@f1b71db |
-| R-046 | Gravity dot: rises instantly to a higher input, then falls with constant acceleration so that full scale takes 1.2 s from rest. [owner] | Time-stepped test | host | todo |
+| R-046 | Gravity dot: rises instantly to a higher input, then falls with constant acceleration so that full scale takes 1.2 s from rest. [owner] | Time-stepped test | host | green@15d1196 |
 | R-047 | Zone bar: LEDs 0-13 of a bar are green, 14-17 yellow, 18-19 red. [owner, indices derived] | Colour test per index | host | green@a2612cb |
-| R-048 | Standby: after 5 s with input below the noise floor, the display shows a slow rainbow; any input above the floor returns to the selected style. [owner] | Time-stepped state test | host | todo |
-| R-050 | Gravity dot leaves a fading tail: LEDs the dot has passed fade with a 120 ms time constant, and the dot itself is at full brightness. [owner, constant derived] | Trail decay test | host | todo |
-| R-051 | A synthetic stereo audio source (120 bpm kick, slow swells) can drive every style with levels in 0..1, so styles can be judged without the amp board. [derived] | Range and beat test; demo build | host | todo |
+| R-048 | Standby: after 5 s with input below the noise floor, the display shows a slow rainbow; any input above the floor returns to the selected style. [owner] | Time-stepped state test | host | green@15d1196 |
+| R-050 | Gravity dot leaves a fading tail: LEDs the dot has passed fade with a 120 ms time constant, and the dot itself is at full brightness. [owner, constant derived] | Trail decay test | host | green@15d1196 |
+| R-051 | A synthetic stereo audio source (120 bpm kick, slow swells) can drive every style with levels in 0..1, so styles can be judged without the amp board. [derived] | Range and beat test; demo build | host | green@15d1196 |
 | R-049 | The display updates at 60 frames per second. [owner] | Frame counter over 10 s on serial | target | todo |
 
 ### Power and LED current
