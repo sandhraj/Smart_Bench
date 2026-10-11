@@ -89,7 +89,24 @@ Provenance: [owner] stated by the owner, [derived] computed from owner statement
 |----|-------------|-------------|------|--------|
 | R-020 | A press released in under 400 ms is a tap; a press held 400 ms or longer is a hold. [owner] | Button classifier test at 399 ms and 400 ms | host | green@62cb8a0 |
 | R-021 | A button 4 press shorter than 3 s advances to the next display pattern and wraps after the last. [owner] | Pattern-cycle test | host | green@62cb8a0 |
-| R-022 | Patterns include bar and spectrum. [owner] | Pattern list test | host | green@62cb8a0 |
+| R-022 | The selectable pattern list, in order, is: VU bar, peak bar, zone bar, gravity dot, standby. Spectrum styles join in a later batch. [owner] | Pattern table test | host | todo |
+
+### Display styles (first batch)
+
+All numbers live in one configuration header so they can be retuned by eye. Tests check behaviour against those constants.
+
+| ID | Requirement | Verified by | Tier | Status |
+|----|-------------|-------------|------|--------|
+| R-040 | Level scale: amplitude 1.0 maps to 1.0 and amplitude 0.01 (-40 dB) maps to 0.0, linear in dB between, clamped to 0..1. [owner] | Scale test at 1.0, 0.1, 0.01, 0.0 | host | todo |
+| R-041 | VU bar: the displayed level reaches 99 % of a step input in 300 ms (rise) and falls to 1 % in 300 ms. [owner] | Time-stepped smoother test | host | todo |
+| R-042 | VU bar lights, for each channel, exactly lit_count(level) LEDs of that channel's bar in the active orientation and no others. [derived] | Render test at 0, 0.5, 1.0 | host | todo |
+| R-043 | Peak bar: displayed level jumps to a higher input on the next frame. [owner] | Frame-stepped test | host | todo |
+| R-044 | Peak bar: with zero input the displayed level falls from full scale to zero in 1.0 s, linearly. [owner] | Time-stepped test | host | todo |
+| R-045 | Peak bar: a peak-hold LED stays at the highest recent level for 600 ms, then falls with the bar. [owner] | Time-stepped test | host | todo |
+| R-046 | Gravity dot: rises instantly to a higher input, then falls with constant acceleration so that full scale takes 1.2 s from rest. [owner] | Time-stepped test | host | todo |
+| R-047 | Zone bar: LEDs 0-13 of a bar are green, 14-17 yellow, 18-19 red. [owner, indices derived] | Colour test per index | host | todo |
+| R-048 | Standby: after 5 s with input below the noise floor, the display shows a slow rainbow; any input above the floor returns to the selected style. [owner] | Time-stepped state test | host | todo |
+| R-049 | The display updates at 60 frames per second. [owner] | Frame counter over 10 s on serial | target | todo |
 
 ### Power and LED current
 
@@ -138,9 +155,9 @@ Ordered by how much they block.
 1. **LED cap method.** The existing bring-up sketch applies a hand-written cap because the library limiter "did not hold" on an earlier build, and notes real current of 1.8 to 2.2 times the modelled value. R-030 is therefore stated as a measured current, not a library setting.
 2. **Amp board key type.** Separate keys, resistor ladder or volume potentiometer. Decides the volume and track control path (optocouplers, digital potentiometer, or parallel buttons). Needs the amp board in hand.
 3. **Audio tap location** on the amp board and its mute pin. Needs the amp board.
-4. **VU ballistics.** Attack and decay times, auto-scale method.
+4. **Auto-scale method.** Ballistics are decided (R-041 to R-046). The gain-follow and noise-gate algorithm is still to be specified.
 5. **Spectrum.** FFT size, window, 32 band edges, and layout across LEDs.
-6. **No-signal behaviour.**
+6. **Noise floor value** for standby (R-048); the behaviour itself is decided.
 7. **Fault behaviour.** Bluetooth disconnect, LED strip failure, accelerometer missing or wrong ID.
 8. **Orientation teach.** How O1 and O2 are chosen, and confirmation feedback.
 9. **"Stable" definition** for the gravity vector (threshold on change per second).
