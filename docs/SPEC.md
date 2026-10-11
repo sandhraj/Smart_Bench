@@ -97,9 +97,9 @@ All numbers live in one configuration header so they can be retuned by eye. Test
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
-| R-040 | Level scale: amplitude 1.0 maps to 1.0 and amplitude 0.01 (-40 dB) maps to 0.0, linear in dB between, clamped to 0..1. [owner] | Scale test at 1.0, 0.1, 0.01, 0.0 | host | todo |
-| R-041 | VU bar: the displayed level reaches 99 % of a step input in 300 ms (rise) and falls to 1 % in 300 ms. [owner] | Time-stepped smoother test | host | todo |
-| R-042 | VU bar lights, for each channel, exactly lit_count(level) LEDs of that channel's bar in the active orientation and no others. [derived] | Render test at 0, 0.5, 1.0 | host | todo |
+| R-040 | Level scale: amplitude 1.0 maps to 1.0 and amplitude 0.01 (-40 dB) maps to 0.0, linear in dB between, clamped to 0..1. [owner] | Scale test at 1.0, 0.1, 0.01, 0.0 | host | green@63a6b58 |
+| R-041 | VU bar: the displayed level reaches 99 % of a step input in 300 ms (rise) and falls to 1 % in 300 ms. [owner] | Time-stepped smoother test | host | green@63a6b58 |
+| R-042 | VU bar lights, for each channel, exactly lit_count(level) LEDs of that channel's bar in the active orientation and no others. [derived] | Render test at 0, 0.5, 1.0 | host | green@63a6b58 |
 | R-043 | Peak bar: displayed level jumps to a higher input on the next frame. [owner] | Frame-stepped test | host | todo |
 | R-044 | Peak bar: with zero input the displayed level falls from full scale to zero in 1.0 s, linearly. [owner] | Time-stepped test | host | todo |
 | R-045 | Peak bar: a peak-hold LED stays at the highest recent level for 600 ms, then falls with the bar. [owner] | Time-stepped test | host | todo |
