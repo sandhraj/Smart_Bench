@@ -7,3 +7,5 @@ __pycache__/
 sdkconfig
 sdkconfig.old
 Claude Workbench.md
+docs/handover/
+.pio/
