@@ -21,5 +21,6 @@ struct Rgb {
 
 constexpr Rgb kBlack = {0, 0, 0};
 constexpr Rgb kVuBarColor = {0, 160, 255};  // colour mapping is still a design choice; tune by eye
+constexpr Rgb kPeakHoldColor = {255, 255, 255};
 
 }  // namespace vu
