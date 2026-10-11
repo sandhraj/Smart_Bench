@@ -53,7 +53,7 @@ void test_stops_at_input() {  // R-046
 void test_tail_fades_behind_dot() {  // R-050
   StyleGravityDot s;
   feed(s, 1.0f, 1.0f, 10.0f);
-  feed(s, 0.0f, 0.0f, 300.0f);  // falling: positions above the dot were visited recently
+  feed(s, 0.0f, 0.0f, 600.0f);  // falling: positions above the dot were visited recently
   const int dot = lit_count(s.pos(LEFT)) - 1;
   TEST_ASSERT_TRUE(dot >= 0 && dot < kBarLeds - 3);
   TEST_ASSERT_FLOAT_WITHIN(0.0001f, 1.0f, s.tail(LEFT, dot));
