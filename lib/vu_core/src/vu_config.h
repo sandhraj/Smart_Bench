@@ -23,4 +23,11 @@ constexpr Rgb kBlack = {0, 0, 0};
 constexpr Rgb kVuBarColor = {0, 160, 255};  // colour mapping is still a design choice; tune by eye
 constexpr Rgb kPeakHoldColor = {255, 255, 255};
 
+// Zone bar: LED position k within a bar (0 = start, 19 = end).
+constexpr int kZoneYellowFrom = 14;   // 70 % of 20
+constexpr int kZoneRedFrom = 18;      // 90 % of 20
+constexpr Rgb kZoneGreen = {0, 200, 0};
+constexpr Rgb kZoneYellow = {255, 170, 0};
+constexpr Rgb kZoneRed = {255, 0, 0};
+
 }  // namespace vu
