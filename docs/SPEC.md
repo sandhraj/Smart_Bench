@@ -104,7 +104,7 @@ All numbers live in one configuration header so they can be retuned by eye. Test
 | R-044 | Peak bar: with zero input the displayed level falls from full scale to zero in 1.0 s, linearly. [owner] | Time-stepped test | host | green@f1b71db |
 | R-045 | Peak bar: a peak-hold LED stays at the highest recent level for 600 ms, then falls with the bar. [owner] | Time-stepped test | host | green@f1b71db |
 | R-046 | Gravity dot: rises instantly to a higher input, then falls with constant acceleration so that full scale takes 1.2 s from rest. [owner] | Time-stepped test | host | todo |
-| R-047 | Zone bar: LEDs 0-13 of a bar are green, 14-17 yellow, 18-19 red. [owner, indices derived] | Colour test per index | host | todo |
+| R-047 | Zone bar: LEDs 0-13 of a bar are green, 14-17 yellow, 18-19 red. [owner, indices derived] | Colour test per index | host | green@a2612cb |
 | R-048 | Standby: after 5 s with input below the noise floor, the display shows a slow rainbow; any input above the floor returns to the selected style. [owner] | Time-stepped state test | host | todo |
 | R-049 | The display updates at 60 frames per second. [owner] | Frame counter over 10 s on serial | target | todo |
 
