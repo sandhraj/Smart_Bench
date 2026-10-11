@@ -66,10 +66,10 @@ Provenance: [owner] stated by the owner, [derived] computed from owner statement
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
-| R-001 | Orientations are O1 (landscape) and O2 (portrait). Each has one stored gravity vector. [owner] | Classifier unit test with two stored vectors | host | todo |
-| R-002 | A smoothed gravity vector within 25 degrees of a stored vector classifies as the nearest such orientation. [owner, nearest derived] | Test vectors at 0, 24, 26 degrees from each stored vector | host | todo |
-| R-003 | A vector more than 25 degrees from every stored vector leaves the active layout unchanged. [owner] | Test vector at 90 degrees from both | host | todo |
-| R-004 | The layout switches only after the new classification has held for 1.0 s, and not before. [owner] | Time-stepped test: held 0.9 s gives no switch, 1.0 s gives switch | host | todo |
+| R-001 | Orientations are O1 (landscape) and O2 (portrait). Each has one stored gravity vector. [owner] | Classifier unit test with two stored vectors | host | green@62cb8a0 |
+| R-002 | A smoothed gravity vector within 25 degrees of a stored vector classifies as the nearest such orientation. [owner, nearest derived] | Test vectors at 0, 24, 26 degrees from each stored vector | host | green@62cb8a0 |
+| R-003 | A vector more than 25 degrees from every stored vector leaves the active layout unchanged. [owner] | Test vector at 90 degrees from both | host | green@62cb8a0 |
+| R-004 | The layout switches only after the new classification has held for 1.0 s, and not before. [owner] | Time-stepped test: held 0.9 s gives no switch, 1.0 s gives switch | host | green@62cb8a0 |
 | R-005 | A button 4 press of 3 s or longer stores the current smoothed gravity vector to non-volatile storage. [owner] | Button simulator plus storage fake | host | todo |
 | R-006 | Stored orientation vectors survive a reboot. [owner] | Teach, reset, read back and compare | target | todo |
 | R-007 | On boot the accelerometer WHO_AM_I register (0x0D) is read and accepted only if 0x1A, 0x2A or 0x3A. [owner] | Serial output shows the value read | target | todo |
@@ -78,18 +78,18 @@ Provenance: [owner] stated by the owner, [derived] computed from owner statement
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
-| R-010 | In O1, the L bar fills segment 10 from index 67 upward and the R bar fills segment 5 from index 50 downward. [owner, derived] | Mapper test: level n lights exactly the expected indices | host | todo |
-| R-011 | In O2, the L bar fills segment 5 from index 31 upward and the R bar fills segment 10 from index 86 downward. [owner, derived] | Same | host | todo |
-| R-012 | A bar of level 0.0 lights no LED and 1.0 lights all 20 LEDs of its segment. [derived] | Mapper test at 0.0 and 1.0 | host | todo |
+| R-010 | In O1, the L bar fills segment 10 from index 67 upward and the R bar fills segment 5 from index 50 downward. [owner, derived] | Mapper test: level n lights exactly the expected indices | host | green@62cb8a0 |
+| R-011 | In O2, the L bar fills segment 5 from index 31 upward and the R bar fills segment 10 from index 86 downward. [owner, derived] | Same | host | green@62cb8a0 |
+| R-012 | A bar of level 0.0 lights no LED and 1.0 lights all 20 LEDs of its segment. [derived] | Mapper test at 0.0 and 1.0 | host | green@62cb8a0 |
 | R-013 | The strip is initialised with 112 LEDs, GRB order, data on GPIO16. [owner] | Startup sweep shows R, G, B across all 112 | target | todo |
 
 ### Controls
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
-| R-020 | A press released in under 400 ms is a tap; a press held 400 ms or longer is a hold. [owner] | Button classifier test at 399 ms and 400 ms | host | todo |
-| R-021 | A button 4 press shorter than 3 s advances to the next display pattern and wraps after the last. [owner] | Pattern-cycle test | host | todo |
-| R-022 | Patterns include bar and spectrum. [owner] | Pattern list test | host | todo |
+| R-020 | A press released in under 400 ms is a tap; a press held 400 ms or longer is a hold. [owner] | Button classifier test at 399 ms and 400 ms | host | green@62cb8a0 |
+| R-021 | A button 4 press shorter than 3 s advances to the next display pattern and wraps after the last. [owner] | Pattern-cycle test | host | green@62cb8a0 |
+| R-022 | Patterns include bar and spectrum. [owner] | Pattern list test | host | green@62cb8a0 |
 
 ### Power and LED current
 
@@ -117,8 +117,8 @@ A separate small firmware, serial 115200, single-character commands. It exists t
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
 | B-001 | On boot, the strip shows red, green, blue, then off. [owner] | Visual or camera check | hand | todo |
-| B-002 | Each command above produces the described state and a status line. [owner] | Serial command parser test | host | todo |
-| B-003 | Unknown characters are ignored. [derived] | Parser test | host | todo |
+| B-002 | Each command above produces the described state and a status line. [owner] | Serial command parser test | host | green@62cb8a0 |
+| B-003 | Unknown characters are ignored. [derived] | Parser test | host | green@62cb8a0 |
 
 ## Hand checks (power chain)
 
