@@ -106,6 +106,8 @@ All numbers live in one configuration header so they can be retuned by eye. Test
 | R-046 | Gravity dot: rises instantly to a higher input, then falls with constant acceleration so that full scale takes 1.2 s from rest. [owner] | Time-stepped test | host | todo |
 | R-047 | Zone bar: LEDs 0-13 of a bar are green, 14-17 yellow, 18-19 red. [owner, indices derived] | Colour test per index | host | green@a2612cb |
 | R-048 | Standby: after 5 s with input below the noise floor, the display shows a slow rainbow; any input above the floor returns to the selected style. [owner] | Time-stepped state test | host | todo |
+| R-050 | Gravity dot leaves a fading tail: LEDs the dot has passed fade with a 120 ms time constant, and the dot itself is at full brightness. [owner, constant derived] | Trail decay test | host | todo |
+| R-051 | A synthetic stereo audio source (120 bpm kick, slow swells) can drive every style with levels in 0..1, so styles can be judged without the amp board. [derived] | Range and beat test; demo build | host | todo |
 | R-049 | The display updates at 60 frames per second. [owner] | Frame counter over 10 s on serial | target | todo |
 
 ### Power and LED current
@@ -147,6 +149,7 @@ A separate small firmware, serial 115200, single-character commands. It exists t
 | H-004 | At the 2 A LED cap, XL4015 output is 4.85 V or more, strip far end is 4.6 V or more, main rail is 18.5 V or more, and the adapter does not cut out. [owner] | Meter during `f` step | hand | todo |
 | H-005 | Output ripple is under 0.05 V AC under load. [owner] | Meter on ACV 20 | hand | todo |
 | H-006 | With supply polarity reversed the rail reads 0 V and nothing is damaged. [owner] | Meter | hand | todo |
+| H-007 | Each of the five patterns looks acceptable on the finished mirror box using the demo build, and colours, tail length and peak-hold look right. [owner] | Visual check, notes recorded in the spec | hand | todo |
 
 ## Open decisions
 
@@ -157,7 +160,7 @@ Ordered by how much they block.
 3. **Audio tap location** on the amp board and its mute pin. Needs the amp board.
 4. **Auto-scale method.** Ballistics are decided (R-041 to R-046). The gain-follow and noise-gate algorithm is still to be specified.
 5. **Spectrum.** FFT size, window, 32 band edges, and layout across LEDs.
-6. **Noise floor value** for standby (R-048); the behaviour itself is decided.
+6. **Noise floor value** for standby (R-048). Placeholder 0.05 normalised level (about -38 dB) until measured with real audio.
 7. **Fault behaviour.** Bluetooth disconnect, LED strip failure, accelerometer missing or wrong ID.
 8. **Orientation teach.** How O1 and O2 are chosen, and confirmation feedback.
 9. **"Stable" definition** for the gravity vector (threshold on change per second).
