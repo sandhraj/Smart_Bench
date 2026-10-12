@@ -86,6 +86,48 @@ Amp L- --+-- Woofer - ------------------- Tweeter -
 
 Inputs 5 and 9 join to GPIO23 with a 10 k pull-up to 3.3 V so the relays stay off while the ESP32 boots. Relay module VCC from the LED buck, common ground. Relay IN pulled low switches the relay on (active-low, bench-checked: no clicks at power-on with inputs floating).
 
+## Boards
+
+No custom PCB. One existing perf board and one new perf board carry the discrete parts; everything else is an off-the-shelf module. A custom board for B is only worth it after the open decisions on audio feed, amp keys and LED sense are closed, or if a second unit is wanted.
+
+| Board | Contents | Build |
+|---|---|---|
+| A Power | DC jack, rocker switch, fuse, SR560, TVS, bulk and bypass caps, MP1584, XL4015, star ground. Outputs: 19.5 V, 5 V logic, 5 V LED | Existing perf board, unchanged |
+| B Control | ESP32 devkit on a socket, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, audio conditioning for L and R, key optocouplers, connectors | New perf board |
+| C Amp | XH-M548 | Off the shelf |
+| D Relay | 4-channel module, 2 channels used | Off the shelf, mounted beside the amp speaker terminals |
+| E Accelerometer | GY-45 | Off the shelf, fixed rigidly to the box on a short lead |
+| LED strip | WS2812B, 112 LEDs | Powered directly from A, not through B |
+
+Placement reasons: D switches speaker wires so it sits by the amp outputs, not by the 19 V rail. B holds every open circuit decision, which perf lets change freely. A stays separate so stages 1 to 3 run without B.
+
+### Interconnects
+
+Keyed connectors (JST-XH or screw terminals) between boards so each stage can be unplugged. Heavy wire is 20 AWG or thicker.
+
+| From | To | Signals | Notes |
+|---|---|---|---|
+| A | C | 19.5 V, GND | 5.5x2.1 plug lead from the fused rail |
+| A | B | 5 V logic, GND | To ESP32 VIN. Not when the ESP32 is on USB |
+| A | B | 5 V LED, GND | AHCT125 supply and pass-through to D |
+| A | LED strip | 5 V LED, GND | Heavy wire, 1000 uF at the strip input. Never through B |
+| B | LED strip | Data | Via AHCT125 buffer 1 and 330 ohm at the strip end |
+| B | D | 5 V, GND, IN1, IN2 | Four wires |
+| C | B | Audio L, audio R, ground | Per the VU audio feed decision |
+| C | B | Bluetooth LED sense | Via 10 k and 1N4148 |
+| B | C | Key lines | Optocoupler outputs, after pad voltages are measured |
+| C | D | Speaker L, speaker R | Through the relay contacts to crossovers and drivers |
+| B | E | 3.3 V, GND, SDA, SCL, INT1 | Short, shielded from LED data if possible |
+| Panel | B | Buttons 1 to 4, GND | INPUT_PULLUP |
+
+### Layout rules
+
+1. One star ground at the 1000 uF negative leg on A. LED return current (up to 2 A) runs from the XL4015 straight to the strip and never through B. B returns a thin signal-ground wire to the star.
+2. Keep the XL4015 and the amp heatsink away from the ESP32 and the sense parts.
+3. Keep audio conditioning on B away from the 5 V LED feed and the LED data wire.
+4. AHCT125 sits next to the ESP32. The 330 ohm sits at the strip end of the data wire.
+5. Relay coil supply and the LED strip share the LED rail; the relay contacts carry only speaker signals.
+
 ## Requirements
 
 Tiers: **host** runs on a PC in CI, **target** needs a flashed board, **bench** needs board plus instruments, **hand** is a manual measurement.
@@ -179,7 +221,7 @@ A separate small firmware, serial 115200, single-character commands. It exists t
 | B-002 | Each command above produces the described state and a status line. [owner] | Serial command parser test | host | green@62cb8a0 |
 | B-003 | Unknown characters are ignored. [derived] | Parser test | host | green@62cb8a0 |
 
-## Hand checks (power chain)
+## Hand checks (power chain and boards)
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
@@ -212,3 +254,8 @@ Ordered by how much they block.
 15. **Bluetooth device name.**
 16. **Second tweeter mounting.** The box is pre-cut for one centre tweeter. Stack both in the centre bay, or one per woofer chamber (only if the tweeter backs are sealed). Tweeter power rating also to be confirmed.
 17. **Amp supply polarity.** Centre pin of the amp's DC jack is expected to be positive; continuity to the input diode to be confirmed before powering from the rail.
+| H-008 | Board A alone: with B, C and D unplugged, 19.5 V rail, 5 V logic and 5 V LED read within H-001 limits. [derived] | Meter | hand | todo |
+| H-009 | Ground continuity: B ground to the star point and strip ground to the XL4015 negative are under 0.5 ohm, and no LED return current flows in B's ground wire at full white. [derived] | Meter, current clamp or series meter | hand | todo |
+| H-010 | Board B with the ESP32 on USB: the 5 V logic wire is not connected, and the ESP32 5 V pin does not back-feed A. [derived] | Meter on the logic rail with USB only | hand | todo |
+| H-011 | Board D: with GPIO23 floating or high both relays are off; with it low both are on and the contacts pass speaker signal. [owner] | Listen, meter on contacts | hand | todo |
+| H-012 | Each interconnect in the table is continuity-checked end to end and its connector cannot be plugged in reversed. [derived] | Meter, visual | hand | todo |
