@@ -1,6 +1,6 @@
 # Bluetooth VU Meter Speaker
 
-Status: draft 1, written from the owner's handover notes. Items under "Open decisions" are not requirements until decided.
+Status: draft 2, amp board received and bench-listened, two-tweeter crossover and relay mute added. Items under "Open decisions" are not requirements until decided.
 
 ## Purpose
 
@@ -14,14 +14,15 @@ Bluetooth reception and amplification are done by an off-the-shelf amp board. Th
 |---|---|---|
 | MCU | ESP32 dev board, classic ESP32, no PSRAM | Meter, LEDs, orientation, buttons |
 | Amp + Bluetooth | XH-M548 (TPA3116D2, Bluetooth 4.0) | A2DP sink, speaker drive |
-| Tweeter amp | PAM8403 module | Drives the centre tweeter from the L+R mix |
+| Tweeters | 2, one per channel | Passive crossover off the amp's speaker outputs (see Audio path) |
+| Mute relay | 4-channel 5 V relay module, active-low inputs, no optocouplers | Breaks each speaker line (2 of 4 used) |
 | LED strip | WS2812B, 50 LEDs/m, 112 LEDs used | Mirror-box edges |
-| Level shifter | SN74AHCT125N | 3.3 V to 5 V LED data |
+| Level shifter | SN74AHCT125N | 3.3 V to 5 V LED data (buffer 1), mute relay drive (buffers 2 and 3) |
 | Accelerometer | GY-45 (MMA845x), I2C 0x1C or 0x1D | Orientation |
 | Buttons | 4 panel momentary, normally open | Controls |
 | Supply | 19.5 V, 2.31 A adapter | Main rail |
-| Logic buck | MP1584, 5.00 to 5.05 V | ESP32 + PAM8403 |
-| LED buck | XL4015, 5.00 to 5.05 V | LED rail |
+| Logic buck | MP1584, 5.00 to 5.05 V | ESP32 |
+| LED buck | XL4015, 5.00 to 5.05 V | LED rail, AHCT125, relay module |
 
 ### ESP32 pin map
 
@@ -34,7 +35,9 @@ Bluetooth reception and amplification are done by an off-the-shelf amp board. Th
 | 27 | Accelerometer INT1 (optional) | decided |
 | 16 | LED data to AHCT125 pin 2 | decided |
 | 32, 33, 25, 26 | Buttons 1 to 4, INPUT_PULLUP | proposed |
-| 18, 19, 23 | Amp key outputs via optocouplers | proposed |
+| 23 | Mute (AHCT125 buffers 2 and 3, 10 k pull-up to 3.3 V): LOW = sound on, HIGH or floating = muted | decided |
+| 18, 19 | Amp key outputs via optocouplers (a third key pin is to be reassigned, 23 is now mute) | proposed |
+| TBD | Amp Bluetooth LED sense (LED, 10 k, 1N4148 to input) | open |
 
 ### LED chain (112 LEDs, one data line)
 
@@ -56,6 +59,32 @@ Index ranges in wiring order, zero-based. Corners: bottom E F G H, top I J K L.
 | 12 | K to J | 20 | 92 to 111 |
 
 Index ranges are derived from the segment lengths and are the single source of truth for host tests.
+
+### Audio path
+
+Per channel, from the amp's speaker output, through the mute relay:
+
+```
+Amp L+ --+-- 0.15 mH coil ----------------- Woofer +
+         +-- 2.2 uF film -- 10 ohm 5 W --- Tweeter +
+Amp L- --+-- Woofer - ------------------- Tweeter -
+```
+
+- Both tweeters sit after the relay, so they mute with their channel. Each relay switches one wire per channel on COM and NO.
+- Tweeter branch: 10 ohm plus 2.2 uF film (63 V or more) gives about -10 dB at about 5 kHz and a branch near 14 ohm, so the amp load stays near 4 ohm. Chosen by bench listening against bare, 5 ohm, and 10 ohm plus 5 uF (too bright). Polarised capacitors are not used.
+- Woofer coil: 0.15 mH air core, DCR 0.3 ohm or less, about 4 kHz with 3.9 ohm woofers. Optional, compare by ear.
+- The earlier tweeter amp, L+R mix and trimmer are dropped. Nothing is tapped from the amp board for a tweeter feed.
+
+### Mute drive
+
+| Buffer | OE | Input | Output | To |
+|---|---|---|---|---|
+| 1 | pin 1 to GND | pin 2 | pin 3 | LED data |
+| 2 | pin 4 to GND | pin 5 | pin 6 | relay IN1 (left) |
+| 3 | pin 10 to GND | pin 9 | pin 8 | relay IN2 (right) |
+| 4 | pin 13 to 5 V | pin 12 to GND | none | unused |
+
+Inputs 5 and 9 join to GPIO23 with a 10 k pull-up to 3.3 V so the relays stay off while the ESP32 boots. Relay module VCC from the LED buck, common ground. Relay IN pulled low switches the relay on (active-low, bench-checked: no clicks at power-on with inputs floating).
 
 ## Requirements
 
@@ -117,6 +146,17 @@ All numbers live in one configuration header so they can be retuned by eye. Test
 | R-030 | With the LED cap enabled, measured strip current at full white does not exceed 2.2 A. [owner, tolerance derived] | Meter in series on LED feed | hand | todo |
 | R-031 | The LED cap is enabled at boot and a status command reports cap state. [owner] | Serial status output | target | todo |
 
+### Mute
+
+The amp board plays Chinese voice prompts that cannot be disabled, so the speaker lines are muted around them. Prompt timings measured from video at 10 fps, plus or minus 0.1 s: power-on prompt at +1.6 s (0.5 s long) after a thump at +0.2 s; connect prompt about 1.4 s long, starting 0.3 to 0.7 s after the last off-blink; disconnect prompt about 0.5 s long, starting about 0.2 s before blinking resumes. Bluetooth LED: pairing is mostly on with a 0.2 s off-blink every 0.8 s, connected is solid.
+
+| ID | Requirement | Verified by | Tier | Status |
+|----|-------------|-------------|------|--------|
+| M-001 | On boot, and while the ESP32 is resetting, the speakers are muted (GPIO23 high or floating). [owner] | Scope or meter on relay inputs through a reset | bench | todo |
+| M-002 | Sound is enabled (GPIO23 low) only after the Bluetooth LED has been solid for 2.5 s. [owner] | Time-stepped state test on a fake LED input | host | todo |
+| M-003 | Any off-blink of the Bluetooth LED mutes immediately. [owner] | Same | host | todo |
+| M-004 | The power-on thump and prompt and the connect prompt are inaudible on the speakers. [owner] | Listen on three power-ups and three connects | hand | todo |
+
 ## Bring-up sketch (LED load test)
 
 A separate small firmware, serial 115200, single-character commands. It exists to prove the LED supply and data path before the main firmware.
@@ -156,17 +196,19 @@ A separate small firmware, serial 115200, single-character commands. It exists t
 Ordered by how much they block.
 
 1. **LED cap method.** The existing bring-up sketch applies a hand-written cap because the library limiter "did not hold" on an earlier build, and notes real current of 1.8 to 2.2 times the modelled value. R-030 is therefore stated as a measured current, not a library setting.
-2. **Amp board key type.** Separate keys, resistor ladder or volume potentiometer. Decides the volume and track control path (optocouplers, digital potentiometer, or parallel buttons). Needs the amp board in hand.
-3. **Audio tap location** on the amp board and its mute pin. Needs the amp board.
+2. **Amp board key type.** The board is in hand. The three keys may be a resistor ladder (three different resistor values). Pad voltages are to be measured before the optocoupler path is designed.
+3. **VU audio feed** to GPIO36 and 39. Either (a) the amp board's input-capacitor pads on the Bluetooth side, or (b) one leg of each speaker output after the board's output filter, through 100 nF and about 330 k into the existing 100 k and 100 k bias, with 220 pF to ground at the pin. Not decided.
 4. **Auto-scale method.** Ballistics are decided (R-041 to R-046). The gain-follow and noise-gate algorithm is still to be specified.
 5. **Spectrum.** FFT size, window, 32 band edges, and layout across LEDs.
 6. **Noise floor value** for standby (R-048). Placeholder 0.05 normalised level (about -38 dB) until measured with real audio.
 7. **Fault behaviour.** Bluetooth disconnect, LED strip failure, accelerometer missing or wrong ID.
 8. **Orientation teach.** How O1 and O2 are chosen, and confirmation feedback.
 9. **"Stable" definition** for the gravity vector (threshold on change per second).
-10. **Mute behaviour.** Release delay at power-on, 2 s re-mute on connect, sense pin.
+10. **Mute behaviour.** Rule is set (M-002, M-003). Open: the sense point on the amp board, the ESP32 pin, and the disconnect prompt, which the LED rule cannot catch (an idle mute could).
 11. **Libraries.** FastLED version, FFT library, accelerometer access (plain I2C registers likely).
 12. **Back-edge segments** (1 and 12) mirroring the bars.
 13. **Persistence of the selected pattern.**
 14. **Diagnostics** (current and temperature sensors), proposed only.
 15. **Bluetooth device name.**
+16. **Second tweeter mounting.** The box is pre-cut for one centre tweeter. Stack both in the centre bay, or one per woofer chamber (only if the tweeter backs are sealed). Tweeter power rating also to be confirmed.
+17. **Amp supply polarity.** Centre pin of the amp's DC jack is expected to be positive; continuity to the input diode to be confirmed before powering from the rail.
