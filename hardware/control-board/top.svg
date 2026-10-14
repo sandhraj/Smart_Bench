@@ -1,0 +1,1397 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 107.8 69.8" class="board"><style>
+.board{width:100%;height:auto;font-family:'IBM Plex Mono',ui-monospace,monospace}
+.pcb{fill:var(--pcb,#c9b37a);stroke:var(--pcb-line,#7a6a3a);stroke-width:.3}
+.hole{fill:var(--hole,#4d4120)}.dot{fill:none;stroke:var(--dotline,#8f7b3f);stroke-width:.25}
+.mount{fill:var(--bg,#fff);stroke:var(--fg,#222);stroke-width:.3}
+.mod{fill:none;stroke-dasharray:1.2 .8;stroke-width:.35}
+.mod.esp{stroke:var(--esp,#1b6b5a)}.mod.gy{stroke:var(--gyc,#1d4ed8)}
+.modlab{font-size:1.9px;fill:var(--esp,#1b6b5a)}
+.res{fill:var(--res,#e8cf9a);stroke:var(--fg,#222);stroke-width:.25}
+.dio{fill:var(--dio,#2b2b2b);stroke:var(--fg,#222);stroke-width:.25}.band{fill:var(--dioband,#d0d0d0)}
+.cap{fill:var(--cap,#f0a43a);stroke:var(--fg,#222);stroke-width:.25}
+.elec{fill:var(--elec,#2b3a67);stroke:var(--fg,#222);stroke-width:.25}
+.dip{fill:var(--dipf,#3a3a3a);fill-opacity:.85;stroke:var(--fg,#222);stroke-width:.3}
+.hdr{fill:var(--hdrf,#222);fill-opacity:.8;stroke:var(--fg,#222);stroke-width:.2}
+.pad{fill:var(--padc,#e8e2c8);stroke:var(--fg,#222);stroke-width:.2}.pad.nc{fill:var(--pcb,#c9b37a)}
+.solder{fill:var(--solder,#cfd3d6);stroke:var(--fg,#222);stroke-width:.2}
+.ref{font-size:1.9px;font-weight:600;fill:var(--fg,#222)}.val{font-size:1.6px;fill:var(--fg,#222)}
+.pin{font-size:1.25px;fill:var(--ink,#111)}.pin2{font-size:1.2px;fill:var(--ink,#111)}.axis{font-size:1.3px;fill:var(--ink,#111)}
+.jmp{stroke-width:.55;stroke-linecap:round;opacity:.9}.bus{stroke-width:1.1;stroke-linecap:round;opacity:.95}
+.wend{stroke-width:.35}.wlab{font-size:1.5px;fill:var(--fg,#222);paint-order:stroke;stroke:var(--pcb,#c9b37a);stroke-width:.4}
+.notch{fill:var(--padtxt,#fff)}
+</style>
+<rect x="0" y="0" width="97.80" height="59.80" rx="1.2" class="pcb"/>
+<circle cx="1.91" cy="1.96" r="0.38" class="hole"/>
+<circle cx="1.91" cy="4.50" r="0.38" class="hole"/>
+<circle cx="1.91" cy="7.04" r="0.38" class="hole"/>
+<circle cx="1.91" cy="9.58" r="0.38" class="hole"/>
+<circle cx="1.91" cy="12.12" r="0.38" class="hole"/>
+<circle cx="1.91" cy="14.66" r="0.38" class="hole"/>
+<circle cx="1.91" cy="17.20" r="0.38" class="hole"/>
+<circle cx="1.91" cy="19.74" r="0.38" class="hole"/>
+<circle cx="1.91" cy="22.28" r="0.38" class="hole"/>
+<circle cx="1.91" cy="24.82" r="0.38" class="hole"/>
+<circle cx="1.91" cy="27.36" r="0.38" class="hole"/>
+<circle cx="1.91" cy="29.90" r="0.38" class="hole"/>
+<circle cx="1.91" cy="32.44" r="0.38" class="hole"/>
+<circle cx="1.91" cy="34.98" r="0.38" class="hole"/>
+<circle cx="1.91" cy="37.52" r="0.38" class="hole"/>
+<circle cx="1.91" cy="40.06" r="0.38" class="hole"/>
+<circle cx="1.91" cy="42.60" r="0.38" class="hole"/>
+<circle cx="1.91" cy="45.14" r="0.38" class="hole"/>
+<circle cx="1.91" cy="47.68" r="0.38" class="hole"/>
+<circle cx="1.91" cy="50.22" r="0.38" class="hole"/>
+<circle cx="1.91" cy="52.76" r="0.38" class="hole"/>
+<circle cx="1.91" cy="55.30" r="0.38" class="hole"/>
+<circle cx="1.91" cy="57.84" r="0.38" class="hole"/>
+<circle cx="4.45" cy="1.96" r="0.38" class="hole"/>
+<circle cx="4.45" cy="4.50" r="0.38" class="hole"/>
+<circle cx="4.45" cy="7.04" r="0.38" class="hole"/>
+<circle cx="4.45" cy="9.58" r="0.38" class="hole"/>
+<circle cx="4.45" cy="12.12" r="0.38" class="hole"/>
+<circle cx="4.45" cy="14.66" r="0.38" class="hole"/>
+<circle cx="4.45" cy="17.20" r="0.38" class="hole"/>
+<circle cx="4.45" cy="19.74" r="0.38" class="hole"/>
+<circle cx="4.45" cy="22.28" r="0.38" class="hole"/>
+<circle cx="4.45" cy="24.82" r="0.38" class="hole"/>
+<circle cx="4.45" cy="27.36" r="0.38" class="hole"/>
+<circle cx="4.45" cy="29.90" r="0.38" class="hole"/>
+<circle cx="4.45" cy="32.44" r="0.38" class="hole"/>
+<circle cx="4.45" cy="34.98" r="0.38" class="hole"/>
+<circle cx="4.45" cy="37.52" r="0.38" class="hole"/>
+<circle cx="4.45" cy="40.06" r="0.38" class="hole"/>
+<circle cx="4.45" cy="42.60" r="0.38" class="hole"/>
+<circle cx="4.45" cy="45.14" r="0.38" class="hole"/>
+<circle cx="4.45" cy="47.68" r="0.38" class="hole"/>
+<circle cx="4.45" cy="50.22" r="0.38" class="hole"/>
+<circle cx="4.45" cy="52.76" r="0.38" class="hole"/>
+<circle cx="4.45" cy="55.30" r="0.38" class="hole"/>
+<circle cx="4.45" cy="57.84" r="0.38" class="hole"/>
+<circle cx="6.99" cy="1.96" r="0.38" class="hole"/>
+<circle cx="6.99" cy="4.50" r="0.38" class="hole"/>
+<circle cx="6.99" cy="7.04" r="0.38" class="hole"/>
+<circle cx="6.99" cy="9.58" r="0.38" class="hole"/>
+<circle cx="6.99" cy="12.12" r="0.38" class="hole"/>
+<circle cx="6.99" cy="14.66" r="0.38" class="hole"/>
+<circle cx="6.99" cy="17.20" r="0.38" class="hole"/>
+<circle cx="6.99" cy="19.74" r="0.38" class="hole"/>
+<circle cx="6.99" cy="22.28" r="0.38" class="hole"/>
+<circle cx="6.99" cy="24.82" r="0.38" class="hole"/>
+<circle cx="6.99" cy="27.36" r="0.38" class="hole"/>
+<circle cx="6.99" cy="29.90" r="0.38" class="hole"/>
+<circle cx="6.99" cy="32.44" r="0.38" class="hole"/>
+<circle cx="6.99" cy="34.98" r="0.38" class="hole"/>
+<circle cx="6.99" cy="37.52" r="0.38" class="hole"/>
+<circle cx="6.99" cy="40.06" r="0.38" class="hole"/>
+<circle cx="6.99" cy="42.60" r="0.38" class="hole"/>
+<circle cx="6.99" cy="45.14" r="0.38" class="hole"/>
+<circle cx="6.99" cy="47.68" r="0.38" class="hole"/>
+<circle cx="6.99" cy="50.22" r="0.38" class="hole"/>
+<circle cx="6.99" cy="52.76" r="0.38" class="hole"/>
+<circle cx="6.99" cy="55.30" r="0.38" class="hole"/>
+<circle cx="6.99" cy="57.84" r="0.38" class="hole"/>
+<circle cx="9.53" cy="1.96" r="0.38" class="hole"/>
+<circle cx="9.53" cy="4.50" r="0.38" class="hole"/>
+<circle cx="9.53" cy="7.04" r="0.38" class="hole"/>
+<circle cx="9.53" cy="9.58" r="0.38" class="hole"/>
+<circle cx="9.53" cy="12.12" r="0.38" class="hole"/>
+<circle cx="9.53" cy="14.66" r="0.38" class="hole"/>
+<circle cx="9.53" cy="17.20" r="0.38" class="hole"/>
+<circle cx="9.53" cy="19.74" r="0.38" class="hole"/>
+<circle cx="9.53" cy="22.28" r="0.38" class="hole"/>
+<circle cx="9.53" cy="24.82" r="0.38" class="hole"/>
+<circle cx="9.53" cy="27.36" r="0.38" class="hole"/>
+<circle cx="9.53" cy="29.90" r="0.38" class="hole"/>
+<circle cx="9.53" cy="32.44" r="0.38" class="hole"/>
+<circle cx="9.53" cy="34.98" r="0.38" class="hole"/>
+<circle cx="9.53" cy="37.52" r="0.38" class="hole"/>
+<circle cx="9.53" cy="40.06" r="0.38" class="hole"/>
+<circle cx="9.53" cy="42.60" r="0.38" class="hole"/>
+<circle cx="9.53" cy="45.14" r="0.38" class="hole"/>
+<circle cx="9.53" cy="47.68" r="0.38" class="hole"/>
+<circle cx="9.53" cy="50.22" r="0.38" class="hole"/>
+<circle cx="9.53" cy="52.76" r="0.38" class="hole"/>
+<circle cx="9.53" cy="55.30" r="0.38" class="hole"/>
+<circle cx="9.53" cy="57.84" r="0.38" class="hole"/>
+<circle cx="12.07" cy="1.96" r="0.38" class="hole"/>
+<circle cx="12.07" cy="4.50" r="0.38" class="hole"/>
+<circle cx="12.07" cy="7.04" r="0.38" class="hole"/>
+<circle cx="12.07" cy="9.58" r="0.38" class="hole"/>
+<circle cx="12.07" cy="12.12" r="0.38" class="hole"/>
+<circle cx="12.07" cy="14.66" r="0.38" class="hole"/>
+<circle cx="12.07" cy="17.20" r="0.38" class="hole"/>
+<circle cx="12.07" cy="19.74" r="0.38" class="hole"/>
+<circle cx="12.07" cy="22.28" r="0.38" class="hole"/>
+<circle cx="12.07" cy="24.82" r="0.38" class="hole"/>
+<circle cx="12.07" cy="27.36" r="0.38" class="hole"/>
+<circle cx="12.07" cy="29.90" r="0.38" class="hole"/>
+<circle cx="12.07" cy="32.44" r="0.38" class="hole"/>
+<circle cx="12.07" cy="34.98" r="0.38" class="hole"/>
+<circle cx="12.07" cy="37.52" r="0.38" class="hole"/>
+<circle cx="12.07" cy="40.06" r="0.38" class="hole"/>
+<circle cx="12.07" cy="42.60" r="0.38" class="hole"/>
+<circle cx="12.07" cy="45.14" r="0.38" class="hole"/>
+<circle cx="12.07" cy="47.68" r="0.38" class="hole"/>
+<circle cx="12.07" cy="50.22" r="0.38" class="hole"/>
+<circle cx="12.07" cy="52.76" r="0.38" class="hole"/>
+<circle cx="12.07" cy="55.30" r="0.38" class="hole"/>
+<circle cx="12.07" cy="57.84" r="0.38" class="hole"/>
+<circle cx="14.61" cy="1.96" r="0.38" class="hole"/>
+<circle cx="14.61" cy="4.50" r="0.38" class="hole"/>
+<circle cx="14.61" cy="7.04" r="0.38" class="hole"/>
+<circle cx="14.61" cy="9.58" r="0.38" class="hole"/>
+<circle cx="14.61" cy="12.12" r="0.38" class="hole"/>
+<circle cx="14.61" cy="14.66" r="0.38" class="hole"/>
+<circle cx="14.61" cy="17.20" r="0.38" class="hole"/>
+<circle cx="14.61" cy="19.74" r="0.38" class="hole"/>
+<circle cx="14.61" cy="22.28" r="0.38" class="hole"/>
+<circle cx="14.61" cy="24.82" r="0.38" class="hole"/>
+<circle cx="14.61" cy="27.36" r="0.38" class="hole"/>
+<circle cx="14.61" cy="29.90" r="0.38" class="hole"/>
+<circle cx="14.61" cy="32.44" r="0.38" class="hole"/>
+<circle cx="14.61" cy="34.98" r="0.38" class="hole"/>
+<circle cx="14.61" cy="37.52" r="0.38" class="hole"/>
+<circle cx="14.61" cy="40.06" r="0.38" class="hole"/>
+<circle cx="14.61" cy="42.60" r="0.38" class="hole"/>
+<circle cx="14.61" cy="45.14" r="0.38" class="hole"/>
+<circle cx="14.61" cy="47.68" r="0.38" class="hole"/>
+<circle cx="14.61" cy="50.22" r="0.38" class="hole"/>
+<circle cx="14.61" cy="52.76" r="0.38" class="hole"/>
+<circle cx="14.61" cy="55.30" r="0.38" class="hole"/>
+<circle cx="14.61" cy="57.84" r="0.38" class="hole"/>
+<circle cx="17.15" cy="1.96" r="0.38" class="hole"/>
+<circle cx="17.15" cy="4.50" r="0.38" class="hole"/>
+<circle cx="17.15" cy="7.04" r="0.38" class="hole"/>
+<circle cx="17.15" cy="9.58" r="0.38" class="hole"/>
+<circle cx="17.15" cy="12.12" r="0.38" class="hole"/>
+<circle cx="17.15" cy="14.66" r="0.38" class="hole"/>
+<circle cx="17.15" cy="17.20" r="0.38" class="hole"/>
+<circle cx="17.15" cy="19.74" r="0.38" class="hole"/>
+<circle cx="17.15" cy="22.28" r="0.38" class="hole"/>
+<circle cx="17.15" cy="24.82" r="0.38" class="hole"/>
+<circle cx="17.15" cy="27.36" r="0.38" class="hole"/>
+<circle cx="17.15" cy="29.90" r="0.38" class="hole"/>
+<circle cx="17.15" cy="32.44" r="0.38" class="hole"/>
+<circle cx="17.15" cy="34.98" r="0.38" class="hole"/>
+<circle cx="17.15" cy="37.52" r="0.38" class="hole"/>
+<circle cx="17.15" cy="40.06" r="0.38" class="hole"/>
+<circle cx="17.15" cy="42.60" r="0.38" class="hole"/>
+<circle cx="17.15" cy="45.14" r="0.38" class="hole"/>
+<circle cx="17.15" cy="47.68" r="0.38" class="hole"/>
+<circle cx="17.15" cy="50.22" r="0.38" class="hole"/>
+<circle cx="17.15" cy="52.76" r="0.38" class="hole"/>
+<circle cx="17.15" cy="55.30" r="0.38" class="hole"/>
+<circle cx="17.15" cy="57.84" r="0.38" class="hole"/>
+<circle cx="19.69" cy="1.96" r="0.38" class="hole"/>
+<circle cx="19.69" cy="4.50" r="0.38" class="hole"/>
+<circle cx="19.69" cy="7.04" r="0.38" class="hole"/>
+<circle cx="19.69" cy="9.58" r="0.38" class="hole"/>
+<circle cx="19.69" cy="12.12" r="0.38" class="hole"/>
+<circle cx="19.69" cy="14.66" r="0.38" class="hole"/>
+<circle cx="19.69" cy="17.20" r="0.38" class="hole"/>
+<circle cx="19.69" cy="19.74" r="0.38" class="hole"/>
+<circle cx="19.69" cy="22.28" r="0.38" class="hole"/>
+<circle cx="19.69" cy="24.82" r="0.38" class="hole"/>
+<circle cx="19.69" cy="27.36" r="0.38" class="hole"/>
+<circle cx="19.69" cy="29.90" r="0.38" class="hole"/>
+<circle cx="19.69" cy="32.44" r="0.38" class="hole"/>
+<circle cx="19.69" cy="34.98" r="0.38" class="hole"/>
+<circle cx="19.69" cy="37.52" r="0.38" class="hole"/>
+<circle cx="19.69" cy="40.06" r="0.38" class="hole"/>
+<circle cx="19.69" cy="42.60" r="0.38" class="hole"/>
+<circle cx="19.69" cy="45.14" r="0.38" class="hole"/>
+<circle cx="19.69" cy="47.68" r="0.38" class="hole"/>
+<circle cx="19.69" cy="50.22" r="0.38" class="hole"/>
+<circle cx="19.69" cy="52.76" r="0.38" class="hole"/>
+<circle cx="19.69" cy="55.30" r="0.38" class="hole"/>
+<circle cx="19.69" cy="57.84" r="0.38" class="hole"/>
+<circle cx="22.23" cy="1.96" r="0.38" class="hole"/>
+<circle cx="22.23" cy="4.50" r="0.38" class="hole"/>
+<circle cx="22.23" cy="7.04" r="0.38" class="hole"/>
+<circle cx="22.23" cy="9.58" r="0.38" class="hole"/>
+<circle cx="22.23" cy="12.12" r="0.38" class="hole"/>
+<circle cx="22.23" cy="14.66" r="0.38" class="hole"/>
+<circle cx="22.23" cy="17.20" r="0.38" class="hole"/>
+<circle cx="22.23" cy="19.74" r="0.38" class="hole"/>
+<circle cx="22.23" cy="22.28" r="0.38" class="hole"/>
+<circle cx="22.23" cy="24.82" r="0.38" class="hole"/>
+<circle cx="22.23" cy="27.36" r="0.38" class="hole"/>
+<circle cx="22.23" cy="29.90" r="0.38" class="hole"/>
+<circle cx="22.23" cy="32.44" r="0.38" class="hole"/>
+<circle cx="22.23" cy="34.98" r="0.38" class="hole"/>
+<circle cx="22.23" cy="37.52" r="0.38" class="hole"/>
+<circle cx="22.23" cy="40.06" r="0.38" class="hole"/>
+<circle cx="22.23" cy="42.60" r="0.38" class="hole"/>
+<circle cx="22.23" cy="45.14" r="0.38" class="hole"/>
+<circle cx="22.23" cy="47.68" r="0.38" class="hole"/>
+<circle cx="22.23" cy="50.22" r="0.38" class="hole"/>
+<circle cx="22.23" cy="52.76" r="0.38" class="hole"/>
+<circle cx="22.23" cy="55.30" r="0.38" class="hole"/>
+<circle cx="22.23" cy="57.84" r="0.38" class="hole"/>
+<circle cx="24.77" cy="1.96" r="0.38" class="hole"/>
+<circle cx="24.77" cy="4.50" r="0.38" class="hole"/>
+<circle cx="24.77" cy="7.04" r="0.38" class="hole"/>
+<circle cx="24.77" cy="9.58" r="0.38" class="hole"/>
+<circle cx="24.77" cy="12.12" r="0.38" class="hole"/>
+<circle cx="24.77" cy="14.66" r="0.38" class="hole"/>
+<circle cx="24.77" cy="17.20" r="0.38" class="hole"/>
+<circle cx="24.77" cy="19.74" r="0.38" class="hole"/>
+<circle cx="24.77" cy="22.28" r="0.38" class="hole"/>
+<circle cx="24.77" cy="24.82" r="0.38" class="hole"/>
+<circle cx="24.77" cy="27.36" r="0.38" class="hole"/>
+<circle cx="24.77" cy="29.90" r="0.38" class="hole"/>
+<circle cx="24.77" cy="32.44" r="0.38" class="hole"/>
+<circle cx="24.77" cy="34.98" r="0.38" class="hole"/>
+<circle cx="24.77" cy="37.52" r="0.38" class="hole"/>
+<circle cx="24.77" cy="40.06" r="0.38" class="hole"/>
+<circle cx="24.77" cy="42.60" r="0.38" class="hole"/>
+<circle cx="24.77" cy="45.14" r="0.38" class="hole"/>
+<circle cx="24.77" cy="47.68" r="0.38" class="hole"/>
+<circle cx="24.77" cy="50.22" r="0.38" class="hole"/>
+<circle cx="24.77" cy="52.76" r="0.38" class="hole"/>
+<circle cx="24.77" cy="55.30" r="0.38" class="hole"/>
+<circle cx="24.77" cy="57.84" r="0.38" class="hole"/>
+<circle cx="27.31" cy="1.96" r="0.38" class="hole"/>
+<circle cx="27.31" cy="4.50" r="0.38" class="hole"/>
+<circle cx="27.31" cy="7.04" r="0.38" class="hole"/>
+<circle cx="27.31" cy="9.58" r="0.38" class="hole"/>
+<circle cx="27.31" cy="12.12" r="0.38" class="hole"/>
+<circle cx="27.31" cy="14.66" r="0.38" class="hole"/>
+<circle cx="27.31" cy="17.20" r="0.38" class="hole"/>
+<circle cx="27.31" cy="19.74" r="0.38" class="hole"/>
+<circle cx="27.31" cy="22.28" r="0.38" class="hole"/>
+<circle cx="27.31" cy="24.82" r="0.38" class="hole"/>
+<circle cx="27.31" cy="27.36" r="0.38" class="hole"/>
+<circle cx="27.31" cy="29.90" r="0.38" class="hole"/>
+<circle cx="27.31" cy="32.44" r="0.38" class="hole"/>
+<circle cx="27.31" cy="34.98" r="0.38" class="hole"/>
+<circle cx="27.31" cy="37.52" r="0.38" class="hole"/>
+<circle cx="27.31" cy="40.06" r="0.38" class="hole"/>
+<circle cx="27.31" cy="42.60" r="0.38" class="hole"/>
+<circle cx="27.31" cy="45.14" r="0.38" class="hole"/>
+<circle cx="27.31" cy="47.68" r="0.38" class="hole"/>
+<circle cx="27.31" cy="50.22" r="0.38" class="hole"/>
+<circle cx="27.31" cy="52.76" r="0.38" class="hole"/>
+<circle cx="27.31" cy="55.30" r="0.38" class="hole"/>
+<circle cx="27.31" cy="57.84" r="0.38" class="hole"/>
+<circle cx="29.85" cy="1.96" r="0.38" class="hole"/>
+<circle cx="29.85" cy="4.50" r="0.38" class="hole"/>
+<circle cx="29.85" cy="7.04" r="0.38" class="hole"/>
+<circle cx="29.85" cy="9.58" r="0.38" class="hole"/>
+<circle cx="29.85" cy="12.12" r="0.38" class="hole"/>
+<circle cx="29.85" cy="14.66" r="0.38" class="hole"/>
+<circle cx="29.85" cy="17.20" r="0.38" class="hole"/>
+<circle cx="29.85" cy="19.74" r="0.38" class="hole"/>
+<circle cx="29.85" cy="22.28" r="0.38" class="hole"/>
+<circle cx="29.85" cy="24.82" r="0.38" class="hole"/>
+<circle cx="29.85" cy="27.36" r="0.38" class="hole"/>
+<circle cx="29.85" cy="29.90" r="0.38" class="hole"/>
+<circle cx="29.85" cy="32.44" r="0.38" class="hole"/>
+<circle cx="29.85" cy="34.98" r="0.38" class="hole"/>
+<circle cx="29.85" cy="37.52" r="0.38" class="hole"/>
+<circle cx="29.85" cy="40.06" r="0.38" class="hole"/>
+<circle cx="29.85" cy="42.60" r="0.38" class="hole"/>
+<circle cx="29.85" cy="45.14" r="0.38" class="hole"/>
+<circle cx="29.85" cy="47.68" r="0.38" class="hole"/>
+<circle cx="29.85" cy="50.22" r="0.38" class="hole"/>
+<circle cx="29.85" cy="52.76" r="0.38" class="hole"/>
+<circle cx="29.85" cy="55.30" r="0.38" class="hole"/>
+<circle cx="29.85" cy="57.84" r="0.38" class="hole"/>
+<circle cx="32.39" cy="1.96" r="0.38" class="hole"/>
+<circle cx="32.39" cy="4.50" r="0.38" class="hole"/>
+<circle cx="32.39" cy="7.04" r="0.38" class="hole"/>
+<circle cx="32.39" cy="9.58" r="0.38" class="hole"/>
+<circle cx="32.39" cy="12.12" r="0.38" class="hole"/>
+<circle cx="32.39" cy="14.66" r="0.38" class="hole"/>
+<circle cx="32.39" cy="17.20" r="0.38" class="hole"/>
+<circle cx="32.39" cy="19.74" r="0.38" class="hole"/>
+<circle cx="32.39" cy="22.28" r="0.38" class="hole"/>
+<circle cx="32.39" cy="24.82" r="0.38" class="hole"/>
+<circle cx="32.39" cy="27.36" r="0.38" class="hole"/>
+<circle cx="32.39" cy="29.90" r="0.38" class="hole"/>
+<circle cx="32.39" cy="32.44" r="0.38" class="hole"/>
+<circle cx="32.39" cy="34.98" r="0.38" class="hole"/>
+<circle cx="32.39" cy="37.52" r="0.38" class="hole"/>
+<circle cx="32.39" cy="40.06" r="0.38" class="hole"/>
+<circle cx="32.39" cy="42.60" r="0.38" class="hole"/>
+<circle cx="32.39" cy="45.14" r="0.38" class="hole"/>
+<circle cx="32.39" cy="47.68" r="0.38" class="hole"/>
+<circle cx="32.39" cy="50.22" r="0.38" class="hole"/>
+<circle cx="32.39" cy="52.76" r="0.38" class="hole"/>
+<circle cx="32.39" cy="55.30" r="0.38" class="hole"/>
+<circle cx="32.39" cy="57.84" r="0.38" class="hole"/>
+<circle cx="34.93" cy="1.96" r="0.38" class="hole"/>
+<circle cx="34.93" cy="4.50" r="0.38" class="hole"/>
+<circle cx="34.93" cy="7.04" r="0.38" class="hole"/>
+<circle cx="34.93" cy="9.58" r="0.38" class="hole"/>
+<circle cx="34.93" cy="12.12" r="0.38" class="hole"/>
+<circle cx="34.93" cy="14.66" r="0.38" class="hole"/>
+<circle cx="34.93" cy="17.20" r="0.38" class="hole"/>
+<circle cx="34.93" cy="19.74" r="0.38" class="hole"/>
+<circle cx="34.93" cy="22.28" r="0.38" class="hole"/>
+<circle cx="34.93" cy="24.82" r="0.38" class="hole"/>
+<circle cx="34.93" cy="27.36" r="0.38" class="hole"/>
+<circle cx="34.93" cy="29.90" r="0.38" class="hole"/>
+<circle cx="34.93" cy="32.44" r="0.38" class="hole"/>
+<circle cx="34.93" cy="34.98" r="0.38" class="hole"/>
+<circle cx="34.93" cy="37.52" r="0.38" class="hole"/>
+<circle cx="34.93" cy="40.06" r="0.38" class="hole"/>
+<circle cx="34.93" cy="42.60" r="0.38" class="hole"/>
+<circle cx="34.93" cy="45.14" r="0.38" class="hole"/>
+<circle cx="34.93" cy="47.68" r="0.38" class="hole"/>
+<circle cx="34.93" cy="50.22" r="0.38" class="hole"/>
+<circle cx="34.93" cy="52.76" r="0.38" class="hole"/>
+<circle cx="34.93" cy="55.30" r="0.38" class="hole"/>
+<circle cx="34.93" cy="57.84" r="0.38" class="hole"/>
+<circle cx="37.47" cy="1.96" r="0.38" class="hole"/>
+<circle cx="37.47" cy="4.50" r="0.38" class="hole"/>
+<circle cx="37.47" cy="7.04" r="0.38" class="hole"/>
+<circle cx="37.47" cy="9.58" r="0.38" class="hole"/>
+<circle cx="37.47" cy="12.12" r="0.38" class="hole"/>
+<circle cx="37.47" cy="14.66" r="0.38" class="hole"/>
+<circle cx="37.47" cy="17.20" r="0.38" class="hole"/>
+<circle cx="37.47" cy="19.74" r="0.38" class="hole"/>
+<circle cx="37.47" cy="22.28" r="0.38" class="hole"/>
+<circle cx="37.47" cy="24.82" r="0.38" class="hole"/>
+<circle cx="37.47" cy="27.36" r="0.38" class="hole"/>
+<circle cx="37.47" cy="29.90" r="0.38" class="hole"/>
+<circle cx="37.47" cy="32.44" r="0.38" class="hole"/>
+<circle cx="37.47" cy="34.98" r="0.38" class="hole"/>
+<circle cx="37.47" cy="37.52" r="0.38" class="hole"/>
+<circle cx="37.47" cy="40.06" r="0.38" class="hole"/>
+<circle cx="37.47" cy="42.60" r="0.38" class="hole"/>
+<circle cx="37.47" cy="45.14" r="0.38" class="hole"/>
+<circle cx="37.47" cy="47.68" r="0.38" class="hole"/>
+<circle cx="37.47" cy="50.22" r="0.38" class="hole"/>
+<circle cx="37.47" cy="52.76" r="0.38" class="hole"/>
+<circle cx="37.47" cy="55.30" r="0.38" class="hole"/>
+<circle cx="37.47" cy="57.84" r="0.38" class="hole"/>
+<circle cx="40.01" cy="1.96" r="0.38" class="hole"/>
+<circle cx="40.01" cy="4.50" r="0.38" class="hole"/>
+<circle cx="40.01" cy="7.04" r="0.38" class="hole"/>
+<circle cx="40.01" cy="9.58" r="0.38" class="hole"/>
+<circle cx="40.01" cy="12.12" r="0.38" class="hole"/>
+<circle cx="40.01" cy="14.66" r="0.38" class="hole"/>
+<circle cx="40.01" cy="17.20" r="0.38" class="hole"/>
+<circle cx="40.01" cy="19.74" r="0.38" class="hole"/>
+<circle cx="40.01" cy="22.28" r="0.38" class="hole"/>
+<circle cx="40.01" cy="24.82" r="0.38" class="hole"/>
+<circle cx="40.01" cy="27.36" r="0.38" class="hole"/>
+<circle cx="40.01" cy="29.90" r="0.38" class="hole"/>
+<circle cx="40.01" cy="32.44" r="0.38" class="hole"/>
+<circle cx="40.01" cy="34.98" r="0.38" class="hole"/>
+<circle cx="40.01" cy="37.52" r="0.38" class="hole"/>
+<circle cx="40.01" cy="40.06" r="0.38" class="hole"/>
+<circle cx="40.01" cy="42.60" r="0.38" class="hole"/>
+<circle cx="40.01" cy="45.14" r="0.38" class="hole"/>
+<circle cx="40.01" cy="47.68" r="0.38" class="hole"/>
+<circle cx="40.01" cy="50.22" r="0.38" class="hole"/>
+<circle cx="40.01" cy="52.76" r="0.38" class="hole"/>
+<circle cx="40.01" cy="55.30" r="0.38" class="hole"/>
+<circle cx="40.01" cy="57.84" r="0.38" class="hole"/>
+<circle cx="42.55" cy="1.96" r="0.38" class="hole"/>
+<circle cx="42.55" cy="4.50" r="0.38" class="hole"/>
+<circle cx="42.55" cy="7.04" r="0.38" class="hole"/>
+<circle cx="42.55" cy="9.58" r="0.38" class="hole"/>
+<circle cx="42.55" cy="12.12" r="0.38" class="hole"/>
+<circle cx="42.55" cy="14.66" r="0.38" class="hole"/>
+<circle cx="42.55" cy="17.20" r="0.38" class="hole"/>
+<circle cx="42.55" cy="19.74" r="0.38" class="hole"/>
+<circle cx="42.55" cy="22.28" r="0.38" class="hole"/>
+<circle cx="42.55" cy="24.82" r="0.38" class="hole"/>
+<circle cx="42.55" cy="27.36" r="0.38" class="hole"/>
+<circle cx="42.55" cy="29.90" r="0.38" class="hole"/>
+<circle cx="42.55" cy="32.44" r="0.38" class="hole"/>
+<circle cx="42.55" cy="34.98" r="0.38" class="hole"/>
+<circle cx="42.55" cy="37.52" r="0.38" class="hole"/>
+<circle cx="42.55" cy="40.06" r="0.38" class="hole"/>
+<circle cx="42.55" cy="42.60" r="0.38" class="hole"/>
+<circle cx="42.55" cy="45.14" r="0.38" class="hole"/>
+<circle cx="42.55" cy="47.68" r="0.38" class="hole"/>
+<circle cx="42.55" cy="50.22" r="0.38" class="hole"/>
+<circle cx="42.55" cy="52.76" r="0.38" class="hole"/>
+<circle cx="42.55" cy="55.30" r="0.38" class="hole"/>
+<circle cx="42.55" cy="57.84" r="0.38" class="hole"/>
+<circle cx="45.09" cy="1.96" r="0.38" class="hole"/>
+<circle cx="45.09" cy="4.50" r="0.38" class="hole"/>
+<circle cx="45.09" cy="7.04" r="0.38" class="hole"/>
+<circle cx="45.09" cy="9.58" r="0.38" class="hole"/>
+<circle cx="45.09" cy="12.12" r="0.38" class="hole"/>
+<circle cx="45.09" cy="14.66" r="0.38" class="hole"/>
+<circle cx="45.09" cy="17.20" r="0.38" class="hole"/>
+<circle cx="45.09" cy="19.74" r="0.38" class="hole"/>
+<circle cx="45.09" cy="22.28" r="0.38" class="hole"/>
+<circle cx="45.09" cy="24.82" r="0.38" class="hole"/>
+<circle cx="45.09" cy="27.36" r="0.38" class="hole"/>
+<circle cx="45.09" cy="29.90" r="0.38" class="hole"/>
+<circle cx="45.09" cy="32.44" r="0.38" class="hole"/>
+<circle cx="45.09" cy="34.98" r="0.38" class="hole"/>
+<circle cx="45.09" cy="37.52" r="0.38" class="hole"/>
+<circle cx="45.09" cy="40.06" r="0.38" class="hole"/>
+<circle cx="45.09" cy="42.60" r="0.38" class="hole"/>
+<circle cx="45.09" cy="45.14" r="0.38" class="hole"/>
+<circle cx="45.09" cy="47.68" r="0.38" class="hole"/>
+<circle cx="45.09" cy="50.22" r="0.38" class="hole"/>
+<circle cx="45.09" cy="52.76" r="0.38" class="hole"/>
+<circle cx="45.09" cy="55.30" r="0.38" class="hole"/>
+<circle cx="45.09" cy="57.84" r="0.38" class="hole"/>
+<circle cx="47.63" cy="1.96" r="0.38" class="hole"/>
+<circle cx="47.63" cy="4.50" r="0.38" class="hole"/>
+<circle cx="47.63" cy="7.04" r="0.38" class="hole"/>
+<circle cx="47.63" cy="9.58" r="0.38" class="hole"/>
+<circle cx="47.63" cy="12.12" r="0.38" class="hole"/>
+<circle cx="47.63" cy="14.66" r="0.38" class="hole"/>
+<circle cx="47.63" cy="17.20" r="0.38" class="hole"/>
+<circle cx="47.63" cy="19.74" r="0.38" class="hole"/>
+<circle cx="47.63" cy="22.28" r="0.38" class="hole"/>
+<circle cx="47.63" cy="24.82" r="0.38" class="hole"/>
+<circle cx="47.63" cy="27.36" r="0.38" class="hole"/>
+<circle cx="47.63" cy="29.90" r="0.38" class="hole"/>
+<circle cx="47.63" cy="32.44" r="0.38" class="hole"/>
+<circle cx="47.63" cy="34.98" r="0.38" class="hole"/>
+<circle cx="47.63" cy="37.52" r="0.38" class="hole"/>
+<circle cx="47.63" cy="40.06" r="0.38" class="hole"/>
+<circle cx="47.63" cy="42.60" r="0.38" class="hole"/>
+<circle cx="47.63" cy="45.14" r="0.38" class="hole"/>
+<circle cx="47.63" cy="47.68" r="0.38" class="hole"/>
+<circle cx="47.63" cy="50.22" r="0.38" class="hole"/>
+<circle cx="47.63" cy="52.76" r="0.38" class="hole"/>
+<circle cx="47.63" cy="55.30" r="0.38" class="hole"/>
+<circle cx="47.63" cy="57.84" r="0.38" class="hole"/>
+<circle cx="50.17" cy="1.96" r="0.38" class="hole"/>
+<circle cx="50.17" cy="4.50" r="0.38" class="hole"/>
+<circle cx="50.17" cy="7.04" r="0.38" class="hole"/>
+<circle cx="50.17" cy="9.58" r="0.38" class="hole"/>
+<circle cx="50.17" cy="12.12" r="0.38" class="hole"/>
+<circle cx="50.17" cy="14.66" r="0.38" class="hole"/>
+<circle cx="50.17" cy="17.20" r="0.38" class="hole"/>
+<circle cx="50.17" cy="19.74" r="0.38" class="hole"/>
+<circle cx="50.17" cy="22.28" r="0.38" class="hole"/>
+<circle cx="50.17" cy="24.82" r="0.38" class="hole"/>
+<circle cx="50.17" cy="27.36" r="0.38" class="hole"/>
+<circle cx="50.17" cy="29.90" r="0.38" class="hole"/>
+<circle cx="50.17" cy="32.44" r="0.38" class="hole"/>
+<circle cx="50.17" cy="34.98" r="0.38" class="hole"/>
+<circle cx="50.17" cy="37.52" r="0.38" class="hole"/>
+<circle cx="50.17" cy="40.06" r="0.38" class="hole"/>
+<circle cx="50.17" cy="42.60" r="0.38" class="hole"/>
+<circle cx="50.17" cy="45.14" r="0.38" class="hole"/>
+<circle cx="50.17" cy="47.68" r="0.38" class="hole"/>
+<circle cx="50.17" cy="50.22" r="0.38" class="hole"/>
+<circle cx="50.17" cy="52.76" r="0.38" class="hole"/>
+<circle cx="50.17" cy="55.30" r="0.38" class="hole"/>
+<circle cx="50.17" cy="57.84" r="0.38" class="hole"/>
+<circle cx="52.71" cy="1.96" r="0.38" class="hole"/>
+<circle cx="52.71" cy="4.50" r="0.38" class="hole"/>
+<circle cx="52.71" cy="7.04" r="0.38" class="hole"/>
+<circle cx="52.71" cy="9.58" r="0.38" class="hole"/>
+<circle cx="52.71" cy="12.12" r="0.38" class="hole"/>
+<circle cx="52.71" cy="14.66" r="0.38" class="hole"/>
+<circle cx="52.71" cy="17.20" r="0.38" class="hole"/>
+<circle cx="52.71" cy="19.74" r="0.38" class="hole"/>
+<circle cx="52.71" cy="22.28" r="0.38" class="hole"/>
+<circle cx="52.71" cy="24.82" r="0.38" class="hole"/>
+<circle cx="52.71" cy="27.36" r="0.38" class="hole"/>
+<circle cx="52.71" cy="29.90" r="0.38" class="hole"/>
+<circle cx="52.71" cy="32.44" r="0.38" class="hole"/>
+<circle cx="52.71" cy="34.98" r="0.38" class="hole"/>
+<circle cx="52.71" cy="37.52" r="0.38" class="hole"/>
+<circle cx="52.71" cy="40.06" r="0.38" class="hole"/>
+<circle cx="52.71" cy="42.60" r="0.38" class="hole"/>
+<circle cx="52.71" cy="45.14" r="0.38" class="hole"/>
+<circle cx="52.71" cy="47.68" r="0.38" class="hole"/>
+<circle cx="52.71" cy="50.22" r="0.38" class="hole"/>
+<circle cx="52.71" cy="52.76" r="0.38" class="hole"/>
+<circle cx="52.71" cy="55.30" r="0.38" class="hole"/>
+<circle cx="52.71" cy="57.84" r="0.38" class="hole"/>
+<circle cx="55.25" cy="1.96" r="0.38" class="hole"/>
+<circle cx="55.25" cy="4.50" r="0.38" class="hole"/>
+<circle cx="55.25" cy="7.04" r="0.38" class="hole"/>
+<circle cx="55.25" cy="9.58" r="0.38" class="hole"/>
+<circle cx="55.25" cy="12.12" r="0.38" class="hole"/>
+<circle cx="55.25" cy="14.66" r="0.38" class="hole"/>
+<circle cx="55.25" cy="17.20" r="0.38" class="hole"/>
+<circle cx="55.25" cy="19.74" r="0.38" class="hole"/>
+<circle cx="55.25" cy="22.28" r="0.38" class="hole"/>
+<circle cx="55.25" cy="24.82" r="0.38" class="hole"/>
+<circle cx="55.25" cy="27.36" r="0.38" class="hole"/>
+<circle cx="55.25" cy="29.90" r="0.38" class="hole"/>
+<circle cx="55.25" cy="32.44" r="0.38" class="hole"/>
+<circle cx="55.25" cy="34.98" r="0.38" class="hole"/>
+<circle cx="55.25" cy="37.52" r="0.38" class="hole"/>
+<circle cx="55.25" cy="40.06" r="0.38" class="hole"/>
+<circle cx="55.25" cy="42.60" r="0.38" class="hole"/>
+<circle cx="55.25" cy="45.14" r="0.38" class="hole"/>
+<circle cx="55.25" cy="47.68" r="0.38" class="hole"/>
+<circle cx="55.25" cy="50.22" r="0.38" class="hole"/>
+<circle cx="55.25" cy="52.76" r="0.38" class="hole"/>
+<circle cx="55.25" cy="55.30" r="0.38" class="hole"/>
+<circle cx="55.25" cy="57.84" r="0.38" class="hole"/>
+<circle cx="57.79" cy="1.96" r="0.38" class="hole"/>
+<circle cx="57.79" cy="4.50" r="0.38" class="hole"/>
+<circle cx="57.79" cy="7.04" r="0.38" class="hole"/>
+<circle cx="57.79" cy="9.58" r="0.38" class="hole"/>
+<circle cx="57.79" cy="12.12" r="0.38" class="hole"/>
+<circle cx="57.79" cy="14.66" r="0.38" class="hole"/>
+<circle cx="57.79" cy="17.20" r="0.38" class="hole"/>
+<circle cx="57.79" cy="19.74" r="0.38" class="hole"/>
+<circle cx="57.79" cy="22.28" r="0.38" class="hole"/>
+<circle cx="57.79" cy="24.82" r="0.38" class="hole"/>
+<circle cx="57.79" cy="27.36" r="0.38" class="hole"/>
+<circle cx="57.79" cy="29.90" r="0.38" class="hole"/>
+<circle cx="57.79" cy="32.44" r="0.38" class="hole"/>
+<circle cx="57.79" cy="34.98" r="0.38" class="hole"/>
+<circle cx="57.79" cy="37.52" r="0.38" class="hole"/>
+<circle cx="57.79" cy="40.06" r="0.38" class="hole"/>
+<circle cx="57.79" cy="42.60" r="0.38" class="hole"/>
+<circle cx="57.79" cy="45.14" r="0.38" class="hole"/>
+<circle cx="57.79" cy="47.68" r="0.38" class="hole"/>
+<circle cx="57.79" cy="50.22" r="0.38" class="hole"/>
+<circle cx="57.79" cy="52.76" r="0.38" class="hole"/>
+<circle cx="57.79" cy="55.30" r="0.38" class="hole"/>
+<circle cx="57.79" cy="57.84" r="0.38" class="hole"/>
+<circle cx="60.33" cy="1.96" r="0.38" class="hole"/>
+<circle cx="60.33" cy="4.50" r="0.38" class="hole"/>
+<circle cx="60.33" cy="7.04" r="0.38" class="hole"/>
+<circle cx="60.33" cy="9.58" r="0.38" class="hole"/>
+<circle cx="60.33" cy="12.12" r="0.38" class="hole"/>
+<circle cx="60.33" cy="14.66" r="0.38" class="hole"/>
+<circle cx="60.33" cy="17.20" r="0.38" class="hole"/>
+<circle cx="60.33" cy="19.74" r="0.38" class="hole"/>
+<circle cx="60.33" cy="22.28" r="0.38" class="hole"/>
+<circle cx="60.33" cy="24.82" r="0.38" class="hole"/>
+<circle cx="60.33" cy="27.36" r="0.38" class="hole"/>
+<circle cx="60.33" cy="29.90" r="0.38" class="hole"/>
+<circle cx="60.33" cy="32.44" r="0.38" class="hole"/>
+<circle cx="60.33" cy="34.98" r="0.38" class="hole"/>
+<circle cx="60.33" cy="37.52" r="0.38" class="hole"/>
+<circle cx="60.33" cy="40.06" r="0.38" class="hole"/>
+<circle cx="60.33" cy="42.60" r="0.38" class="hole"/>
+<circle cx="60.33" cy="45.14" r="0.38" class="hole"/>
+<circle cx="60.33" cy="47.68" r="0.38" class="hole"/>
+<circle cx="60.33" cy="50.22" r="0.38" class="hole"/>
+<circle cx="60.33" cy="52.76" r="0.38" class="hole"/>
+<circle cx="60.33" cy="55.30" r="0.38" class="hole"/>
+<circle cx="60.33" cy="57.84" r="0.38" class="hole"/>
+<circle cx="62.87" cy="1.96" r="0.38" class="hole"/>
+<circle cx="62.87" cy="4.50" r="0.38" class="hole"/>
+<circle cx="62.87" cy="7.04" r="0.38" class="hole"/>
+<circle cx="62.87" cy="9.58" r="0.38" class="hole"/>
+<circle cx="62.87" cy="12.12" r="0.38" class="hole"/>
+<circle cx="62.87" cy="14.66" r="0.38" class="hole"/>
+<circle cx="62.87" cy="17.20" r="0.38" class="hole"/>
+<circle cx="62.87" cy="19.74" r="0.38" class="hole"/>
+<circle cx="62.87" cy="22.28" r="0.38" class="hole"/>
+<circle cx="62.87" cy="24.82" r="0.38" class="hole"/>
+<circle cx="62.87" cy="27.36" r="0.38" class="hole"/>
+<circle cx="62.87" cy="29.90" r="0.38" class="hole"/>
+<circle cx="62.87" cy="32.44" r="0.38" class="hole"/>
+<circle cx="62.87" cy="34.98" r="0.38" class="hole"/>
+<circle cx="62.87" cy="37.52" r="0.38" class="hole"/>
+<circle cx="62.87" cy="40.06" r="0.38" class="hole"/>
+<circle cx="62.87" cy="42.60" r="0.38" class="hole"/>
+<circle cx="62.87" cy="45.14" r="0.38" class="hole"/>
+<circle cx="62.87" cy="47.68" r="0.38" class="hole"/>
+<circle cx="62.87" cy="50.22" r="0.38" class="hole"/>
+<circle cx="62.87" cy="52.76" r="0.38" class="hole"/>
+<circle cx="62.87" cy="55.30" r="0.38" class="hole"/>
+<circle cx="62.87" cy="57.84" r="0.38" class="hole"/>
+<circle cx="65.41" cy="1.96" r="0.38" class="hole"/>
+<circle cx="65.41" cy="4.50" r="0.38" class="hole"/>
+<circle cx="65.41" cy="7.04" r="0.38" class="hole"/>
+<circle cx="65.41" cy="9.58" r="0.38" class="hole"/>
+<circle cx="65.41" cy="12.12" r="0.38" class="hole"/>
+<circle cx="65.41" cy="14.66" r="0.38" class="hole"/>
+<circle cx="65.41" cy="17.20" r="0.38" class="hole"/>
+<circle cx="65.41" cy="19.74" r="0.38" class="hole"/>
+<circle cx="65.41" cy="22.28" r="0.38" class="hole"/>
+<circle cx="65.41" cy="24.82" r="0.38" class="hole"/>
+<circle cx="65.41" cy="27.36" r="0.38" class="hole"/>
+<circle cx="65.41" cy="29.90" r="0.38" class="hole"/>
+<circle cx="65.41" cy="32.44" r="0.38" class="hole"/>
+<circle cx="65.41" cy="34.98" r="0.38" class="hole"/>
+<circle cx="65.41" cy="37.52" r="0.38" class="hole"/>
+<circle cx="65.41" cy="40.06" r="0.38" class="hole"/>
+<circle cx="65.41" cy="42.60" r="0.38" class="hole"/>
+<circle cx="65.41" cy="45.14" r="0.38" class="hole"/>
+<circle cx="65.41" cy="47.68" r="0.38" class="hole"/>
+<circle cx="65.41" cy="50.22" r="0.38" class="hole"/>
+<circle cx="65.41" cy="52.76" r="0.38" class="hole"/>
+<circle cx="65.41" cy="55.30" r="0.38" class="hole"/>
+<circle cx="65.41" cy="57.84" r="0.38" class="hole"/>
+<circle cx="67.95" cy="1.96" r="0.38" class="hole"/>
+<circle cx="67.95" cy="4.50" r="0.38" class="hole"/>
+<circle cx="67.95" cy="7.04" r="0.38" class="hole"/>
+<circle cx="67.95" cy="9.58" r="0.38" class="hole"/>
+<circle cx="67.95" cy="12.12" r="0.38" class="hole"/>
+<circle cx="67.95" cy="14.66" r="0.38" class="hole"/>
+<circle cx="67.95" cy="17.20" r="0.38" class="hole"/>
+<circle cx="67.95" cy="19.74" r="0.38" class="hole"/>
+<circle cx="67.95" cy="22.28" r="0.38" class="hole"/>
+<circle cx="67.95" cy="24.82" r="0.38" class="hole"/>
+<circle cx="67.95" cy="27.36" r="0.38" class="hole"/>
+<circle cx="67.95" cy="29.90" r="0.38" class="hole"/>
+<circle cx="67.95" cy="32.44" r="0.38" class="hole"/>
+<circle cx="67.95" cy="34.98" r="0.38" class="hole"/>
+<circle cx="67.95" cy="37.52" r="0.38" class="hole"/>
+<circle cx="67.95" cy="40.06" r="0.38" class="hole"/>
+<circle cx="67.95" cy="42.60" r="0.38" class="hole"/>
+<circle cx="67.95" cy="45.14" r="0.38" class="hole"/>
+<circle cx="67.95" cy="47.68" r="0.38" class="hole"/>
+<circle cx="67.95" cy="50.22" r="0.38" class="hole"/>
+<circle cx="67.95" cy="52.76" r="0.38" class="hole"/>
+<circle cx="67.95" cy="55.30" r="0.38" class="hole"/>
+<circle cx="67.95" cy="57.84" r="0.38" class="hole"/>
+<circle cx="70.49" cy="1.96" r="0.38" class="hole"/>
+<circle cx="70.49" cy="4.50" r="0.38" class="hole"/>
+<circle cx="70.49" cy="7.04" r="0.38" class="hole"/>
+<circle cx="70.49" cy="9.58" r="0.38" class="hole"/>
+<circle cx="70.49" cy="12.12" r="0.38" class="hole"/>
+<circle cx="70.49" cy="14.66" r="0.38" class="hole"/>
+<circle cx="70.49" cy="17.20" r="0.38" class="hole"/>
+<circle cx="70.49" cy="19.74" r="0.38" class="hole"/>
+<circle cx="70.49" cy="22.28" r="0.38" class="hole"/>
+<circle cx="70.49" cy="24.82" r="0.38" class="hole"/>
+<circle cx="70.49" cy="27.36" r="0.38" class="hole"/>
+<circle cx="70.49" cy="29.90" r="0.38" class="hole"/>
+<circle cx="70.49" cy="32.44" r="0.38" class="hole"/>
+<circle cx="70.49" cy="34.98" r="0.38" class="hole"/>
+<circle cx="70.49" cy="37.52" r="0.38" class="hole"/>
+<circle cx="70.49" cy="40.06" r="0.38" class="hole"/>
+<circle cx="70.49" cy="42.60" r="0.38" class="hole"/>
+<circle cx="70.49" cy="45.14" r="0.38" class="hole"/>
+<circle cx="70.49" cy="47.68" r="0.38" class="hole"/>
+<circle cx="70.49" cy="50.22" r="0.38" class="hole"/>
+<circle cx="70.49" cy="52.76" r="0.38" class="hole"/>
+<circle cx="70.49" cy="55.30" r="0.38" class="hole"/>
+<circle cx="70.49" cy="57.84" r="0.38" class="hole"/>
+<circle cx="73.03" cy="1.96" r="0.38" class="hole"/>
+<circle cx="73.03" cy="4.50" r="0.38" class="hole"/>
+<circle cx="73.03" cy="7.04" r="0.38" class="hole"/>
+<circle cx="73.03" cy="9.58" r="0.38" class="hole"/>
+<circle cx="73.03" cy="12.12" r="0.38" class="hole"/>
+<circle cx="73.03" cy="14.66" r="0.38" class="hole"/>
+<circle cx="73.03" cy="17.20" r="0.38" class="hole"/>
+<circle cx="73.03" cy="19.74" r="0.38" class="hole"/>
+<circle cx="73.03" cy="22.28" r="0.38" class="hole"/>
+<circle cx="73.03" cy="24.82" r="0.38" class="hole"/>
+<circle cx="73.03" cy="27.36" r="0.38" class="hole"/>
+<circle cx="73.03" cy="29.90" r="0.38" class="hole"/>
+<circle cx="73.03" cy="32.44" r="0.38" class="hole"/>
+<circle cx="73.03" cy="34.98" r="0.38" class="hole"/>
+<circle cx="73.03" cy="37.52" r="0.38" class="hole"/>
+<circle cx="73.03" cy="40.06" r="0.38" class="hole"/>
+<circle cx="73.03" cy="42.60" r="0.38" class="hole"/>
+<circle cx="73.03" cy="45.14" r="0.38" class="hole"/>
+<circle cx="73.03" cy="47.68" r="0.38" class="hole"/>
+<circle cx="73.03" cy="50.22" r="0.38" class="hole"/>
+<circle cx="73.03" cy="52.76" r="0.38" class="hole"/>
+<circle cx="73.03" cy="55.30" r="0.38" class="hole"/>
+<circle cx="73.03" cy="57.84" r="0.38" class="hole"/>
+<circle cx="75.57" cy="1.96" r="0.38" class="hole"/>
+<circle cx="75.57" cy="4.50" r="0.38" class="hole"/>
+<circle cx="75.57" cy="7.04" r="0.38" class="hole"/>
+<circle cx="75.57" cy="9.58" r="0.38" class="hole"/>
+<circle cx="75.57" cy="12.12" r="0.38" class="hole"/>
+<circle cx="75.57" cy="14.66" r="0.38" class="hole"/>
+<circle cx="75.57" cy="17.20" r="0.38" class="hole"/>
+<circle cx="75.57" cy="19.74" r="0.38" class="hole"/>
+<circle cx="75.57" cy="22.28" r="0.38" class="hole"/>
+<circle cx="75.57" cy="24.82" r="0.38" class="hole"/>
+<circle cx="75.57" cy="27.36" r="0.38" class="hole"/>
+<circle cx="75.57" cy="29.90" r="0.38" class="hole"/>
+<circle cx="75.57" cy="32.44" r="0.38" class="hole"/>
+<circle cx="75.57" cy="34.98" r="0.38" class="hole"/>
+<circle cx="75.57" cy="37.52" r="0.38" class="hole"/>
+<circle cx="75.57" cy="40.06" r="0.38" class="hole"/>
+<circle cx="75.57" cy="42.60" r="0.38" class="hole"/>
+<circle cx="75.57" cy="45.14" r="0.38" class="hole"/>
+<circle cx="75.57" cy="47.68" r="0.38" class="hole"/>
+<circle cx="75.57" cy="50.22" r="0.38" class="hole"/>
+<circle cx="75.57" cy="52.76" r="0.38" class="hole"/>
+<circle cx="75.57" cy="55.30" r="0.38" class="hole"/>
+<circle cx="75.57" cy="57.84" r="0.38" class="hole"/>
+<circle cx="78.11" cy="1.96" r="0.38" class="hole"/>
+<circle cx="78.11" cy="4.50" r="0.38" class="hole"/>
+<circle cx="78.11" cy="7.04" r="0.38" class="hole"/>
+<circle cx="78.11" cy="9.58" r="0.38" class="hole"/>
+<circle cx="78.11" cy="12.12" r="0.38" class="hole"/>
+<circle cx="78.11" cy="14.66" r="0.38" class="hole"/>
+<circle cx="78.11" cy="17.20" r="0.38" class="hole"/>
+<circle cx="78.11" cy="19.74" r="0.38" class="hole"/>
+<circle cx="78.11" cy="22.28" r="0.38" class="hole"/>
+<circle cx="78.11" cy="24.82" r="0.38" class="hole"/>
+<circle cx="78.11" cy="27.36" r="0.38" class="hole"/>
+<circle cx="78.11" cy="29.90" r="0.38" class="hole"/>
+<circle cx="78.11" cy="32.44" r="0.38" class="hole"/>
+<circle cx="78.11" cy="34.98" r="0.38" class="hole"/>
+<circle cx="78.11" cy="37.52" r="0.38" class="hole"/>
+<circle cx="78.11" cy="40.06" r="0.38" class="hole"/>
+<circle cx="78.11" cy="42.60" r="0.38" class="hole"/>
+<circle cx="78.11" cy="45.14" r="0.38" class="hole"/>
+<circle cx="78.11" cy="47.68" r="0.38" class="hole"/>
+<circle cx="78.11" cy="50.22" r="0.38" class="hole"/>
+<circle cx="78.11" cy="52.76" r="0.38" class="hole"/>
+<circle cx="78.11" cy="55.30" r="0.38" class="hole"/>
+<circle cx="78.11" cy="57.84" r="0.38" class="hole"/>
+<circle cx="80.65" cy="1.96" r="0.38" class="hole"/>
+<circle cx="80.65" cy="4.50" r="0.38" class="hole"/>
+<circle cx="80.65" cy="7.04" r="0.38" class="hole"/>
+<circle cx="80.65" cy="9.58" r="0.38" class="hole"/>
+<circle cx="80.65" cy="12.12" r="0.38" class="hole"/>
+<circle cx="80.65" cy="14.66" r="0.38" class="hole"/>
+<circle cx="80.65" cy="17.20" r="0.38" class="hole"/>
+<circle cx="80.65" cy="19.74" r="0.38" class="hole"/>
+<circle cx="80.65" cy="22.28" r="0.38" class="hole"/>
+<circle cx="80.65" cy="24.82" r="0.38" class="hole"/>
+<circle cx="80.65" cy="27.36" r="0.38" class="hole"/>
+<circle cx="80.65" cy="29.90" r="0.38" class="hole"/>
+<circle cx="80.65" cy="32.44" r="0.38" class="hole"/>
+<circle cx="80.65" cy="34.98" r="0.38" class="hole"/>
+<circle cx="80.65" cy="37.52" r="0.38" class="hole"/>
+<circle cx="80.65" cy="40.06" r="0.38" class="hole"/>
+<circle cx="80.65" cy="42.60" r="0.38" class="hole"/>
+<circle cx="80.65" cy="45.14" r="0.38" class="hole"/>
+<circle cx="80.65" cy="47.68" r="0.38" class="hole"/>
+<circle cx="80.65" cy="50.22" r="0.38" class="hole"/>
+<circle cx="80.65" cy="52.76" r="0.38" class="hole"/>
+<circle cx="80.65" cy="55.30" r="0.38" class="hole"/>
+<circle cx="80.65" cy="57.84" r="0.38" class="hole"/>
+<circle cx="83.19" cy="1.96" r="0.38" class="hole"/>
+<circle cx="83.19" cy="4.50" r="0.38" class="hole"/>
+<circle cx="83.19" cy="7.04" r="0.38" class="hole"/>
+<circle cx="83.19" cy="9.58" r="0.38" class="hole"/>
+<circle cx="83.19" cy="12.12" r="0.38" class="hole"/>
+<circle cx="83.19" cy="14.66" r="0.38" class="hole"/>
+<circle cx="83.19" cy="17.20" r="0.38" class="hole"/>
+<circle cx="83.19" cy="19.74" r="0.38" class="hole"/>
+<circle cx="83.19" cy="22.28" r="0.38" class="hole"/>
+<circle cx="83.19" cy="24.82" r="0.38" class="hole"/>
+<circle cx="83.19" cy="27.36" r="0.38" class="hole"/>
+<circle cx="83.19" cy="29.90" r="0.38" class="hole"/>
+<circle cx="83.19" cy="32.44" r="0.38" class="hole"/>
+<circle cx="83.19" cy="34.98" r="0.38" class="hole"/>
+<circle cx="83.19" cy="37.52" r="0.38" class="hole"/>
+<circle cx="83.19" cy="40.06" r="0.38" class="hole"/>
+<circle cx="83.19" cy="42.60" r="0.38" class="hole"/>
+<circle cx="83.19" cy="45.14" r="0.38" class="hole"/>
+<circle cx="83.19" cy="47.68" r="0.38" class="hole"/>
+<circle cx="83.19" cy="50.22" r="0.38" class="hole"/>
+<circle cx="83.19" cy="52.76" r="0.38" class="hole"/>
+<circle cx="83.19" cy="55.30" r="0.38" class="hole"/>
+<circle cx="83.19" cy="57.84" r="0.38" class="hole"/>
+<circle cx="85.73" cy="1.96" r="0.38" class="hole"/>
+<circle cx="85.73" cy="4.50" r="0.38" class="hole"/>
+<circle cx="85.73" cy="7.04" r="0.38" class="hole"/>
+<circle cx="85.73" cy="9.58" r="0.38" class="hole"/>
+<circle cx="85.73" cy="12.12" r="0.38" class="hole"/>
+<circle cx="85.73" cy="14.66" r="0.38" class="hole"/>
+<circle cx="85.73" cy="17.20" r="0.38" class="hole"/>
+<circle cx="85.73" cy="19.74" r="0.38" class="hole"/>
+<circle cx="85.73" cy="22.28" r="0.38" class="hole"/>
+<circle cx="85.73" cy="24.82" r="0.38" class="hole"/>
+<circle cx="85.73" cy="27.36" r="0.38" class="hole"/>
+<circle cx="85.73" cy="29.90" r="0.38" class="hole"/>
+<circle cx="85.73" cy="32.44" r="0.38" class="hole"/>
+<circle cx="85.73" cy="34.98" r="0.38" class="hole"/>
+<circle cx="85.73" cy="37.52" r="0.38" class="hole"/>
+<circle cx="85.73" cy="40.06" r="0.38" class="hole"/>
+<circle cx="85.73" cy="42.60" r="0.38" class="hole"/>
+<circle cx="85.73" cy="45.14" r="0.38" class="hole"/>
+<circle cx="85.73" cy="47.68" r="0.38" class="hole"/>
+<circle cx="85.73" cy="50.22" r="0.38" class="hole"/>
+<circle cx="85.73" cy="52.76" r="0.38" class="hole"/>
+<circle cx="85.73" cy="55.30" r="0.38" class="hole"/>
+<circle cx="85.73" cy="57.84" r="0.38" class="hole"/>
+<circle cx="88.27" cy="1.96" r="0.38" class="hole"/>
+<circle cx="88.27" cy="4.50" r="0.38" class="hole"/>
+<circle cx="88.27" cy="7.04" r="0.38" class="hole"/>
+<circle cx="88.27" cy="9.58" r="0.38" class="hole"/>
+<circle cx="88.27" cy="12.12" r="0.38" class="hole"/>
+<circle cx="88.27" cy="14.66" r="0.38" class="hole"/>
+<circle cx="88.27" cy="17.20" r="0.38" class="hole"/>
+<circle cx="88.27" cy="19.74" r="0.38" class="hole"/>
+<circle cx="88.27" cy="22.28" r="0.38" class="hole"/>
+<circle cx="88.27" cy="24.82" r="0.38" class="hole"/>
+<circle cx="88.27" cy="27.36" r="0.38" class="hole"/>
+<circle cx="88.27" cy="29.90" r="0.38" class="hole"/>
+<circle cx="88.27" cy="32.44" r="0.38" class="hole"/>
+<circle cx="88.27" cy="34.98" r="0.38" class="hole"/>
+<circle cx="88.27" cy="37.52" r="0.38" class="hole"/>
+<circle cx="88.27" cy="40.06" r="0.38" class="hole"/>
+<circle cx="88.27" cy="42.60" r="0.38" class="hole"/>
+<circle cx="88.27" cy="45.14" r="0.38" class="hole"/>
+<circle cx="88.27" cy="47.68" r="0.38" class="hole"/>
+<circle cx="88.27" cy="50.22" r="0.38" class="hole"/>
+<circle cx="88.27" cy="52.76" r="0.38" class="hole"/>
+<circle cx="88.27" cy="55.30" r="0.38" class="hole"/>
+<circle cx="88.27" cy="57.84" r="0.38" class="hole"/>
+<circle cx="90.81" cy="1.96" r="0.38" class="hole"/>
+<circle cx="90.81" cy="4.50" r="0.38" class="hole"/>
+<circle cx="90.81" cy="7.04" r="0.38" class="hole"/>
+<circle cx="90.81" cy="9.58" r="0.38" class="hole"/>
+<circle cx="90.81" cy="12.12" r="0.38" class="hole"/>
+<circle cx="90.81" cy="14.66" r="0.38" class="hole"/>
+<circle cx="90.81" cy="17.20" r="0.38" class="hole"/>
+<circle cx="90.81" cy="19.74" r="0.38" class="hole"/>
+<circle cx="90.81" cy="22.28" r="0.38" class="hole"/>
+<circle cx="90.81" cy="24.82" r="0.38" class="hole"/>
+<circle cx="90.81" cy="27.36" r="0.38" class="hole"/>
+<circle cx="90.81" cy="29.90" r="0.38" class="hole"/>
+<circle cx="90.81" cy="32.44" r="0.38" class="hole"/>
+<circle cx="90.81" cy="34.98" r="0.38" class="hole"/>
+<circle cx="90.81" cy="37.52" r="0.38" class="hole"/>
+<circle cx="90.81" cy="40.06" r="0.38" class="hole"/>
+<circle cx="90.81" cy="42.60" r="0.38" class="hole"/>
+<circle cx="90.81" cy="45.14" r="0.38" class="hole"/>
+<circle cx="90.81" cy="47.68" r="0.38" class="hole"/>
+<circle cx="90.81" cy="50.22" r="0.38" class="hole"/>
+<circle cx="90.81" cy="52.76" r="0.38" class="hole"/>
+<circle cx="90.81" cy="55.30" r="0.38" class="hole"/>
+<circle cx="90.81" cy="57.84" r="0.38" class="hole"/>
+<circle cx="93.35" cy="1.96" r="0.38" class="hole"/>
+<circle cx="93.35" cy="4.50" r="0.38" class="hole"/>
+<circle cx="93.35" cy="7.04" r="0.38" class="hole"/>
+<circle cx="93.35" cy="9.58" r="0.38" class="hole"/>
+<circle cx="93.35" cy="12.12" r="0.38" class="hole"/>
+<circle cx="93.35" cy="14.66" r="0.38" class="hole"/>
+<circle cx="93.35" cy="17.20" r="0.38" class="hole"/>
+<circle cx="93.35" cy="19.74" r="0.38" class="hole"/>
+<circle cx="93.35" cy="22.28" r="0.38" class="hole"/>
+<circle cx="93.35" cy="24.82" r="0.38" class="hole"/>
+<circle cx="93.35" cy="27.36" r="0.38" class="hole"/>
+<circle cx="93.35" cy="29.90" r="0.38" class="hole"/>
+<circle cx="93.35" cy="32.44" r="0.38" class="hole"/>
+<circle cx="93.35" cy="34.98" r="0.38" class="hole"/>
+<circle cx="93.35" cy="37.52" r="0.38" class="hole"/>
+<circle cx="93.35" cy="40.06" r="0.38" class="hole"/>
+<circle cx="93.35" cy="42.60" r="0.38" class="hole"/>
+<circle cx="93.35" cy="45.14" r="0.38" class="hole"/>
+<circle cx="93.35" cy="47.68" r="0.38" class="hole"/>
+<circle cx="93.35" cy="50.22" r="0.38" class="hole"/>
+<circle cx="93.35" cy="52.76" r="0.38" class="hole"/>
+<circle cx="93.35" cy="55.30" r="0.38" class="hole"/>
+<circle cx="93.35" cy="57.84" r="0.38" class="hole"/>
+<circle cx="95.89" cy="1.96" r="0.38" class="hole"/>
+<circle cx="95.89" cy="4.50" r="0.38" class="hole"/>
+<circle cx="95.89" cy="7.04" r="0.38" class="hole"/>
+<circle cx="95.89" cy="9.58" r="0.38" class="hole"/>
+<circle cx="95.89" cy="12.12" r="0.38" class="hole"/>
+<circle cx="95.89" cy="14.66" r="0.38" class="hole"/>
+<circle cx="95.89" cy="17.20" r="0.38" class="hole"/>
+<circle cx="95.89" cy="19.74" r="0.38" class="hole"/>
+<circle cx="95.89" cy="22.28" r="0.38" class="hole"/>
+<circle cx="95.89" cy="24.82" r="0.38" class="hole"/>
+<circle cx="95.89" cy="27.36" r="0.38" class="hole"/>
+<circle cx="95.89" cy="29.90" r="0.38" class="hole"/>
+<circle cx="95.89" cy="32.44" r="0.38" class="hole"/>
+<circle cx="95.89" cy="34.98" r="0.38" class="hole"/>
+<circle cx="95.89" cy="37.52" r="0.38" class="hole"/>
+<circle cx="95.89" cy="40.06" r="0.38" class="hole"/>
+<circle cx="95.89" cy="42.60" r="0.38" class="hole"/>
+<circle cx="95.89" cy="45.14" r="0.38" class="hole"/>
+<circle cx="95.89" cy="47.68" r="0.38" class="hole"/>
+<circle cx="95.89" cy="50.22" r="0.38" class="hole"/>
+<circle cx="95.89" cy="52.76" r="0.38" class="hole"/>
+<circle cx="95.89" cy="55.30" r="0.38" class="hole"/>
+<circle cx="95.89" cy="57.84" r="0.38" class="hole"/>
+<rect x="14.53" y="13.36" width="51" height="28" rx="1" class="mod esp"/>
+<text x="40.03" y="27.86" class="modlab" text-anchor="middle">ESP32 DevKit 30-pin (above, USB left / antenna right)</text>
+<rect x="38.41" y="40.60" width="21" height="16" rx="0.8" class="mod gy"/>
+<text x="48.91" y="50.10" class="modlab" text-anchor="middle">GY-45 (above, header up)</text>
+<circle cx="40.01" cy="52.76" r="1.6" class="mount"/>
+<circle cx="57.79" cy="52.76" r="1.6" class="mount"/>
+<circle cx="11.40" cy="2.55" r="1.5" class="mount"/>
+<circle cx="86.40" cy="2.55" r="1.5" class="mount"/>
+<circle cx="11.40" cy="57.25" r="1.5" class="mount"/>
+<circle cx="86.40" cy="57.25" r="1.5" class="mount"/>
+<rect x="20.96" y="13.39" width="38.10" height="2.54" rx="0.3" class="hdr"/>
+<rect x="20.96" y="38.79" width="38.10" height="2.54" rx="0.3" class="hdr"/>
+<text x="48.89" y="55.60" class="ref" text-anchor="middle">U3</text>
+<rect x="2.95" y="43.84" width="18.24" height="10.22" rx="0.8" class="dip"/>
+<text x="12.07" y="49.55" class="ref" text-anchor="middle" style="fill:#fff">U2 SN74AHCT125N</text>
+<circle cx="18.17" cy="45.90" r="0.8" class="notch"/>
+<rect x="63.91" y="41.30" width="10.62" height="10.22" rx="0.8" class="dip"/>
+<text x="69.22" y="47.01" class="ref" text-anchor="middle" style="fill:#fff">U4 PC827</text>
+<circle cx="71.83" cy="43.80" r="0.8" class="notch"/>
+<rect x="0.64" y="41.33" width="2.54" height="15.24" rx="0.4" class="hdr"/>
+<text x="3.51" y="53.50" class="ref">J3</text>
+<rect x="61.60" y="43.87" width="2.54" height="15.24" rx="0.4" class="hdr"/>
+<text x="64.47" y="43.34" class="ref">J8</text>
+<rect x="33.66" y="0.69" width="12.70" height="2.54" rx="0.4" class="hdr"/>
+<text x="36.53" y="0.16" class="ref">J6</text>
+<rect x="25.81" y="54.00" width="10.62" height="5.14" rx="0.8" class="dip"/>
+<text x="31.12" y="57.17" class="ref" text-anchor="middle" style="fill:#fff">U5 PC817</text>
+<circle cx="28.92" cy="55.84" r="0.8" class="notch"/>
+<rect x="56.52" y="3.23" width="7.62" height="2.54" rx="0.4" class="hdr"/>
+<text x="64.47" y="2.70" class="ref">J5</text>
+<rect x="0.64" y="5.77" width="2.54" height="7.62" rx="0.4" class="hdr"/>
+<text x="3.51" y="10.32" class="ref">J1</text>
+<rect x="0.64" y="56.57" width="7.62" height="2.54" rx="0.4" class="hdr"/>
+<text x="8.59" y="56.04" class="ref">J2</text>
+<rect x="18.42" y="56.57" width="7.62" height="2.54" rx="0.4" class="hdr"/>
+<text x="21.29" y="56.04" class="ref">J4</text>
+<rect x="43.82" y="5.77" width="5.08" height="2.54" rx="0.4" class="hdr"/>
+<text x="49.23" y="5.24" class="ref">J7</text>
+<circle cx="6.99" cy="10.85" r="2.5" class="elec"/>
+<text x="6.99" y="9.15" class="ref" text-anchor="middle">C1</text>
+<text x="6.99" y="13.55" class="val" text-anchor="middle">100µF 16V</text>
+<rect x="3.05" y="10.72" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="4.45" y="10.42" class="ref" text-anchor="middle">C2</text>
+<text x="4.45" y="14.82" class="val" text-anchor="middle">100nF</text>
+<g transform="translate(17.15 12.12) rotate(0.0)"><rect x="-3.88" y="-1.1" width="7.76" height="2.2" rx="0.5" class="dio"/>
+<rect x="2.88" y="-1.1" width="0.8" height="2.2" class="band"/>
+</g>
+<text x="17.15" y="10.42" class="ref" text-anchor="middle">D2</text>
+<text x="17.15" y="14.82" class="val" text-anchor="middle">1N5819</text>
+<rect x="20.83" y="53.90" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="22.23" y="53.60" class="ref" text-anchor="middle">C3</text>
+<text x="22.23" y="58.00" class="val" text-anchor="middle">100nF</text>
+<circle cx="4.45" cy="36.25" r="2.5" class="elec"/>
+<text x="4.45" y="34.55" class="ref" text-anchor="middle">C4</text>
+<text x="4.45" y="38.95" class="val" text-anchor="middle">100µF 16V</text>
+<g transform="translate(22.23 48.95) rotate(90.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="22.23" y="47.25" class="ref" text-anchor="middle">R1</text>
+<text x="22.23" y="51.65" class="val" text-anchor="middle">330Ω</text>
+<g transform="translate(9.53 38.79) rotate(-90.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="9.53" y="37.09" class="ref" text-anchor="middle">R2</text>
+<text x="9.53" y="41.49" class="val" text-anchor="middle">10k</text>
+<rect x="66.55" y="3.10" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="67.95" y="2.80" class="ref" text-anchor="middle">C5</text>
+<text x="67.95" y="7.20" class="val" text-anchor="middle">100nF</text>
+<rect x="61.47" y="0.56" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="62.87" y="0.26" class="ref" text-anchor="middle">C6</text>
+<text x="62.87" y="4.66" class="val" text-anchor="middle">100nF</text>
+<g transform="translate(74.30 7.04) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="74.30" y="5.34" class="ref" text-anchor="middle">R3</text>
+<text x="74.30" y="9.74" class="val" text-anchor="middle">100k</text>
+<g transform="translate(76.84 1.96) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="76.84" y="0.26" class="ref" text-anchor="middle">R4</text>
+<text x="76.84" y="4.66" class="val" text-anchor="middle">100k</text>
+<g transform="translate(69.22 9.58) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="69.22" y="7.88" class="ref" text-anchor="middle">R5</text>
+<text x="69.22" y="12.28" class="val" text-anchor="middle">22k</text>
+<g transform="translate(76.84 4.50) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="76.84" y="2.80" class="ref" text-anchor="middle">R6</text>
+<text x="76.84" y="7.20" class="val" text-anchor="middle">22k</text>
+<g transform="translate(61.60 7.04) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="61.60" y="5.34" class="ref" text-anchor="middle">R7</text>
+<text x="61.60" y="9.74" class="val" text-anchor="middle">22k</text>
+<g transform="translate(48.90 9.58) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="48.90" y="7.88" class="ref" text-anchor="middle">R8</text>
+<text x="48.90" y="12.28" class="val" text-anchor="middle">22k</text>
+<rect x="53.85" y="5.64" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="55.25" y="5.34" class="ref" text-anchor="middle">C7</text>
+<text x="55.25" y="9.74" class="val" text-anchor="middle">1nF</text>
+<rect x="51.31" y="3.10" width="2.80" height="2.80" rx="1" class="cap"/>
+<text x="52.71" y="2.80" class="ref" text-anchor="middle">C8</text>
+<text x="52.71" y="7.20" class="val" text-anchor="middle">1nF</text>
+<g transform="translate(43.82 4.50) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="43.82" y="2.80" class="ref" text-anchor="middle">R9</text>
+<text x="43.82" y="7.20" class="val" text-anchor="middle">10k</text>
+<g transform="translate(43.82 12.12) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="dio"/>
+<rect x="1.61" y="-1.1" width="0.8" height="2.2" class="band"/>
+</g>
+<text x="43.82" y="10.42" class="ref" text-anchor="middle">D1</text>
+<text x="43.82" y="14.82" class="val" text-anchor="middle">1N4148</text>
+<g transform="translate(53.98 12.12) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="53.98" y="10.42" class="ref" text-anchor="middle">R10</text>
+<text x="53.98" y="14.82" class="val" text-anchor="middle">100k</text>
+<g transform="translate(31.12 47.68) rotate(0.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="31.12" y="45.98" class="ref" text-anchor="middle">R11</text>
+<text x="31.12" y="50.38" class="val" text-anchor="middle">1k</text>
+<g transform="translate(31.12 45.14) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="31.12" y="43.44" class="ref" text-anchor="middle">R12</text>
+<text x="31.12" y="47.84" class="val" text-anchor="middle">1k</text>
+<g transform="translate(31.12 52.76) rotate(180.0)"><rect x="-2.61" y="-1.1" width="5.22" height="2.2" rx="0.5" class="res"/>
+</g>
+<text x="31.12" y="51.06" class="ref" text-anchor="middle">R13</text>
+<text x="31.12" y="55.46" class="val" text-anchor="middle">1k</text>
+<circle cx="22.23" cy="14.66" r="1.05" class="pad"/>
+<circle cx="24.77" cy="14.66" r="1.05" class="pad"/>
+<circle cx="27.31" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="29.85" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="32.39" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="34.93" cy="14.66" r="1.05" class="pad"/>
+<circle cx="37.47" cy="14.66" r="1.05" class="pad"/>
+<circle cx="40.01" cy="14.66" r="1.05" class="pad"/>
+<circle cx="42.55" cy="14.66" r="1.05" class="pad"/>
+<circle cx="45.09" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="47.63" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="50.17" cy="14.66" r="1.05" class="pad"/>
+<circle cx="52.71" cy="14.66" r="1.05" class="pad"/>
+<circle cx="55.25" cy="14.66" r="1.05" class="pad"/>
+<circle cx="57.79" cy="14.66" r="1.05" class="pad nc"/>
+<circle cx="22.23" cy="40.06" r="1.05" class="pad"/>
+<circle cx="24.77" cy="40.06" r="1.05" class="pad"/>
+<circle cx="27.31" cy="40.06" r="1.05" class="pad nc"/>
+<circle cx="29.85" cy="40.06" r="1.05" class="pad nc"/>
+<circle cx="32.39" cy="40.06" r="1.05" class="pad"/>
+<circle cx="34.93" cy="40.06" r="1.05" class="pad"/>
+<circle cx="37.47" cy="40.06" r="1.05" class="pad"/>
+<circle cx="40.01" cy="40.06" r="1.05" class="pad nc"/>
+<circle cx="42.55" cy="40.06" r="1.05" class="pad"/>
+<circle cx="45.09" cy="40.06" r="1.05" class="pad"/>
+<circle cx="47.63" cy="40.06" r="1.05" class="pad"/>
+<circle cx="50.17" cy="40.06" r="1.05" class="pad nc"/>
+<circle cx="52.71" cy="40.06" r="1.05" class="pad nc"/>
+<circle cx="55.25" cy="40.06" r="1.05" class="pad"/>
+<circle cx="57.79" cy="40.06" r="1.05" class="pad"/>
+<circle cx="57.79" cy="42.60" r="1.05" class="pad"/>
+<circle cx="55.25" cy="42.60" r="1.05" class="pad nc"/>
+<circle cx="52.71" cy="42.60" r="1.05" class="pad"/>
+<circle cx="50.17" cy="42.60" r="1.05" class="pad"/>
+<circle cx="47.63" cy="42.60" r="1.05" class="pad"/>
+<circle cx="45.09" cy="42.60" r="1.05" class="pad nc"/>
+<circle cx="42.55" cy="42.60" r="1.05" class="pad nc"/>
+<circle cx="40.01" cy="42.60" r="1.05" class="pad"/>
+<circle cx="19.69" cy="45.14" r="1.05" class="pad"/>
+<circle cx="17.15" cy="45.14" r="1.05" class="pad"/>
+<circle cx="14.61" cy="45.14" r="1.05" class="pad"/>
+<circle cx="12.07" cy="45.14" r="1.05" class="pad"/>
+<circle cx="9.53" cy="45.14" r="1.05" class="pad"/>
+<circle cx="6.99" cy="45.14" r="1.05" class="pad"/>
+<circle cx="4.45" cy="45.14" r="1.05" class="pad"/>
+<circle cx="4.45" cy="52.76" r="1.05" class="pad"/>
+<circle cx="6.99" cy="52.76" r="1.05" class="pad"/>
+<circle cx="9.53" cy="52.76" r="1.05" class="pad"/>
+<circle cx="12.07" cy="52.76" r="1.05" class="pad nc"/>
+<circle cx="14.61" cy="52.76" r="1.05" class="pad"/>
+<circle cx="17.15" cy="52.76" r="1.05" class="pad"/>
+<circle cx="19.69" cy="52.76" r="1.05" class="pad"/>
+<circle cx="73.03" cy="42.60" r="1.05" class="pad"/>
+<circle cx="70.49" cy="42.60" r="1.05" class="pad"/>
+<circle cx="67.95" cy="42.60" r="1.05" class="pad"/>
+<circle cx="65.41" cy="42.60" r="1.05" class="pad"/>
+<circle cx="65.41" cy="50.22" r="1.05" class="pad"/>
+<circle cx="67.95" cy="50.22" r="1.05" class="pad"/>
+<circle cx="70.49" cy="50.22" r="1.05" class="pad"/>
+<circle cx="73.03" cy="50.22" r="1.05" class="pad"/>
+<circle cx="1.91" cy="55.30" r="1.05" class="pad"/>
+<circle cx="1.91" cy="52.76" r="1.05" class="pad nc"/>
+<circle cx="1.91" cy="50.22" r="1.05" class="pad nc"/>
+<circle cx="1.91" cy="47.68" r="1.05" class="pad"/>
+<circle cx="1.91" cy="45.14" r="1.05" class="pad"/>
+<circle cx="1.91" cy="42.60" r="1.05" class="pad"/>
+<circle cx="62.87" cy="45.14" r="1.05" class="pad"/>
+<circle cx="62.87" cy="47.68" r="1.05" class="pad"/>
+<circle cx="62.87" cy="50.22" r="1.05" class="pad"/>
+<circle cx="62.87" cy="52.76" r="1.05" class="pad"/>
+<circle cx="62.87" cy="55.30" r="1.05" class="pad"/>
+<circle cx="62.87" cy="57.84" r="1.05" class="pad"/>
+<circle cx="34.93" cy="1.96" r="1.05" class="pad"/>
+<circle cx="37.47" cy="1.96" r="1.05" class="pad"/>
+<circle cx="40.01" cy="1.96" r="1.05" class="pad"/>
+<circle cx="42.55" cy="1.96" r="1.05" class="pad"/>
+<circle cx="45.09" cy="1.96" r="1.05" class="pad"/>
+<circle cx="27.31" cy="55.30" r="1.05" class="pad"/>
+<circle cx="27.31" cy="57.84" r="1.05" class="pad"/>
+<circle cx="34.93" cy="57.84" r="1.05" class="pad"/>
+<circle cx="34.93" cy="55.30" r="1.05" class="pad"/>
+<circle cx="62.87" cy="4.50" r="1.05" class="pad"/>
+<circle cx="60.33" cy="4.50" r="1.05" class="pad"/>
+<circle cx="57.79" cy="4.50" r="1.05" class="pad"/>
+<circle cx="1.91" cy="12.12" r="1.05" class="pad"/>
+<circle cx="1.91" cy="7.04" r="1.05" class="pad"/>
+<circle cx="6.99" cy="57.84" r="1.05" class="pad"/>
+<circle cx="1.91" cy="57.84" r="1.05" class="pad"/>
+<circle cx="19.69" cy="57.84" r="1.05" class="pad"/>
+<circle cx="24.77" cy="57.84" r="1.05" class="pad"/>
+<circle cx="47.63" cy="7.04" r="1.05" class="pad"/>
+<circle cx="45.09" cy="7.04" r="1.05" class="pad"/>
+<circle cx="6.99" cy="12.12" r="1.05" class="pad"/>
+<circle cx="6.99" cy="9.58" r="1.05" class="pad"/>
+<circle cx="4.45" cy="14.66" r="1.05" class="pad"/>
+<circle cx="4.45" cy="9.58" r="1.05" class="pad"/>
+<circle cx="12.07" cy="12.12" r="1.05" class="pad"/>
+<circle cx="22.23" cy="12.12" r="1.05" class="pad"/>
+<circle cx="19.69" cy="55.30" r="1.05" class="pad"/>
+<circle cx="24.77" cy="55.30" r="1.05" class="pad"/>
+<circle cx="4.45" cy="34.98" r="1.05" class="pad"/>
+<circle cx="4.45" cy="37.52" r="1.05" class="pad"/>
+<circle cx="22.23" cy="45.14" r="1.05" class="pad"/>
+<circle cx="22.23" cy="52.76" r="1.05" class="pad"/>
+<circle cx="9.53" cy="42.60" r="1.05" class="pad"/>
+<circle cx="9.53" cy="34.98" r="1.05" class="pad"/>
+<circle cx="65.41" cy="4.50" r="1.05" class="pad"/>
+<circle cx="70.49" cy="4.50" r="1.05" class="pad"/>
+<circle cx="60.33" cy="1.96" r="1.05" class="pad"/>
+<circle cx="65.41" cy="1.96" r="1.05" class="pad"/>
+<circle cx="70.49" cy="7.04" r="1.05" class="pad"/>
+<circle cx="78.11" cy="7.04" r="1.05" class="pad"/>
+<circle cx="73.03" cy="1.96" r="1.05" class="pad"/>
+<circle cx="80.65" cy="1.96" r="1.05" class="pad"/>
+<circle cx="65.41" cy="9.58" r="1.05" class="pad"/>
+<circle cx="73.03" cy="9.58" r="1.05" class="pad"/>
+<circle cx="80.65" cy="4.50" r="1.05" class="pad"/>
+<circle cx="73.03" cy="4.50" r="1.05" class="pad"/>
+<circle cx="65.41" cy="7.04" r="1.05" class="pad"/>
+<circle cx="57.79" cy="7.04" r="1.05" class="pad"/>
+<circle cx="52.71" cy="9.58" r="1.05" class="pad"/>
+<circle cx="45.09" cy="9.58" r="1.05" class="pad"/>
+<circle cx="55.25" cy="9.58" r="1.05" class="pad"/>
+<circle cx="55.25" cy="4.50" r="1.05" class="pad"/>
+<circle cx="52.71" cy="7.04" r="1.05" class="pad"/>
+<circle cx="52.71" cy="1.96" r="1.05" class="pad"/>
+<circle cx="47.63" cy="4.50" r="1.05" class="pad"/>
+<circle cx="40.01" cy="4.50" r="1.05" class="pad"/>
+<circle cx="40.01" cy="12.12" r="1.05" class="pad"/>
+<circle cx="47.63" cy="12.12" r="1.05" class="pad"/>
+<circle cx="50.17" cy="12.12" r="1.05" class="pad"/>
+<circle cx="57.79" cy="12.12" r="1.05" class="pad"/>
+<circle cx="27.31" cy="47.68" r="1.05" class="pad"/>
+<circle cx="34.93" cy="47.68" r="1.05" class="pad"/>
+<circle cx="34.93" cy="45.14" r="1.05" class="pad"/>
+<circle cx="27.31" cy="45.14" r="1.05" class="pad"/>
+<circle cx="34.93" cy="52.76" r="1.05" class="pad"/>
+<circle cx="27.31" cy="52.76" r="1.05" class="pad"/>
+<text x="22.73" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 22.73 12.96)">VIN</text>
+<text x="25.27" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 25.27 12.96)">GND</text>
+<text x="27.81" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 27.81 12.96)">IO13</text>
+<text x="30.35" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 30.35 12.96)">IO12</text>
+<text x="32.89" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 32.89 12.96)">IO14</text>
+<text x="35.43" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 35.43 12.96)">IO27</text>
+<text x="37.97" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 37.97 12.96)">IO26</text>
+<text x="40.51" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 40.51 12.96)">IO25</text>
+<text x="43.05" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 43.05 12.96)">IO33</text>
+<text x="45.59" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 45.59 12.96)">IO32</text>
+<text x="48.13" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 48.13 12.96)">IO35</text>
+<text x="50.67" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 50.67 12.96)">IO34</text>
+<text x="53.21" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 53.21 12.96)">IO39</text>
+<text x="55.75" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 55.75 12.96)">IO36</text>
+<text x="58.29" y="12.96" class="pin" text-anchor="start" transform="rotate(-90 58.29 12.96)">EN</text>
+<text x="22.73" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 22.73 41.76)">3V3</text>
+<text x="25.27" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 25.27 41.76)">GND</text>
+<text x="27.81" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 27.81 41.76)">IO15</text>
+<text x="30.35" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 30.35 41.76)">IO2</text>
+<text x="32.89" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 32.89 41.76)">IO4</text>
+<text x="35.43" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 35.43 41.76)">IO16</text>
+<text x="37.97" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 37.97 41.76)">IO17</text>
+<text x="40.51" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 40.51 41.76)">IO5</text>
+<text x="43.05" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 43.05 41.76)">IO18</text>
+<text x="45.59" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 45.59 41.76)">IO19</text>
+<text x="48.13" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 48.13 41.76)">IO21</text>
+<text x="50.67" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 50.67 41.76)">RX0</text>
+<text x="53.21" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 53.21 41.76)">TX0</text>
+<text x="55.75" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 55.75 41.76)">IO22</text>
+<text x="58.29" y="41.76" class="pin" text-anchor="end" transform="rotate(-90 58.29 41.76)">IO23</text>
+<text x="58.24" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 58.24 44.30)">VCC-IN</text>
+<text x="55.70" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 55.70 44.30)">3.3V</text>
+<text x="53.16" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 53.16 44.30)">GND</text>
+<text x="50.62" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 50.62 44.30)">SCL</text>
+<text x="48.08" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 48.08 44.30)">SDA</text>
+<text x="45.54" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 45.54 44.30)">SA0</text>
+<text x="43.00" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 43.00 44.30)">INT2</text>
+<text x="40.46" y="44.30" class="pin2" text-anchor="end" transform="rotate(-90 40.46 44.30)">INT1</text>
+<text x="19.69" y="43.64" class="pin2" text-anchor="middle">1OE</text>
+<text x="17.15" y="43.64" class="pin2" text-anchor="middle">1A</text>
+<text x="14.61" y="43.64" class="pin2" text-anchor="middle">1Y</text>
+<text x="12.07" y="43.64" class="pin2" text-anchor="middle">2OE</text>
+<text x="9.53" y="43.64" class="pin2" text-anchor="middle">2A</text>
+<text x="6.99" y="43.64" class="pin2" text-anchor="middle">2Y</text>
+<text x="4.45" y="43.64" class="pin2" text-anchor="middle">GND</text>
+<text x="4.45" y="51.26" class="pin2" text-anchor="middle">3Y</text>
+<text x="6.99" y="51.26" class="pin2" text-anchor="middle">3A</text>
+<text x="9.53" y="51.26" class="pin2" text-anchor="middle">3OE</text>
+<text x="12.07" y="51.26" class="pin2" text-anchor="middle">4Y</text>
+<text x="14.61" y="51.26" class="pin2" text-anchor="middle">4A</text>
+<text x="17.15" y="51.26" class="pin2" text-anchor="middle">4OE</text>
+<text x="19.69" y="51.26" class="pin2" text-anchor="middle">VCC</text>
+<text x="2.36" y="53.80" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 53.80)">GND</text>
+<text x="2.36" y="51.26" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 51.26)">IN4</text>
+<text x="2.36" y="48.72" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 48.72)">IN3</text>
+<text x="2.36" y="46.18" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 46.18)">IN2</text>
+<text x="2.36" y="43.64" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 43.64)">IN1</text>
+<text x="2.36" y="41.10" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 41.10)">VCC</text>
+<text x="63.32" y="43.64" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 43.64)">K1C</text>
+<text x="63.32" y="46.18" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 46.18)">K1E</text>
+<text x="63.32" y="48.72" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 48.72)">K2C</text>
+<text x="63.32" y="51.26" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 51.26)">K2E</text>
+<text x="63.32" y="53.80" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 53.80)">K3C</text>
+<text x="63.32" y="56.34" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 56.34)">K3E</text>
+<text x="35.38" y="0.46" class="pin2" text-anchor="middle" transform="rotate(-90 35.38 0.46)">BTN1</text>
+<text x="37.92" y="0.46" class="pin2" text-anchor="middle" transform="rotate(-90 37.92 0.46)">BTN2</text>
+<text x="40.46" y="0.46" class="pin2" text-anchor="middle" transform="rotate(-90 40.46 0.46)">BTN3</text>
+<text x="43.00" y="0.46" class="pin2" text-anchor="middle" transform="rotate(-90 43.00 0.46)">BTN4</text>
+<text x="45.54" y="0.46" class="pin2" text-anchor="middle" transform="rotate(-90 45.54 0.46)">GND</text>
+<text x="63.32" y="3.00" class="pin2" text-anchor="middle" transform="rotate(-90 63.32 3.00)">L_SPK</text>
+<text x="60.78" y="3.00" class="pin2" text-anchor="middle" transform="rotate(-90 60.78 3.00)">R_SPK</text>
+<text x="58.24" y="3.00" class="pin2" text-anchor="middle" transform="rotate(-90 58.24 3.00)">GND</text>
+<text x="2.36" y="10.62" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 10.62)">5V_LOGIC</text>
+<text x="2.36" y="5.54" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 5.54)">GND</text>
+<text x="7.44" y="56.34" class="pin2" text-anchor="middle" transform="rotate(-90 7.44 56.34)">5V_LED</text>
+<text x="2.36" y="56.34" class="pin2" text-anchor="middle" transform="rotate(-90 2.36 56.34)">GND</text>
+<text x="20.14" y="56.34" class="pin2" text-anchor="middle" transform="rotate(-90 20.14 56.34)">DATA</text>
+<text x="25.22" y="56.34" class="pin2" text-anchor="middle" transform="rotate(-90 25.22 56.34)">GND</text>
+<text x="48.08" y="5.54" class="pin2" text-anchor="middle" transform="rotate(-90 48.08 5.54)">SENSE</text>
+<text x="45.54" y="5.54" class="pin2" text-anchor="middle" transform="rotate(-90 45.54 5.54)">GND</text>
+<text x="1.91" y="-1.2" class="axis" text-anchor="middle">A</text>
+<text x="4.45" y="-1.2" class="axis" text-anchor="middle">B</text>
+<text x="6.99" y="-1.2" class="axis" text-anchor="middle">C</text>
+<text x="9.53" y="-1.2" class="axis" text-anchor="middle">D</text>
+<text x="12.07" y="-1.2" class="axis" text-anchor="middle">E</text>
+<text x="14.61" y="-1.2" class="axis" text-anchor="middle">F</text>
+<text x="17.15" y="-1.2" class="axis" text-anchor="middle">G</text>
+<text x="19.69" y="-1.2" class="axis" text-anchor="middle">H</text>
+<text x="22.23" y="-1.2" class="axis" text-anchor="middle">I</text>
+<text x="24.77" y="-1.2" class="axis" text-anchor="middle">J</text>
+<text x="27.31" y="-1.2" class="axis" text-anchor="middle">K</text>
+<text x="29.85" y="-1.2" class="axis" text-anchor="middle">L</text>
+<text x="32.39" y="-1.2" class="axis" text-anchor="middle">M</text>
+<text x="34.93" y="-1.2" class="axis" text-anchor="middle">N</text>
+<text x="37.47" y="-1.2" class="axis" text-anchor="middle">O</text>
+<text x="40.01" y="-1.2" class="axis" text-anchor="middle">P</text>
+<text x="42.55" y="-1.2" class="axis" text-anchor="middle">Q</text>
+<text x="45.09" y="-1.2" class="axis" text-anchor="middle">R</text>
+<text x="47.63" y="-1.2" class="axis" text-anchor="middle">S</text>
+<text x="50.17" y="-1.2" class="axis" text-anchor="middle">T</text>
+<text x="52.71" y="-1.2" class="axis" text-anchor="middle">U</text>
+<text x="55.25" y="-1.2" class="axis" text-anchor="middle">V</text>
+<text x="57.79" y="-1.2" class="axis" text-anchor="middle">W</text>
+<text x="60.33" y="-1.2" class="axis" text-anchor="middle">X</text>
+<text x="62.87" y="-1.2" class="axis" text-anchor="middle">Y</text>
+<text x="65.41" y="-1.2" class="axis" text-anchor="middle">Z</text>
+<text x="67.95" y="-1.2" class="axis" text-anchor="middle">AA</text>
+<text x="70.49" y="-1.2" class="axis" text-anchor="middle">AB</text>
+<text x="73.03" y="-1.2" class="axis" text-anchor="middle">AC</text>
+<text x="75.57" y="-1.2" class="axis" text-anchor="middle">AD</text>
+<text x="78.11" y="-1.2" class="axis" text-anchor="middle">AE</text>
+<text x="80.65" y="-1.2" class="axis" text-anchor="middle">AF</text>
+<text x="83.19" y="-1.2" class="axis" text-anchor="middle">AG</text>
+<text x="85.73" y="-1.2" class="axis" text-anchor="middle">AH</text>
+<text x="88.27" y="-1.2" class="axis" text-anchor="middle">AI</text>
+<text x="90.81" y="-1.2" class="axis" text-anchor="middle">AJ</text>
+<text x="93.35" y="-1.2" class="axis" text-anchor="middle">AK</text>
+<text x="95.89" y="-1.2" class="axis" text-anchor="middle">AL</text>
+<text x="-1.4" y="2.46" class="axis" text-anchor="end">1</text>
+<text x="-1.4" y="5.00" class="axis" text-anchor="end">2</text>
+<text x="-1.4" y="7.54" class="axis" text-anchor="end">3</text>
+<text x="-1.4" y="10.08" class="axis" text-anchor="end">4</text>
+<text x="-1.4" y="12.62" class="axis" text-anchor="end">5</text>
+<text x="-1.4" y="15.16" class="axis" text-anchor="end">6</text>
+<text x="-1.4" y="17.70" class="axis" text-anchor="end">7</text>
+<text x="-1.4" y="20.24" class="axis" text-anchor="end">8</text>
+<text x="-1.4" y="22.78" class="axis" text-anchor="end">9</text>
+<text x="-1.4" y="25.32" class="axis" text-anchor="end">10</text>
+<text x="-1.4" y="27.86" class="axis" text-anchor="end">11</text>
+<text x="-1.4" y="30.40" class="axis" text-anchor="end">12</text>
+<text x="-1.4" y="32.94" class="axis" text-anchor="end">13</text>
+<text x="-1.4" y="35.48" class="axis" text-anchor="end">14</text>
+<text x="-1.4" y="38.02" class="axis" text-anchor="end">15</text>
+<text x="-1.4" y="40.56" class="axis" text-anchor="end">16</text>
+<text x="-1.4" y="43.10" class="axis" text-anchor="end">17</text>
+<text x="-1.4" y="45.64" class="axis" text-anchor="end">18</text>
+<text x="-1.4" y="48.18" class="axis" text-anchor="end">19</text>
+<text x="-1.4" y="50.72" class="axis" text-anchor="end">20</text>
+<text x="-1.4" y="53.26" class="axis" text-anchor="end">21</text>
+<text x="-1.4" y="55.80" class="axis" text-anchor="end">22</text>
+<text x="-1.4" y="58.34" class="axis" text-anchor="end">23</text>
+<line x1="67.95" y1="50.22" x2="62.87" y2="50.22" stroke="#b08968" class="jmp"/>
+<text x="65.41" y="49.72" class="wlab" text-anchor="middle">W1</text>
+<line x1="6.99" y1="45.14" x2="1.91" y2="45.14" stroke="#3a0ca3" class="jmp"/>
+<text x="4.45" y="44.64" class="wlab" text-anchor="middle">W2</text>
+<line x1="14.61" y1="45.14" x2="22.23" y2="45.14" stroke="#0077b6" class="jmp"/>
+<text x="18.42" y="44.64" class="wlab" text-anchor="middle">W3</text>
+<line x1="50.17" y1="37.52" x2="50.17" y2="42.60" stroke="#2a9d8f" class="jmp"/>
+<text x="50.17" y="39.56" class="wlab" text-anchor="middle">W4</text>
+<line x1="37.47" y1="14.66" x2="37.47" y2="1.96" stroke="#6a994e" class="jmp"/>
+<text x="37.47" y="7.81" class="wlab" text-anchor="middle">W5</text>
+<line x1="42.55" y1="14.66" x2="42.55" y2="1.96" stroke="#6a994e" class="jmp"/>
+<text x="42.55" y="7.81" class="wlab" text-anchor="middle">W6</text>
+<line x1="34.93" y1="14.66" x2="34.93" y2="1.96" stroke="#6a994e" class="jmp"/>
+<text x="34.93" y="7.81" class="wlab" text-anchor="middle">W7</text>
+<line x1="40.01" y1="14.66" x2="40.01" y2="1.96" stroke="#6a994e" class="jmp"/>
+<text x="40.01" y="7.81" class="wlab" text-anchor="middle">W8</text>
+<line x1="6.99" y1="12.12" x2="12.07" y2="12.12" stroke="#d62828" class="jmp"/>
+<text x="9.53" y="11.62" class="wlab" text-anchor="middle">W9</text>
+<line x1="34.93" y1="42.60" x2="34.93" y2="52.76" stroke="#9c6644" class="jmp"/>
+<text x="34.93" y="47.18" class="wlab" text-anchor="middle">W10</text>
+<line x1="75.57" y1="45.14" x2="62.87" y2="45.14" stroke="#b08968" class="jmp"/>
+<text x="69.22" y="44.64" class="wlab" text-anchor="middle">W11</text>
+<line x1="32.39" y1="37.52" x2="32.39" y2="42.60" stroke="#9c6644" class="jmp"/>
+<text x="32.39" y="39.56" class="wlab" text-anchor="middle">W12</text>
+<line x1="45.09" y1="37.52" x2="32.39" y2="37.52" stroke="#9c6644" class="jmp"/>
+<text x="38.74" y="37.02" class="wlab" text-anchor="middle">W13</text>
+<line x1="40.01" y1="34.98" x2="40.01" y2="42.60" stroke="#2a9d8f" class="jmp"/>
+<text x="40.01" y="38.29" class="wlab" text-anchor="middle">W14</text>
+<line x1="57.79" y1="34.98" x2="40.01" y2="34.98" stroke="#2a9d8f" class="jmp"/>
+<text x="48.90" y="34.48" class="wlab" text-anchor="middle">W15</text>
+<line x1="17.15" y1="34.98" x2="17.15" y2="45.14" stroke="#0077b6" class="jmp"/>
+<text x="17.15" y="39.56" class="wlab" text-anchor="middle">W16</text>
+<line x1="34.93" y1="34.98" x2="17.15" y2="34.98" stroke="#0077b6" class="jmp"/>
+<text x="26.04" y="34.48" class="wlab" text-anchor="middle">W17</text>
+<line x1="27.31" y1="32.44" x2="27.31" y2="47.68" stroke="#9c6644" class="jmp"/>
+<text x="27.31" y="39.56" class="wlab" text-anchor="middle">W18</text>
+<line x1="42.55" y1="32.44" x2="27.31" y2="32.44" stroke="#9c6644" class="jmp"/>
+<text x="34.93" y="31.94" class="wlab" text-anchor="middle">W19</text>
+<line x1="62.87" y1="55.30" x2="34.93" y2="55.30" stroke="#b08968" class="jmp"/>
+<text x="48.90" y="54.80" class="wlab" text-anchor="middle">W20</text>
+<line x1="62.87" y1="57.84" x2="34.93" y2="57.84" stroke="#b08968" class="jmp"/>
+<text x="48.90" y="57.34" class="wlab" text-anchor="middle">W21</text>
+<line x1="55.25" y1="9.58" x2="65.41" y2="9.58" stroke="#e63946" class="jmp"/>
+<text x="60.33" y="9.08" class="wlab" text-anchor="middle">W22</text>
+<line x1="65.41" y1="7.04" x2="78.11" y2="7.04" stroke="#e63946" class="jmp"/>
+<text x="71.76" y="6.54" class="wlab" text-anchor="middle">W23</text>
+<line x1="32.39" y1="40.06" x2="12.07" y2="40.06" stroke="#7209b7" class="jmp"/>
+<text x="22.23" y="39.56" class="wlab" text-anchor="middle">W24</text>
+<line x1="6.99" y1="42.60" x2="6.99" y2="52.76" stroke="#7209b7" class="jmp"/>
+<text x="6.99" y="47.18" class="wlab" text-anchor="middle">W25</text>
+<line x1="80.65" y1="17.20" x2="80.65" y2="4.50" stroke="#e63946" class="jmp"/>
+<text x="80.65" y="10.35" class="wlab" text-anchor="middle">W26</text>
+<line x1="52.71" y1="17.20" x2="80.65" y2="17.20" stroke="#e63946" class="jmp"/>
+<text x="66.68" y="16.70" class="wlab" text-anchor="middle">W27</text>
+<line x1="19.69" y1="55.30" x2="6.99" y2="55.30" stroke="#e85d04" class="jmp"/>
+<text x="13.34" y="54.80" class="wlab" text-anchor="middle">W28</text>
+<line x1="4.45" y1="55.30" x2="4.45" y2="34.98" stroke="#e85d04" class="jmp"/>
+<text x="4.45" y="44.64" class="wlab" text-anchor="middle">W29</text>
+<line x1="67.95" y1="42.60" x2="27.31" y2="42.60" stroke="#9c6644" class="jmp"/>
+<text x="47.63" y="42.10" class="wlab" text-anchor="middle">W30</text>
+<line x1="78.11" y1="47.68" x2="34.93" y2="47.68" stroke="#9c6644" class="jmp"/>
+<text x="56.52" y="47.18" class="wlab" text-anchor="middle">W31</text>
+<line x1="22.23" y1="37.52" x2="12.07" y2="37.52" stroke="#f48c06" class="jmp"/>
+<text x="17.15" y="37.02" class="wlab" text-anchor="middle">W32</text>
+<line x1="57.79" y1="29.90" x2="57.79" y2="42.60" stroke="#f48c06" class="jmp"/>
+<text x="57.79" y="35.75" class="wlab" text-anchor="middle">W33</text>
+<line x1="9.53" y1="29.90" x2="57.79" y2="29.90" stroke="#f48c06" class="jmp"/>
+<text x="33.66" y="29.40" class="wlab" text-anchor="middle">W34</text>
+<line x1="73.03" y1="29.90" x2="73.03" y2="9.58" stroke="#f48c06" class="jmp"/>
+<text x="73.03" y="19.24" class="wlab" text-anchor="middle">W35</text>
+<line x1="57.79" y1="29.90" x2="73.03" y2="29.90" stroke="#f48c06" class="jmp"/>
+<text x="65.41" y="29.40" class="wlab" text-anchor="middle">W36</text>
+<line x1="24.77" y1="14.66" x2="24.77" y2="40.06" stroke="#111111" class="jmp"/>
+<text x="24.77" y="26.86" class="wlab" text-anchor="middle">W37</text>
+<line x1="24.77" y1="40.06" x2="24.77" y2="55.30" stroke="#111111" class="jmp"/>
+<text x="24.77" y="47.18" class="wlab" text-anchor="middle">W38</text>
+<line x1="19.69" y1="42.60" x2="12.07" y2="42.60" stroke="#111111" class="jmp"/>
+<text x="15.88" y="42.10" class="wlab" text-anchor="middle">W39</text>
+<line x1="12.07" y1="42.60" x2="4.45" y2="42.60" stroke="#111111" class="jmp"/>
+<text x="8.26" y="42.10" class="wlab" text-anchor="middle">W40</text>
+<line x1="6.99" y1="37.52" x2="6.99" y2="9.58" stroke="#111111" class="jmp"/>
+<text x="6.99" y="23.05" class="wlab" text-anchor="middle">W41</text>
+<line x1="6.99" y1="9.58" x2="45.09" y2="9.58" stroke="#111111" class="jmp"/>
+<text x="26.04" y="9.08" class="wlab" text-anchor="middle">W42</text>
+<line x1="45.09" y1="1.96" x2="52.71" y2="1.96" stroke="#111111" class="jmp"/>
+<text x="48.90" y="1.46" class="wlab" text-anchor="middle">W43</text>
+<line x1="57.79" y1="7.04" x2="57.79" y2="12.12" stroke="#111111" class="jmp"/>
+<text x="57.79" y="9.08" class="wlab" text-anchor="middle">W44</text>
+<line x1="24.77" y1="52.76" x2="14.61" y2="52.76" stroke="#111111" class="jmp"/>
+<text x="19.69" y="52.26" class="wlab" text-anchor="middle">W45</text>
+<line x1="24.77" y1="57.84" x2="1.91" y2="57.84" stroke="#111111" class="jmp"/>
+<text x="13.34" y="57.34" class="wlab" text-anchor="middle">W46</text>
+<line x1="65.41" y1="12.12" x2="65.41" y2="42.60" stroke="#111111" class="jmp"/>
+<text x="65.41" y="26.86" class="wlab" text-anchor="middle">W47</text>
+<line x1="52.71" y1="1.96" x2="52.71" y2="42.60" stroke="#111111" class="jmp"/>
+<text x="52.71" y="21.78" class="wlab" text-anchor="middle">W48</text>
+</svg>

@@ -1,0 +1,3342 @@
+{
+ "runs": [
+  {
+   "id": "W1",
+   "net": "3V3",
+   "from": "D12",
+   "to": "AC12",
+   "from_what": "D12 (free hole)",
+   "to_what": "AC12 (free hole)",
+   "len_holes": 25,
+   "taps": [
+    "W12 (free hole)"
+   ],
+   "crosses": 0,
+   "fromxy": [
+    3,
+    11
+   ],
+   "toxy": [
+    28,
+    11
+   ]
+  },
+  {
+   "id": "W2",
+   "net": "3V3",
+   "from": "E15",
+   "to": "I15",
+   "from_what": "E15 (free hole)",
+   "to_what": "I15 (free hole)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    4,
+    14
+   ],
+   "toxy": [
+    8,
+    14
+   ]
+  },
+  {
+   "id": "W3",
+   "net": "3V3",
+   "from": "W12",
+   "to": "W17",
+   "from_what": "W12 (free hole)",
+   "to_what": "W17 (U3.VCC-IN)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    22,
+    11
+   ],
+   "toxy": [
+    22,
+    16
+   ]
+  },
+  {
+   "id": "W4",
+   "net": "3V3",
+   "from": "AC4",
+   "to": "AC12",
+   "from_what": "AC4 (R5.2)",
+   "to_what": "AC12 (free hole)",
+   "len_holes": 8,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    28,
+    3
+   ],
+   "toxy": [
+    28,
+    11
+   ]
+  },
+  {
+   "id": "W5",
+   "net": "5V_LED",
+   "from": "B14",
+   "to": "B22",
+   "from_what": "B14 (C4.+)",
+   "to_what": "B22 (free hole)",
+   "len_holes": 8,
+   "taps": [],
+   "crosses": 4,
+   "fromxy": [
+    1,
+    13
+   ],
+   "toxy": [
+    1,
+    21
+   ]
+  },
+  {
+   "id": "W6",
+   "net": "5V_LED",
+   "from": "C22",
+   "to": "H22",
+   "from_what": "C22 (free hole)",
+   "to_what": "H22 (C3.1)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    2,
+    21
+   ],
+   "toxy": [
+    7,
+    21
+   ]
+  },
+  {
+   "id": "W7",
+   "net": "5V_LOGIC",
+   "from": "C5",
+   "to": "E5",
+   "from_what": "C5 (C1.+)",
+   "to_what": "E5 (D2.A)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    2,
+    4
+   ],
+   "toxy": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "W8",
+   "net": "BTN1",
+   "from": "N1",
+   "to": "N6",
+   "from_what": "N1 (J6.BTN1)",
+   "to_what": "N6 (U1.IO27)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    13,
+    0
+   ],
+   "toxy": [
+    13,
+    5
+   ]
+  },
+  {
+   "id": "W9",
+   "net": "BTN2",
+   "from": "O1",
+   "to": "O6",
+   "from_what": "O1 (J6.BTN2)",
+   "to_what": "O6 (U1.IO26)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    14,
+    0
+   ],
+   "toxy": [
+    14,
+    5
+   ]
+  },
+  {
+   "id": "W10",
+   "net": "BTN3",
+   "from": "P1",
+   "to": "P6",
+   "from_what": "P1 (J6.BTN3)",
+   "to_what": "P6 (U1.IO25)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    15,
+    0
+   ],
+   "toxy": [
+    15,
+    5
+   ]
+  },
+  {
+   "id": "W11",
+   "net": "BTN4",
+   "from": "Q1",
+   "to": "Q6",
+   "from_what": "Q1 (J6.BTN4)",
+   "to_what": "Q6 (U1.IO33)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 2,
+   "fromxy": [
+    16,
+    0
+   ],
+   "toxy": [
+    16,
+    5
+   ]
+  },
+  {
+   "id": "W12",
+   "net": "D16",
+   "from": "G14",
+   "to": "G18",
+   "from_what": "G14 (free hole)",
+   "to_what": "G18 (U2.1A)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    6,
+    13
+   ],
+   "toxy": [
+    6,
+    17
+   ]
+  },
+  {
+   "id": "W13",
+   "net": "D16",
+   "from": "G14",
+   "to": "N14",
+   "from_what": "G14 (free hole)",
+   "to_what": "N14 (free hole)",
+   "len_holes": 7,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    6,
+    13
+   ],
+   "toxy": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "W14",
+   "net": "DATA_BUF",
+   "from": "F18",
+   "to": "I18",
+   "from_what": "F18 (U2.1Y)",
+   "to_what": "I18 (R1.1)",
+   "len_holes": 3,
+   "taps": [],
+   "crosses": 2,
+   "fromxy": [
+    5,
+    17
+   ],
+   "toxy": [
+    8,
+    17
+   ]
+  },
+  {
+   "id": "W15",
+   "net": "IN1",
+   "from": "A18",
+   "to": "C18",
+   "from_what": "A18 (J3.IN1)",
+   "to_what": "C18 (U2.2Y)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    0,
+    17
+   ],
+   "toxy": [
+    2,
+    17
+   ]
+  },
+  {
+   "id": "W16",
+   "net": "INT1",
+   "from": "P14",
+   "to": "P17",
+   "from_what": "P14 (free hole)",
+   "to_what": "P17 (U3.INT1)",
+   "len_holes": 3,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    15,
+    13
+   ],
+   "toxy": [
+    15,
+    16
+   ]
+  },
+  {
+   "id": "W17",
+   "net": "INT1",
+   "from": "P14",
+   "to": "W14",
+   "from_what": "P14 (free hole)",
+   "to_what": "W14 (free hole)",
+   "len_holes": 7,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    15,
+    13
+   ],
+   "toxy": [
+    22,
+    13
+   ]
+  },
+  {
+   "id": "W18",
+   "net": "KEY1",
+   "from": "K13",
+   "to": "K19",
+   "from_what": "K13 (free hole)",
+   "to_what": "K19 (R11.1)",
+   "len_holes": 6,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    10,
+    12
+   ],
+   "toxy": [
+    10,
+    18
+   ]
+  },
+  {
+   "id": "W19",
+   "net": "KEY1",
+   "from": "K13",
+   "to": "Q13",
+   "from_what": "K13 (free hole)",
+   "to_what": "Q13 (free hole)",
+   "len_holes": 6,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    10,
+    12
+   ],
+   "toxy": [
+    16,
+    12
+   ]
+  },
+  {
+   "id": "W20",
+   "net": "KEY1_A",
+   "from": "N19",
+   "to": "AE19",
+   "from_what": "N19 (R11.2)",
+   "to_what": "AE19 (free hole)",
+   "len_holes": 17,
+   "taps": [],
+   "crosses": 5,
+   "fromxy": [
+    13,
+    18
+   ],
+   "toxy": [
+    30,
+    18
+   ]
+  },
+  {
+   "id": "W21",
+   "net": "KEY1_C",
+   "from": "Y18",
+   "to": "AD18",
+   "from_what": "Y18 (J8.K1C)",
+   "to_what": "AD18 (free hole)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 4,
+   "fromxy": [
+    24,
+    17
+   ],
+   "toxy": [
+    29,
+    17
+   ]
+  },
+  {
+   "id": "W22",
+   "net": "KEY2",
+   "from": "M15",
+   "to": "M17",
+   "from_what": "M15 (free hole)",
+   "to_what": "M17 (free hole)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    12,
+    14
+   ],
+   "toxy": [
+    12,
+    16
+   ]
+  },
+  {
+   "id": "W23",
+   "net": "KEY2",
+   "from": "M15",
+   "to": "R15",
+   "from_what": "M15 (free hole)",
+   "to_what": "R15 (free hole)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    12,
+    14
+   ],
+   "toxy": [
+    17,
+    14
+   ]
+  },
+  {
+   "id": "W24",
+   "net": "KEY2_A",
+   "from": "K17",
+   "to": "AA17",
+   "from_what": "K17 (free hole)",
+   "to_what": "AA17 (U4.A2)",
+   "len_holes": 16,
+   "taps": [],
+   "crosses": 9,
+   "fromxy": [
+    10,
+    16
+   ],
+   "toxy": [
+    26,
+    16
+   ]
+  },
+  {
+   "id": "W25",
+   "net": "KEY2_C",
+   "from": "Y20",
+   "to": "AA20",
+   "from_what": "Y20 (J8.K2C)",
+   "to_what": "AA20 (U4.C2)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    24,
+    19
+   ],
+   "toxy": [
+    26,
+    19
+   ]
+  },
+  {
+   "id": "W26",
+   "net": "KEY3",
+   "from": "N17",
+   "to": "N21",
+   "from_what": "N17 (free hole)",
+   "to_what": "N21 (R13.1)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    13,
+    16
+   ],
+   "toxy": [
+    13,
+    20
+   ]
+  },
+  {
+   "id": "W27",
+   "net": "KEY3_C",
+   "from": "N22",
+   "to": "Y22",
+   "from_what": "N22 (U5.C)",
+   "to_what": "Y22 (J8.K3C)",
+   "len_holes": 11,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    13,
+    21
+   ],
+   "toxy": [
+    24,
+    21
+   ]
+  },
+  {
+   "id": "W28",
+   "net": "KEY3_E",
+   "from": "N23",
+   "to": "Y23",
+   "from_what": "N23 (U5.E)",
+   "to_what": "Y23 (J8.K3E)",
+   "len_holes": 11,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    13,
+    22
+   ],
+   "toxy": [
+    24,
+    22
+   ]
+  },
+  {
+   "id": "W29",
+   "net": "MUTE",
+   "from": "C17",
+   "to": "C21",
+   "from_what": "C17 (free hole)",
+   "to_what": "C21 (U2.3A)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 3,
+   "fromxy": [
+    2,
+    16
+   ],
+   "toxy": [
+    2,
+    20
+   ]
+  },
+  {
+   "id": "W30",
+   "net": "MUTE",
+   "from": "E16",
+   "to": "M16",
+   "from_what": "E16 (free hole)",
+   "to_what": "M16 (U1.IO4)",
+   "len_holes": 8,
+   "taps": [],
+   "crosses": 4,
+   "fromxy": [
+    4,
+    15
+   ],
+   "toxy": [
+    12,
+    15
+   ]
+  },
+  {
+   "id": "W31",
+   "net": "SCL",
+   "from": "T15",
+   "to": "T17",
+   "from_what": "T15 (free hole)",
+   "to_what": "T17 (U3.SCL)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 1,
+   "fromxy": [
+    19,
+    14
+   ],
+   "toxy": [
+    19,
+    16
+   ]
+  },
+  {
+   "id": "W32",
+   "net": "VU_L",
+   "from": "V4",
+   "to": "Z4",
+   "from_what": "V4 (C7.1)",
+   "to_what": "Z4 (R5.1)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    21,
+    3
+   ],
+   "toxy": [
+    25,
+    3
+   ]
+  },
+  {
+   "id": "W33",
+   "net": "VU_L",
+   "from": "Z3",
+   "to": "AE3",
+   "from_what": "Z3 (R7.1)",
+   "to_what": "AE3 (R3.2)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 2,
+   "fromxy": [
+    25,
+    2
+   ],
+   "toxy": [
+    30,
+    2
+   ]
+  },
+  {
+   "id": "W34",
+   "net": "VU_R",
+   "from": "U7",
+   "to": "AF7",
+   "from_what": "U7 (free hole)",
+   "to_what": "AF7 (free hole)",
+   "len_holes": 11,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    20,
+    6
+   ],
+   "toxy": [
+    31,
+    6
+   ]
+  },
+  {
+   "id": "W35",
+   "net": "VU_R",
+   "from": "AF2",
+   "to": "AF7",
+   "from_what": "AF2 (R6.1)",
+   "to_what": "AF7 (free hole)",
+   "len_holes": 5,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    31,
+    1
+   ],
+   "toxy": [
+    31,
+    6
+   ]
+  },
+  {
+   "id": "W36",
+   "net": "GND",
+   "from": "A23",
+   "to": "J23",
+   "from_what": "A23 (J2.GND)",
+   "to_what": "J23 (J4.GND)",
+   "len_holes": 9,
+   "taps": [],
+   "crosses": 4,
+   "fromxy": [
+    0,
+    22
+   ],
+   "toxy": [
+    9,
+    22
+   ]
+  },
+  {
+   "id": "W37",
+   "net": "GND",
+   "from": "B17",
+   "to": "H17",
+   "from_what": "B17 (free hole)",
+   "to_what": "H17 (free hole)",
+   "len_holes": 6,
+   "taps": [
+    "E17 (free hole)"
+   ],
+   "crosses": 0,
+   "fromxy": [
+    1,
+    16
+   ],
+   "toxy": [
+    7,
+    16
+   ]
+  },
+  {
+   "id": "W38",
+   "net": "GND",
+   "from": "C4",
+   "to": "C15",
+   "from_what": "C4 (C1.-)",
+   "to_what": "C15 (free hole)",
+   "len_holes": 11,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    2,
+    3
+   ],
+   "toxy": [
+    2,
+    14
+   ]
+  },
+  {
+   "id": "W39",
+   "net": "GND",
+   "from": "C4",
+   "to": "R4",
+   "from_what": "C4 (C1.-)",
+   "to_what": "R4 (R8.2)",
+   "len_holes": 15,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    2,
+    3
+   ],
+   "toxy": [
+    17,
+    3
+   ]
+  },
+  {
+   "id": "W40",
+   "net": "GND",
+   "from": "F21",
+   "to": "J21",
+   "from_what": "F21 (U2.4A)",
+   "to_what": "J21 (free hole)",
+   "len_holes": 4,
+   "taps": [],
+   "crosses": 2,
+   "fromxy": [
+    5,
+    20
+   ],
+   "toxy": [
+    9,
+    20
+   ]
+  },
+  {
+   "id": "W41",
+   "net": "GND",
+   "from": "J6",
+   "to": "J22",
+   "from_what": "J6 (U1.GND)",
+   "to_what": "J22 (C3.2)",
+   "len_holes": 16,
+   "taps": [
+    "J16 (U1.GND)"
+   ],
+   "crosses": 1,
+   "fromxy": [
+    9,
+    5
+   ],
+   "toxy": [
+    9,
+    21
+   ]
+  },
+  {
+   "id": "W42",
+   "net": "GND",
+   "from": "R1",
+   "to": "U1",
+   "from_what": "R1 (J6.GND)",
+   "to_what": "U1 (C8.2)",
+   "len_holes": 3,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    17,
+    0
+   ],
+   "toxy": [
+    20,
+    0
+   ]
+  },
+  {
+   "id": "W43",
+   "net": "GND",
+   "from": "U1",
+   "to": "U17",
+   "from_what": "U1 (C8.2)",
+   "to_what": "U17 (U3.GND)",
+   "len_holes": 16,
+   "taps": [],
+   "crosses": 4,
+   "fromxy": [
+    20,
+    0
+   ],
+   "toxy": [
+    20,
+    16
+   ]
+  },
+  {
+   "id": "W44",
+   "net": "GND",
+   "from": "W3",
+   "to": "W5",
+   "from_what": "W3 (R7.2)",
+   "to_what": "W5 (R10.2)",
+   "len_holes": 2,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    22,
+    2
+   ],
+   "toxy": [
+    22,
+    4
+   ]
+  },
+  {
+   "id": "W45",
+   "net": "GND",
+   "from": "Z5",
+   "to": "Z17",
+   "from_what": "Z5 (free hole)",
+   "to_what": "Z17 (U4.K2)",
+   "len_holes": 12,
+   "taps": [],
+   "crosses": 0,
+   "fromxy": [
+    25,
+    4
+   ],
+   "toxy": [
+    25,
+    16
+   ]
+  }
+ ],
+ "buses": [
+  {
+   "id": "B1",
+   "net": "3V3",
+   "holes": [
+    "D12",
+    "D13",
+    "D14 (R2.2)",
+    "D15",
+    "E15"
+   ],
+   "cells": [
+    [
+     3,
+     11
+    ],
+    [
+     3,
+     12
+    ],
+    [
+     3,
+     13
+    ],
+    [
+     3,
+     14
+    ],
+    [
+     4,
+     14
+    ]
+   ]
+  },
+  {
+   "id": "B2",
+   "net": "3V3",
+   "holes": [
+    "I15",
+    "I16 (U1.3V3)"
+   ],
+   "cells": [
+    [
+     8,
+     14
+    ],
+    [
+     8,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B3",
+   "net": "3V3",
+   "holes": [
+    "AC2 (R6.2)",
+    "AC3",
+    "AC4 (R5.2)"
+   ],
+   "cells": [
+    [
+     28,
+     1
+    ],
+    [
+     28,
+     2
+    ],
+    [
+     28,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "B4",
+   "net": "5V_LED",
+   "holes": [
+    "A14",
+    "A15",
+    "A16",
+    "A17 (J3.VCC)",
+    "B14 (C4.+)"
+   ],
+   "cells": [
+    [
+     0,
+     13
+    ],
+    [
+     0,
+     14
+    ],
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     1,
+     13
+    ]
+   ]
+  },
+  {
+   "id": "B5",
+   "net": "5V_LED",
+   "holes": [
+    "B22",
+    "C22",
+    "C23 (J2.5V_LED)"
+   ],
+   "cells": [
+    [
+     1,
+     21
+    ],
+    [
+     2,
+     21
+    ],
+    [
+     2,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "B6",
+   "net": "5V_LED",
+   "holes": [
+    "G21 (U2.4OE)",
+    "H21 (U2.VCC)",
+    "H22 (C3.1)"
+   ],
+   "cells": [
+    [
+     6,
+     20
+    ],
+    [
+     7,
+     20
+    ],
+    [
+     7,
+     21
+    ]
+   ]
+  },
+  {
+   "id": "B7",
+   "net": "5V_LOGIC",
+   "holes": [
+    "A5 (J1.5V_LOGIC)",
+    "A6",
+    "B5",
+    "B6 (C2.1)",
+    "C5 (C1.+)"
+   ],
+   "cells": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "B8",
+   "net": "D16",
+   "holes": [
+    "N14",
+    "N15",
+    "N16 (U1.IO16)"
+   ],
+   "cells": [
+    [
+     13,
+     13
+    ],
+    [
+     13,
+     14
+    ],
+    [
+     13,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B9",
+   "net": "GND",
+   "holes": [
+    "A3 (J1.GND)",
+    "A4",
+    "B4 (C2.2)",
+    "C4 (C1.-)"
+   ],
+   "cells": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "B10",
+   "net": "GND",
+   "holes": [
+    "A22 (J3.GND)",
+    "A23 (J2.GND)"
+   ],
+   "cells": [
+    [
+     0,
+     21
+    ],
+    [
+     0,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "B11",
+   "net": "GND",
+   "holes": [
+    "B15 (C4.-)",
+    "B16",
+    "B17",
+    "B18 (U2.GND)",
+    "C15"
+   ],
+   "cells": [
+    [
+     1,
+     14
+    ],
+    [
+     1,
+     15
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     1,
+     17
+    ],
+    [
+     2,
+     14
+    ]
+   ]
+  },
+  {
+   "id": "B12",
+   "net": "GND",
+   "holes": [
+    "D20",
+    "D21 (U2.3OE)",
+    "E20",
+    "F20",
+    "F21 (U2.4A)"
+   ],
+   "cells": [
+    [
+     3,
+     19
+    ],
+    [
+     3,
+     20
+    ],
+    [
+     4,
+     19
+    ],
+    [
+     5,
+     19
+    ],
+    [
+     5,
+     20
+    ]
+   ]
+  },
+  {
+   "id": "B13",
+   "net": "GND",
+   "holes": [
+    "E17",
+    "E18 (U2.2OE)"
+   ],
+   "cells": [
+    [
+     4,
+     16
+    ],
+    [
+     4,
+     17
+    ]
+   ]
+  },
+  {
+   "id": "B14",
+   "net": "GND",
+   "holes": [
+    "H17",
+    "H18 (U2.1OE)",
+    "I17",
+    "J16 (U1.GND)",
+    "J17"
+   ],
+   "cells": [
+    [
+     7,
+     16
+    ],
+    [
+     7,
+     17
+    ],
+    [
+     8,
+     16
+    ],
+    [
+     9,
+     15
+    ],
+    [
+     9,
+     16
+    ]
+   ]
+  },
+  {
+   "id": "B15",
+   "net": "GND",
+   "holes": [
+    "J21",
+    "J22 (C3.2)",
+    "J23 (J4.GND)",
+    "K23 (U5.K)"
+   ],
+   "cells": [
+    [
+     9,
+     20
+    ],
+    [
+     9,
+     21
+    ],
+    [
+     9,
+     22
+    ],
+    [
+     10,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "B16",
+   "net": "GND",
+   "holes": [
+    "R1 (J6.GND)",
+    "R2",
+    "R3 (J7.GND)",
+    "R4 (R8.2)"
+   ],
+   "cells": [
+    [
+     17,
+     0
+    ],
+    [
+     17,
+     1
+    ],
+    [
+     17,
+     2
+    ],
+    [
+     17,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "B17",
+   "net": "GND",
+   "holes": [
+    "U1 (C8.2)",
+    "U2",
+    "V2 (C7.2)",
+    "W2 (J5.GND)",
+    "W3 (R7.2)"
+   ],
+   "cells": [
+    [
+     20,
+     0
+    ],
+    [
+     20,
+     1
+    ],
+    [
+     21,
+     1
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     22,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "B18",
+   "net": "GND",
+   "holes": [
+    "W5 (R10.2)",
+    "X5",
+    "Y5",
+    "Z5"
+   ],
+   "cells": [
+    [
+     22,
+     4
+    ],
+    [
+     23,
+     4
+    ],
+    [
+     24,
+     4
+    ],
+    [
+     25,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "B19",
+   "net": "GND",
+   "holes": [
+    "Z16",
+    "Z17 (U4.K2)",
+    "AA16",
+    "AB16",
+    "AB17 (U4.K1)"
+   ],
+   "cells": [
+    [
+     25,
+     15
+    ],
+    [
+     25,
+     16
+    ],
+    [
+     26,
+     15
+    ],
+    [
+     27,
+     15
+    ],
+    [
+     27,
+     16
+    ]
+   ]
+  },
+  {
+   "id": "B20",
+   "net": "IN2",
+   "holes": [
+    "A19 (J3.IN2)",
+    "B19",
+    "B20",
+    "B21 (U2.3Y)"
+   ],
+   "cells": [
+    [
+     0,
+     18
+    ],
+    [
+     1,
+     18
+    ],
+    [
+     1,
+     19
+    ],
+    [
+     1,
+     20
+    ]
+   ]
+  },
+  {
+   "id": "B21",
+   "net": "INT1",
+   "holes": [
+    "W14",
+    "W15",
+    "W16 (U1.IO23)"
+   ],
+   "cells": [
+    [
+     22,
+     13
+    ],
+    [
+     22,
+     14
+    ],
+    [
+     22,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B22",
+   "net": "KEY1",
+   "holes": [
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q16 (U1.IO18)"
+   ],
+   "cells": [
+    [
+     16,
+     12
+    ],
+    [
+     16,
+     13
+    ],
+    [
+     16,
+     14
+    ],
+    [
+     16,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B23",
+   "net": "KEY1_A",
+   "holes": [
+    "AC17 (U4.A1)",
+    "AD17",
+    "AE17",
+    "AE18",
+    "AE19"
+   ],
+   "cells": [
+    [
+     28,
+     16
+    ],
+    [
+     29,
+     16
+    ],
+    [
+     30,
+     16
+    ],
+    [
+     30,
+     17
+    ],
+    [
+     30,
+     18
+    ]
+   ]
+  },
+  {
+   "id": "B24",
+   "net": "KEY1_C",
+   "holes": [
+    "AC18",
+    "AC19",
+    "AC20 (U4.C1)",
+    "AD18"
+   ],
+   "cells": [
+    [
+     28,
+     17
+    ],
+    [
+     28,
+     18
+    ],
+    [
+     28,
+     19
+    ],
+    [
+     29,
+     17
+    ]
+   ]
+  },
+  {
+   "id": "B25",
+   "net": "KEY1_E",
+   "holes": [
+    "Y19 (J8.K1E)",
+    "Z19",
+    "AA19",
+    "AB19",
+    "AB20 (U4.E1)"
+   ],
+   "cells": [
+    [
+     24,
+     18
+    ],
+    [
+     25,
+     18
+    ],
+    [
+     26,
+     18
+    ],
+    [
+     27,
+     18
+    ],
+    [
+     27,
+     19
+    ]
+   ]
+  },
+  {
+   "id": "B26",
+   "net": "KEY2",
+   "holes": [
+    "M17",
+    "M18",
+    "N18 (R12.1)"
+   ],
+   "cells": [
+    [
+     12,
+     16
+    ],
+    [
+     12,
+     17
+    ],
+    [
+     13,
+     17
+    ]
+   ]
+  },
+  {
+   "id": "B27",
+   "net": "KEY2",
+   "holes": [
+    "R15",
+    "R16 (U1.IO19)"
+   ],
+   "cells": [
+    [
+     17,
+     14
+    ],
+    [
+     17,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B28",
+   "net": "KEY2_A",
+   "holes": [
+    "K17",
+    "K18 (R12.2)"
+   ],
+   "cells": [
+    [
+     10,
+     16
+    ],
+    [
+     10,
+     17
+    ]
+   ]
+  },
+  {
+   "id": "B29",
+   "net": "KEY2_E",
+   "holes": [
+    "Y21 (J8.K2E)",
+    "Z20 (U4.E2)",
+    "Z21"
+   ],
+   "cells": [
+    [
+     24,
+     20
+    ],
+    [
+     25,
+     19
+    ],
+    [
+     25,
+     20
+    ]
+   ]
+  },
+  {
+   "id": "B30",
+   "net": "KEY3",
+   "holes": [
+    "N17",
+    "O16 (U1.IO17)",
+    "O17"
+   ],
+   "cells": [
+    [
+     13,
+     16
+    ],
+    [
+     14,
+     15
+    ],
+    [
+     14,
+     16
+    ]
+   ]
+  },
+  {
+   "id": "B31",
+   "net": "KEY3_A",
+   "holes": [
+    "K21 (R13.2)",
+    "K22 (U5.A)"
+   ],
+   "cells": [
+    [
+     10,
+     20
+    ],
+    [
+     10,
+     21
+    ]
+   ]
+  },
+  {
+   "id": "B32",
+   "net": "LED_DATA",
+   "holes": [
+    "H23 (J4.DATA)",
+    "I21 (R1.2)",
+    "I22",
+    "I23"
+   ],
+   "cells": [
+    [
+     7,
+     22
+    ],
+    [
+     8,
+     20
+    ],
+    [
+     8,
+     21
+    ],
+    [
+     8,
+     22
+    ]
+   ]
+  },
+  {
+   "id": "B33",
+   "net": "L_SPK",
+   "holes": [
+    "Y2 (J5.L_SPK)",
+    "Z2 (C5.1)"
+   ],
+   "cells": [
+    [
+     24,
+     1
+    ],
+    [
+     25,
+     1
+    ]
+   ]
+  },
+  {
+   "id": "B34",
+   "net": "MUTE",
+   "holes": [
+    "C17",
+    "D16",
+    "D17 (R2.1)",
+    "D18 (U2.2A)",
+    "E16"
+   ],
+   "cells": [
+    [
+     2,
+     16
+    ],
+    [
+     3,
+     15
+    ],
+    [
+     3,
+     16
+    ],
+    [
+     3,
+     17
+    ],
+    [
+     4,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B35",
+   "net": "R_SPK",
+   "holes": [
+    "X1 (C6.1)",
+    "X2 (J5.R_SPK)"
+   ],
+   "cells": [
+    [
+     23,
+     0
+    ],
+    [
+     23,
+     1
+    ]
+   ]
+  },
+  {
+   "id": "B36",
+   "net": "SCL",
+   "holes": [
+    "T15",
+    "U15",
+    "V15",
+    "V16 (U1.IO22)"
+   ],
+   "cells": [
+    [
+     19,
+     14
+    ],
+    [
+     20,
+     14
+    ],
+    [
+     21,
+     14
+    ],
+    [
+     21,
+     15
+    ]
+   ]
+  },
+  {
+   "id": "B37",
+   "net": "SDA",
+   "holes": [
+    "S16 (U1.IO21)",
+    "S17 (U3.SDA)"
+   ],
+   "cells": [
+    [
+     18,
+     15
+    ],
+    [
+     18,
+     16
+    ]
+   ]
+  },
+  {
+   "id": "B38",
+   "net": "SENSE",
+   "holes": [
+    "S5 (D1.K)",
+    "T5 (R10.1)",
+    "T6 (U1.IO34)"
+   ],
+   "cells": [
+    [
+     18,
+     4
+    ],
+    [
+     19,
+     4
+    ],
+    [
+     19,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "B39",
+   "net": "SENSE_D",
+   "holes": [
+    "P2 (R9.2)",
+    "P3",
+    "P4",
+    "P5 (D1.A)"
+   ],
+   "cells": [
+    [
+     15,
+     1
+    ],
+    [
+     15,
+     2
+    ],
+    [
+     15,
+     3
+    ],
+    [
+     15,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "B40",
+   "net": "SENSE_RAW",
+   "holes": [
+    "S2 (R9.1)",
+    "S3 (J7.SENSE)"
+   ],
+   "cells": [
+    [
+     18,
+     1
+    ],
+    [
+     18,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "B41",
+   "net": "VIN",
+   "holes": [
+    "I5 (D2.K)",
+    "I6 (U1.VIN)"
+   ],
+   "cells": [
+    [
+     8,
+     4
+    ],
+    [
+     8,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "B42",
+   "net": "VU_L",
+   "holes": [
+    "V4 (C7.1)",
+    "V5",
+    "V6 (U1.IO36)"
+   ],
+   "cells": [
+    [
+     21,
+     3
+    ],
+    [
+     21,
+     4
+    ],
+    [
+     21,
+     5
+    ]
+   ]
+  },
+  {
+   "id": "B43",
+   "net": "VU_L",
+   "holes": [
+    "Z3 (R7.1)",
+    "Z4 (R5.1)"
+   ],
+   "cells": [
+    [
+     25,
+     2
+    ],
+    [
+     25,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "B44",
+   "net": "VU_L_C",
+   "holes": [
+    "AB2 (C5.2)",
+    "AB3 (R3.1)"
+   ],
+   "cells": [
+    [
+     27,
+     1
+    ],
+    [
+     27,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "B45",
+   "net": "VU_R",
+   "holes": [
+    "U3 (C8.1)",
+    "U4 (R8.1)",
+    "U5",
+    "U6 (U1.IO39)",
+    "U7"
+   ],
+   "cells": [
+    [
+     20,
+     2
+    ],
+    [
+     20,
+     3
+    ],
+    [
+     20,
+     4
+    ],
+    [
+     20,
+     5
+    ],
+    [
+     20,
+     6
+    ]
+   ]
+  },
+  {
+   "id": "B46",
+   "net": "VU_R",
+   "holes": [
+    "AF1 (R4.2)",
+    "AF2 (R6.1)"
+   ],
+   "cells": [
+    [
+     31,
+     0
+    ],
+    [
+     31,
+     1
+    ]
+   ]
+  },
+  {
+   "id": "B47",
+   "net": "VU_R_C",
+   "holes": [
+    "Z1 (C6.2)",
+    "AA1",
+    "AB1",
+    "AC1 (R4.1)"
+   ],
+   "cells": [
+    [
+     25,
+     0
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     27,
+     0
+    ],
+    [
+     28,
+     0
+    ]
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "ref": "C1",
+   "type": "CE",
+   "value": "100uF 16V",
+   "pins": [
+    {
+     "n": 1,
+     "name": "+",
+     "hole": "C5",
+     "net": "5V_LOGIC"
+    },
+    {
+     "n": 2,
+     "name": "-",
+     "hole": "C4",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "C2",
+   "type": "C",
+   "value": "100nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "B6",
+     "net": "5V_LOGIC"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "B4",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "C3",
+   "type": "C",
+   "value": "100nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "H22",
+     "net": "5V_LED"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "J22",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "C4",
+   "type": "CE",
+   "value": "100uF 16V",
+   "pins": [
+    {
+     "n": 1,
+     "name": "+",
+     "hole": "B14",
+     "net": "5V_LED"
+    },
+    {
+     "n": 2,
+     "name": "-",
+     "hole": "B15",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "C5",
+   "type": "C",
+   "value": "100nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "Z2",
+     "net": "L_SPK"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "AB2",
+     "net": "VU_L_C"
+    }
+   ]
+  },
+  {
+   "ref": "C6",
+   "type": "C",
+   "value": "100nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "X1",
+     "net": "R_SPK"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "Z1",
+     "net": "VU_R_C"
+    }
+   ]
+  },
+  {
+   "ref": "C7",
+   "type": "C",
+   "value": "1nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "V4",
+     "net": "VU_L"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "V2",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "C8",
+   "type": "C",
+   "value": "1nF",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "U3",
+     "net": "VU_R"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "U1",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "D1",
+   "type": "D3",
+   "value": "1N4148",
+   "pins": [
+    {
+     "n": 1,
+     "name": "A",
+     "hole": "P5",
+     "net": "SENSE_D"
+    },
+    {
+     "n": 2,
+     "name": "K",
+     "hole": "S5",
+     "net": "SENSE"
+    }
+   ]
+  },
+  {
+   "ref": "D2",
+   "type": "D4",
+   "value": "1N5819",
+   "pins": [
+    {
+     "n": 1,
+     "name": "A",
+     "hole": "E5",
+     "net": "5V_LOGIC"
+    },
+    {
+     "n": 2,
+     "name": "K",
+     "hole": "I5",
+     "net": "VIN"
+    }
+   ]
+  },
+  {
+   "ref": "J1",
+   "type": "TB2",
+   "value": "5V logic in (from MP1584), 5.08 mm screw terminal",
+   "pins": [
+    {
+     "n": 1,
+     "name": "5V_LOGIC",
+     "hole": "A5",
+     "net": "5V_LOGIC"
+    },
+    {
+     "n": 2,
+     "name": "GND",
+     "hole": "A3",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J2",
+   "type": "TB2",
+   "value": "5V LED rail in (from XL4015), 5.08 mm screw terminal",
+   "pins": [
+    {
+     "n": 1,
+     "name": "5V_LED",
+     "hole": "C23",
+     "net": "5V_LED"
+    },
+    {
+     "n": 2,
+     "name": "GND",
+     "hole": "A23",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J3",
+   "type": "HDR6",
+   "value": "Relay board IN1..IN4, JST-XH 6-pin",
+   "pins": [
+    {
+     "n": 1,
+     "name": "GND",
+     "hole": "A22",
+     "net": "GND"
+    },
+    {
+     "n": 2,
+     "name": "IN4",
+     "hole": "A21",
+     "net": "-"
+    },
+    {
+     "n": 3,
+     "name": "IN3",
+     "hole": "A20",
+     "net": "-"
+    },
+    {
+     "n": 4,
+     "name": "IN2",
+     "hole": "A19",
+     "net": "IN2"
+    },
+    {
+     "n": 5,
+     "name": "IN1",
+     "hole": "A18",
+     "net": "IN1"
+    },
+    {
+     "n": 6,
+     "name": "VCC",
+     "hole": "A17",
+     "net": "5V_LED"
+    }
+   ]
+  },
+  {
+   "ref": "J4",
+   "type": "TB2",
+   "value": "LED strip data, 5.08 mm screw terminal",
+   "pins": [
+    {
+     "n": 1,
+     "name": "DATA",
+     "hole": "H23",
+     "net": "LED_DATA"
+    },
+    {
+     "n": 2,
+     "name": "GND",
+     "hole": "J23",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J5",
+   "type": "HDR3",
+   "value": "Speaker-leg audio sense, JST-XH 3-pin",
+   "pins": [
+    {
+     "n": 1,
+     "name": "L_SPK",
+     "hole": "Y2",
+     "net": "L_SPK"
+    },
+    {
+     "n": 2,
+     "name": "R_SPK",
+     "hole": "X2",
+     "net": "R_SPK"
+    },
+    {
+     "n": 3,
+     "name": "GND",
+     "hole": "W2",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J6",
+   "type": "HDR5",
+   "value": "Panel buttons, JST-XH 5-pin",
+   "pins": [
+    {
+     "n": 1,
+     "name": "BTN1",
+     "hole": "N1",
+     "net": "BTN1"
+    },
+    {
+     "n": 2,
+     "name": "BTN2",
+     "hole": "O1",
+     "net": "BTN2"
+    },
+    {
+     "n": 3,
+     "name": "BTN3",
+     "hole": "P1",
+     "net": "BTN3"
+    },
+    {
+     "n": 4,
+     "name": "BTN4",
+     "hole": "Q1",
+     "net": "BTN4"
+    },
+    {
+     "n": 5,
+     "name": "GND",
+     "hole": "R1",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J7",
+   "type": "HDR2",
+   "value": "Amp blue-LED sense, JST-XH 2-pin",
+   "pins": [
+    {
+     "n": 1,
+     "name": "SENSE",
+     "hole": "S3",
+     "net": "SENSE_RAW"
+    },
+    {
+     "n": 2,
+     "name": "GND",
+     "hole": "R3",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "J8",
+   "type": "HDR6",
+   "value": "Key-press outputs to amp pads, JST-XH 6-pin",
+   "pins": [
+    {
+     "n": 1,
+     "name": "K1C",
+     "hole": "Y18",
+     "net": "KEY1_C"
+    },
+    {
+     "n": 2,
+     "name": "K1E",
+     "hole": "Y19",
+     "net": "KEY1_E"
+    },
+    {
+     "n": 3,
+     "name": "K2C",
+     "hole": "Y20",
+     "net": "KEY2_C"
+    },
+    {
+     "n": 4,
+     "name": "K2E",
+     "hole": "Y21",
+     "net": "KEY2_E"
+    },
+    {
+     "n": 5,
+     "name": "K3C",
+     "hole": "Y22",
+     "net": "KEY3_C"
+    },
+    {
+     "n": 6,
+     "name": "K3E",
+     "hole": "Y23",
+     "net": "KEY3_E"
+    }
+   ]
+  },
+  {
+   "ref": "R1",
+   "type": "R",
+   "value": "330R",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "I18",
+     "net": "DATA_BUF"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "I21",
+     "net": "LED_DATA"
+    }
+   ]
+  },
+  {
+   "ref": "R2",
+   "type": "R",
+   "value": "10k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "D17",
+     "net": "MUTE"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "D14",
+     "net": "3V3"
+    }
+   ]
+  },
+  {
+   "ref": "R3",
+   "type": "R",
+   "value": "100k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "AB3",
+     "net": "VU_L_C"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "AE3",
+     "net": "VU_L"
+    }
+   ]
+  },
+  {
+   "ref": "R4",
+   "type": "R",
+   "value": "100k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "AC1",
+     "net": "VU_R_C"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "AF1",
+     "net": "VU_R"
+    }
+   ]
+  },
+  {
+   "ref": "R5",
+   "type": "R",
+   "value": "22k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "Z4",
+     "net": "VU_L"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "AC4",
+     "net": "3V3"
+    }
+   ]
+  },
+  {
+   "ref": "R6",
+   "type": "R",
+   "value": "22k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "AF2",
+     "net": "VU_R"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "AC2",
+     "net": "3V3"
+    }
+   ]
+  },
+  {
+   "ref": "R7",
+   "type": "R",
+   "value": "22k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "Z3",
+     "net": "VU_L"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "W3",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "R8",
+   "type": "R",
+   "value": "22k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "U4",
+     "net": "VU_R"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "R4",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "R9",
+   "type": "R",
+   "value": "10k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "S2",
+     "net": "SENSE_RAW"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "P2",
+     "net": "SENSE_D"
+    }
+   ]
+  },
+  {
+   "ref": "R10",
+   "type": "R",
+   "value": "100k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "T5",
+     "net": "SENSE"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "W5",
+     "net": "GND"
+    }
+   ]
+  },
+  {
+   "ref": "R11",
+   "type": "R",
+   "value": "1k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "K19",
+     "net": "KEY1"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "N19",
+     "net": "KEY1_A"
+    }
+   ]
+  },
+  {
+   "ref": "R12",
+   "type": "R",
+   "value": "1k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "N18",
+     "net": "KEY2"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "K18",
+     "net": "KEY2_A"
+    }
+   ]
+  },
+  {
+   "ref": "R13",
+   "type": "R",
+   "value": "1k",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1",
+     "hole": "N21",
+     "net": "KEY3"
+    },
+    {
+     "n": 2,
+     "name": "2",
+     "hole": "K21",
+     "net": "KEY3_A"
+    }
+   ]
+  },
+  {
+   "ref": "U1",
+   "type": "ESP32",
+   "value": "ESP32 DevKit 30-pin on 2x15 sockets",
+   "pins": [
+    {
+     "n": 1,
+     "name": "VIN",
+     "hole": "I6",
+     "net": "VIN"
+    },
+    {
+     "n": 2,
+     "name": "GND",
+     "hole": "J6",
+     "net": "GND"
+    },
+    {
+     "n": 3,
+     "name": "IO13",
+     "hole": "K6",
+     "net": "-"
+    },
+    {
+     "n": 4,
+     "name": "IO12",
+     "hole": "L6",
+     "net": "-"
+    },
+    {
+     "n": 5,
+     "name": "IO14",
+     "hole": "M6",
+     "net": "-"
+    },
+    {
+     "n": 6,
+     "name": "IO27",
+     "hole": "N6",
+     "net": "BTN1"
+    },
+    {
+     "n": 7,
+     "name": "IO26",
+     "hole": "O6",
+     "net": "BTN2"
+    },
+    {
+     "n": 8,
+     "name": "IO25",
+     "hole": "P6",
+     "net": "BTN3"
+    },
+    {
+     "n": 9,
+     "name": "IO33",
+     "hole": "Q6",
+     "net": "BTN4"
+    },
+    {
+     "n": 10,
+     "name": "IO32",
+     "hole": "R6",
+     "net": "-"
+    },
+    {
+     "n": 11,
+     "name": "IO35",
+     "hole": "S6",
+     "net": "-"
+    },
+    {
+     "n": 12,
+     "name": "IO34",
+     "hole": "T6",
+     "net": "SENSE"
+    },
+    {
+     "n": 13,
+     "name": "IO39",
+     "hole": "U6",
+     "net": "VU_R"
+    },
+    {
+     "n": 14,
+     "name": "IO36",
+     "hole": "V6",
+     "net": "VU_L"
+    },
+    {
+     "n": 15,
+     "name": "EN",
+     "hole": "W6",
+     "net": "-"
+    },
+    {
+     "n": 16,
+     "name": "3V3",
+     "hole": "I16",
+     "net": "3V3"
+    },
+    {
+     "n": 17,
+     "name": "GND",
+     "hole": "J16",
+     "net": "GND"
+    },
+    {
+     "n": 18,
+     "name": "IO15",
+     "hole": "K16",
+     "net": "-"
+    },
+    {
+     "n": 19,
+     "name": "IO2",
+     "hole": "L16",
+     "net": "-"
+    },
+    {
+     "n": 20,
+     "name": "IO4",
+     "hole": "M16",
+     "net": "MUTE"
+    },
+    {
+     "n": 21,
+     "name": "IO16",
+     "hole": "N16",
+     "net": "D16"
+    },
+    {
+     "n": 22,
+     "name": "IO17",
+     "hole": "O16",
+     "net": "KEY3"
+    },
+    {
+     "n": 23,
+     "name": "IO5",
+     "hole": "P16",
+     "net": "-"
+    },
+    {
+     "n": 24,
+     "name": "IO18",
+     "hole": "Q16",
+     "net": "KEY1"
+    },
+    {
+     "n": 25,
+     "name": "IO19",
+     "hole": "R16",
+     "net": "KEY2"
+    },
+    {
+     "n": 26,
+     "name": "IO21",
+     "hole": "S16",
+     "net": "SDA"
+    },
+    {
+     "n": 27,
+     "name": "RX0",
+     "hole": "T16",
+     "net": "-"
+    },
+    {
+     "n": 28,
+     "name": "TX0",
+     "hole": "U16",
+     "net": "-"
+    },
+    {
+     "n": 29,
+     "name": "IO22",
+     "hole": "V16",
+     "net": "SCL"
+    },
+    {
+     "n": 30,
+     "name": "IO23",
+     "hole": "W16",
+     "net": "INT1"
+    }
+   ]
+  },
+  {
+   "ref": "U2",
+   "type": "DIP14",
+   "value": "SN74AHCT125N DIP-14 in socket",
+   "pins": [
+    {
+     "n": 1,
+     "name": "1OE",
+     "hole": "H18",
+     "net": "GND"
+    },
+    {
+     "n": 2,
+     "name": "1A",
+     "hole": "G18",
+     "net": "D16"
+    },
+    {
+     "n": 3,
+     "name": "1Y",
+     "hole": "F18",
+     "net": "DATA_BUF"
+    },
+    {
+     "n": 4,
+     "name": "2OE",
+     "hole": "E18",
+     "net": "GND"
+    },
+    {
+     "n": 5,
+     "name": "2A",
+     "hole": "D18",
+     "net": "MUTE"
+    },
+    {
+     "n": 6,
+     "name": "2Y",
+     "hole": "C18",
+     "net": "IN1"
+    },
+    {
+     "n": 7,
+     "name": "GND",
+     "hole": "B18",
+     "net": "GND"
+    },
+    {
+     "n": 8,
+     "name": "3Y",
+     "hole": "B21",
+     "net": "IN2"
+    },
+    {
+     "n": 9,
+     "name": "3A",
+     "hole": "C21",
+     "net": "MUTE"
+    },
+    {
+     "n": 10,
+     "name": "3OE",
+     "hole": "D21",
+     "net": "GND"
+    },
+    {
+     "n": 11,
+     "name": "4Y",
+     "hole": "E21",
+     "net": "-"
+    },
+    {
+     "n": 12,
+     "name": "4A",
+     "hole": "F21",
+     "net": "GND"
+    },
+    {
+     "n": 13,
+     "name": "4OE",
+     "hole": "G21",
+     "net": "5V_LED"
+    },
+    {
+     "n": 14,
+     "name": "VCC",
+     "hole": "H21",
+     "net": "5V_LED"
+    }
+   ]
+  },
+  {
+   "ref": "U3",
+   "type": "GY45",
+   "value": "GY-45 MMA8452Q accelerometer, 1x8 header",
+   "pins": [
+    {
+     "n": 1,
+     "name": "VCC-IN",
+     "hole": "W17",
+     "net": "3V3"
+    },
+    {
+     "n": 2,
+     "name": "3.3V",
+     "hole": "V17",
+     "net": "-"
+    },
+    {
+     "n": 3,
+     "name": "GND",
+     "hole": "U17",
+     "net": "GND"
+    },
+    {
+     "n": 4,
+     "name": "SCL",
+     "hole": "T17",
+     "net": "SCL"
+    },
+    {
+     "n": 5,
+     "name": "SDA",
+     "hole": "S17",
+     "net": "SDA"
+    },
+    {
+     "n": 6,
+     "name": "SA0",
+     "hole": "R17",
+     "net": "-"
+    },
+    {
+     "n": 7,
+     "name": "INT2",
+     "hole": "Q17",
+     "net": "-"
+    },
+    {
+     "n": 8,
+     "name": "INT1",
+     "hole": "P17",
+     "net": "INT1"
+    }
+   ]
+  },
+  {
+   "ref": "U4",
+   "type": "DIP8",
+   "value": "PC827 dual optocoupler in DIP-8 socket",
+   "pins": [
+    {
+     "n": 1,
+     "name": "A1",
+     "hole": "AC17",
+     "net": "KEY1_A"
+    },
+    {
+     "n": 2,
+     "name": "K1",
+     "hole": "AB17",
+     "net": "GND"
+    },
+    {
+     "n": 3,
+     "name": "A2",
+     "hole": "AA17",
+     "net": "KEY2_A"
+    },
+    {
+     "n": 4,
+     "name": "K2",
+     "hole": "Z17",
+     "net": "GND"
+    },
+    {
+     "n": 5,
+     "name": "E2",
+     "hole": "Z20",
+     "net": "KEY2_E"
+    },
+    {
+     "n": 6,
+     "name": "C2",
+     "hole": "AA20",
+     "net": "KEY2_C"
+    },
+    {
+     "n": 7,
+     "name": "E1",
+     "hole": "AB20",
+     "net": "KEY1_E"
+    },
+    {
+     "n": 8,
+     "name": "C1",
+     "hole": "AC20",
+     "net": "KEY1_C"
+    }
+   ]
+  },
+  {
+   "ref": "U5",
+   "type": "DIP4",
+   "value": "PC817 optocoupler in DIP-4 socket",
+   "pins": [
+    {
+     "n": 1,
+     "name": "A",
+     "hole": "K22",
+     "net": "KEY3_A"
+    },
+    {
+     "n": 2,
+     "name": "K",
+     "hole": "K23",
+     "net": "GND"
+    },
+    {
+     "n": 3,
+     "name": "E",
+     "hole": "N23",
+     "net": "KEY3_E"
+    },
+    {
+     "n": 4,
+     "name": "C",
+     "hole": "N22",
+     "net": "KEY3_C"
+    }
+   ]
+  }
+ ],
+ "nets": {
+  "5V_LOGIC": [
+   "C1.+",
+   "C2.1",
+   "D2.A",
+   "J1.5V_LOGIC"
+  ],
+  "GND": [
+   "C1.-",
+   "C2.2",
+   "C3.2",
+   "C4.-",
+   "C7.2",
+   "C8.2",
+   "J1.GND",
+   "J2.GND",
+   "J3.GND",
+   "J4.GND",
+   "J5.GND",
+   "J6.GND",
+   "J7.GND",
+   "R7.2",
+   "R8.2",
+   "R10.2",
+   "U1.GND",
+   "U1.GND",
+   "U2.1OE",
+   "U2.2OE",
+   "U2.GND",
+   "U2.3OE",
+   "U2.4A",
+   "U3.GND",
+   "U4.K1",
+   "U4.K2",
+   "U5.K"
+  ],
+  "5V_LED": [
+   "C3.1",
+   "C4.+",
+   "J2.5V_LED",
+   "J3.VCC",
+   "U2.4OE",
+   "U2.VCC"
+  ],
+  "L_SPK": [
+   "C5.1",
+   "J5.L_SPK"
+  ],
+  "VU_L_C": [
+   "C5.2",
+   "R3.1"
+  ],
+  "R_SPK": [
+   "C6.1",
+   "J5.R_SPK"
+  ],
+  "VU_R_C": [
+   "C6.2",
+   "R4.1"
+  ],
+  "VU_L": [
+   "C7.1",
+   "R3.2",
+   "R5.1",
+   "R7.1",
+   "U1.IO36"
+  ],
+  "VU_R": [
+   "C8.1",
+   "R4.2",
+   "R6.1",
+   "R8.1",
+   "U1.IO39"
+  ],
+  "SENSE_D": [
+   "D1.A",
+   "R9.2"
+  ],
+  "SENSE": [
+   "D1.K",
+   "R10.1",
+   "U1.IO34"
+  ],
+  "VIN": [
+   "D2.K",
+   "U1.VIN"
+  ],
+  "IN2": [
+   "J3.IN2",
+   "U2.3Y"
+  ],
+  "IN1": [
+   "J3.IN1",
+   "U2.2Y"
+  ],
+  "LED_DATA": [
+   "J4.DATA",
+   "R1.2"
+  ],
+  "BTN1": [
+   "J6.BTN1",
+   "U1.IO27"
+  ],
+  "BTN2": [
+   "J6.BTN2",
+   "U1.IO26"
+  ],
+  "BTN3": [
+   "J6.BTN3",
+   "U1.IO25"
+  ],
+  "BTN4": [
+   "J6.BTN4",
+   "U1.IO33"
+  ],
+  "SENSE_RAW": [
+   "J7.SENSE",
+   "R9.1"
+  ],
+  "KEY1_C": [
+   "J8.K1C",
+   "U4.C1"
+  ],
+  "KEY1_E": [
+   "J8.K1E",
+   "U4.E1"
+  ],
+  "KEY2_C": [
+   "J8.K2C",
+   "U4.C2"
+  ],
+  "KEY2_E": [
+   "J8.K2E",
+   "U4.E2"
+  ],
+  "KEY3_C": [
+   "J8.K3C",
+   "U5.C"
+  ],
+  "KEY3_E": [
+   "J8.K3E",
+   "U5.E"
+  ],
+  "DATA_BUF": [
+   "R1.1",
+   "U2.1Y"
+  ],
+  "MUTE": [
+   "R2.1",
+   "U1.IO4",
+   "U2.2A",
+   "U2.3A"
+  ],
+  "3V3": [
+   "R2.2",
+   "R5.2",
+   "R6.2",
+   "U1.3V3",
+   "U3.VCC-IN"
+  ],
+  "KEY1": [
+   "R11.1",
+   "U1.IO18"
+  ],
+  "KEY1_A": [
+   "R11.2",
+   "U4.A1"
+  ],
+  "KEY2": [
+   "R12.1",
+   "U1.IO19"
+  ],
+  "KEY2_A": [
+   "R12.2",
+   "U4.A2"
+  ],
+  "KEY3": [
+   "R13.1",
+   "U1.IO17"
+  ],
+  "KEY3_A": [
+   "R13.2",
+   "U5.A"
+  ],
+  "D16": [
+   "U1.IO16",
+   "U2.1A"
+  ],
+  "SDA": [
+   "U1.IO21",
+   "U3.SDA"
+  ],
+  "SCL": [
+   "U1.IO22",
+   "U3.SCL"
+  ],
+  "INT1": [
+   "U1.IO23",
+   "U3.INT1"
+  ]
+ },
+ "stats": {
+  "jumper_wires": 45,
+  "jumper_hops": 48,
+  "bus_groups": 47,
+  "bus_steps": 115
+ }
+}

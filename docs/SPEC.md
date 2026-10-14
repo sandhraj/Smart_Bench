@@ -129,7 +129,7 @@ No custom PCB. One existing perf board and one new perf board carry the discrete
 | Board | Contents | Build |
 |---|---|---|
 | A Power | DC jack, rocker switch, fuse, SR560, TVS, bulk and bypass caps, MP1584, XL4015, star ground. Outputs: 19.5 V, 5 V logic, 5 V LED | Existing perf board, unchanged |
-| B Control | ESP32 devkit on a socket, 1N5819 Schottky on VIN with bulk and bypass caps ahead of it, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, VU tap parts for L and R, PC827 and PC817 key optocouplers with 1 k series resistors, connectors | New perf board, same outline as A: 97.8 x 59.8 mm, mounting holes 3 mm at 75 x 54.7 mm centres. Edge connectors: 5.08 mm screw terminals for power and strip data, JST-XH for signals |
+| B Control | ESP32 devkit on a socket, 1N5819 Schottky on VIN with bulk and bypass caps ahead of it, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, VU tap parts for L and R, PC827 and PC817 key optocouplers with 1 k series resistors, connectors | New perf board, same outline as A: 97.8 x 59.8 mm, mounting holes 3 mm at 75 x 54.7 mm centres. Edge connectors: 5.08 mm screw terminals for power and strip data, JST-XH for signals. Layout, wiring list and BOM in `hardware/control-board/` |
 | C Amp | XH-M548 | Off the shelf |
 | D Relay | 4-channel module, 2 channels used | Off the shelf, mounted beside the amp speaker terminals |
 | E Accelerometer | GY-45 | Off the shelf, fixed rigidly to the box on a short lead |
