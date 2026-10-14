@@ -32,12 +32,18 @@ Bluetooth reception and amplification are done by an off-the-shelf amp board. Th
 | 39 (ADC1) | R audio tap | decided |
 | 21 | I2C SDA | decided |
 | 22 | I2C SCL | decided |
-| 27 | Accelerometer INT1 (optional) | decided |
+| 23 | Accelerometer INT1 (optional), next to the GY-45 | decided |
 | 16 | LED data to AHCT125 pin 2 | decided |
-| 32, 33, 25, 26 | Buttons 1 to 4, INPUT_PULLUP | proposed |
-| 23 | Mute (AHCT125 buffers 2 and 3, 10 k pull-up to 3.3 V): LOW = sound on, HIGH or floating = muted | decided |
-| 18, 19 | Amp key outputs via optocouplers (a third key pin is to be reassigned, 23 is now mute) | proposed |
-| TBD | Amp Bluetooth LED sense (LED, 10 k, 1N4148 to input) | open |
+| 27, 26, 25, 33 | Buttons 1 to 4, INPUT_PULLUP, contiguous on one header row | decided |
+| 4 | Mute (AHCT125 buffers 2 and 3, 10 k pull-up to 3.3 V): LOW = sound on, HIGH or floating = muted | decided |
+| 18, 19, 17 | Amp key outputs 1 to 3 via optocouplers | proposed |
+| 34 (input only) | Amp Bluetooth LED sense (LED, 10 k, 1N4148 to input); sense point on the amp still open | proposed |
+
+Pins kept free: EN, TX0 and RX0 (USB serial), GPIO 5, 2, 12 and 15 (strapping), GPIO 6 to 11 (flash), GPIO 32 and 35 (spare, left as a gap between the buttons and the audio taps), GPIO 13 and 14.
+
+The ESP32 radio is not used: no Wi-Fi, and Bluetooth stays with the amp board. Firmware leaves the radio off.
+
+Header-row partition (devkit with USB at the left, so the top row reads VIN, GND, 13, 12, 14, 27, 26, 25, 33, 32, 35, 34, VN, VP, EN and the bottom row reads 3V3, GND, 15, 2, 4, 16, 17, 5, 18, 19, 21, RX0, TX0, 22, 23). Top row: power in at the left, buttons in the middle, audio and LED sense at the right. Bottom row: mute and LED data at the left (next to the AHCT125), amp keys in the middle (next to the optocouplers), I2C and INT at the right (next to the GY-45).
 
 ### LED chain (112 LEDs, one data line)
 
@@ -65,15 +71,45 @@ Index ranges are derived from the segment lengths and are the single source of t
 Per channel, from the amp's speaker output, through the mute relay:
 
 ```
-Amp L+ --+-- 0.15 mH coil ----------------- Woofer +
-         +-- 2.2 uF film -- 10 ohm 5 W --- Tweeter +
-Amp L- --+-- Woofer - ------------------- Tweeter -
+Amp L+ --+------------------------------- Woofer +
+         +-- 1.1 uF film -- 10 ohm 5 W -- Tweeter - (tweeter polarity reversed)
+Amp L- --+-- Woofer - ------------------- Tweeter +
 ```
 
 - Both tweeters sit after the relay, so they mute with their channel. Each relay switches one wire per channel on COM and NO.
-- Tweeter branch: 10 ohm plus 2.2 uF film (63 V or more) gives about -10 dB at about 5 kHz and a branch near 14 ohm, so the amp load stays near 4 ohm. Chosen by bench listening against bare, 5 ohm, and 10 ohm plus 5 uF (too bright). Polarised capacitors are not used.
-- Woofer coil: 0.15 mH air core, DCR 0.3 ohm or less, about 4 kHz with 3.9 ohm woofers. Optional, compare by ear.
+- Tweeter branch: 10 ohm 5 W plus 1.1 uF film (two 2.2 uF 400 V film capacitors in series, on hand) gives about -10 dB, crossing at about 10 kHz, with the amp load staying near 4 ohm. Chosen by bench listening: 5 ohm was too loud, 10 ohm plus 2.35 uF was shrill on "s" sounds, 20 ohm only dropped the crossover to about 2.8 kHz. Reversing the tweeter polarity helped. Polarised capacitors are not used.
+- Woofers run full range with no coil. A 4 kHz roll-off would leave a hole between 4 and 9 kHz. If the woofer top end is harsh in the box, try about 0.07 to 0.1 mH.
 - The earlier tweeter amp, L+R mix and trimmer are dropped. Nothing is tapped from the amp board for a tweeter feed.
+
+### VU audio tap
+
+Decided: tap the speaker outputs on the amp side of the relay, no soldering on the amp board. One per channel:
+
+```
+Amp L+ terminal -- 100 nF -- 100 k --+-- GPIO36 (L) / GPIO39 (R)
+                     3.3 V -- 22 k --+
+                       GND -- 22 k --+
+                       GND -- 1 nF --+
+```
+
+- Bias is 1.65 V from a separate 22 k / 22 k pair per channel; the node is not shared between channels.
+- Each output leg sits at about 9.5 V DC and carries half the speaker signal, so about 1/10 at the pin gives roughly 0.95 V peak at full volume, inside the ADC range. Firmware auto-scales.
+- High-cut about 16 kHz (100 k in parallel with 11 k, with 1 nF), low-cut about 14 Hz.
+- The 100 nF capacitor sees about 8 V DC plus up to 9.5 V of audio: ceramic, 25 V or more.
+- The ESP32 ground shares the star ground with the amp. Never tie the tap's ground to a speaker leg (the outputs are bridge-tied).
+- To confirm on the bench: the pin sits about 1.65 V DC at idle.
+
+### Key presses into the amp
+
+PC827 (dual) and PC817 (single) optocouplers in sockets, no power pin. Per channel: GPIO to 1 k to the LED anode, cathode to GND; collector to the button's higher-voltage pad and emitter to the lower pad, in parallel with the on-board button.
+
+| Channel | Optocoupler pins (A, K, C, E) | Button |
+|---|---|---|
+| 1 (GPIO18) | PC827 1, 2, 8, 7 | Play/pause |
+| 2 (GPIO19) | PC827 3, 4, 6, 5 | Volume-/previous |
+| 3 (GPIO17) | PC817 1, 2, 4, 3 | Volume+/next |
+
+A tap gives a short pulse for next and previous; a hold gives timed volume steps, capped below maximum volume (where the amp beeps and skips a track). Measure the amp's key-pad voltages, powered, before wiring to identify the ground side of each button.
 
 ### Mute drive
 
@@ -84,7 +120,7 @@ Amp L- --+-- Woofer - ------------------- Tweeter -
 | 3 | pin 10 to GND | pin 9 | pin 8 | relay IN2 (right) |
 | 4 | pin 13 to 5 V | pin 12 to GND | none | unused |
 
-Inputs 5 and 9 join to GPIO23 with a 10 k pull-up to 3.3 V so the relays stay off while the ESP32 boots. Relay module VCC from the LED buck, common ground. Relay IN pulled low switches the relay on (active-low, bench-checked: no clicks at power-on with inputs floating).
+Inputs 5 and 9 join to GPIO4 with a 10 k pull-up to 3.3 V so the relays stay off while the ESP32 boots. Relay module VCC from the LED buck, common ground. Relay IN pulled low switches the relay on (active-low, bench-checked: no clicks at power-on with inputs floating).
 
 ## Boards
 
@@ -93,7 +129,7 @@ No custom PCB. One existing perf board and one new perf board carry the discrete
 | Board | Contents | Build |
 |---|---|---|
 | A Power | DC jack, rocker switch, fuse, SR560, TVS, bulk and bypass caps, MP1584, XL4015, star ground. Outputs: 19.5 V, 5 V logic, 5 V LED | Existing perf board, unchanged |
-| B Control | ESP32 devkit on a socket, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, audio conditioning for L and R, key optocouplers, connectors | New perf board |
+| B Control | ESP32 devkit on a socket, 1N5819 Schottky on VIN with bulk and bypass caps ahead of it, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, VU tap parts for L and R, PC827 and PC817 key optocouplers with 1 k series resistors, connectors | New perf board, same outline as A: 97.8 x 59.8 mm, mounting holes 3 mm at 75 x 54.7 mm centres. Edge connectors: 5.08 mm screw terminals for power and strip data, JST-XH for signals |
 | C Amp | XH-M548 | Off the shelf |
 | D Relay | 4-channel module, 2 channels used | Off the shelf, mounted beside the amp speaker terminals |
 | E Accelerometer | GY-45 | Off the shelf, fixed rigidly to the box on a short lead |
@@ -108,16 +144,16 @@ Keyed connectors (JST-XH or screw terminals) between boards so each stage can be
 | From | To | Signals | Notes |
 |---|---|---|---|
 | A | C | 19.5 V, GND | 5.5x2.1 plug lead from the fused rail |
-| A | B | 5 V logic, GND | To ESP32 VIN. Not when the ESP32 is on USB |
+| A | B | 5 V logic, GND | To ESP32 VIN through a 1N5819 Schottky (D2, band toward VIN), with 100 uF and 100 nF across the logic input ahead of the diode (C1, C2). The diode blocks back-feed, so the wire can stay connected while the ESP32 is on USB |
 | A | B | 5 V LED, GND | AHCT125 supply and pass-through to D |
 | A | LED strip | 5 V LED, GND | Heavy wire, 1000 uF at the strip input. Never through B |
 | B | LED strip | Data | Via AHCT125 buffer 1 and 330 ohm at the strip end |
 | B | D | 5 V, GND, IN1, IN2 | Four wires |
 | C | B | Audio L, audio R, ground | Per the VU audio feed decision |
 | C | B | Bluetooth LED sense | Via 10 k and 1N4148 |
-| B | C | Key lines | Optocoupler outputs, after pad voltages are measured |
+| B | C | Key lines | Optocoupler collector and emitter per channel (six wires), after pad voltages are measured |
 | C | D | Speaker L, speaker R | Through the relay contacts to crossovers and drivers |
-| B | E | 3.3 V, GND, SDA, SCL, INT1 | Short, shielded from LED data if possible |
+| B | E | 3.3 V to VCC-IN, GND, SDA, SCL, INT1 (GPIO23) | Short (under 30 cm), shielded from LED data if possible. SA0, INT2 and the board's 3.3 V pin stay unconnected. Address 0x1D or 0x1C, WHO_AM_I 0x2A |
 | Panel | B | Buttons 1 to 4, GND | INPUT_PULLUP |
 
 ### Layout rules
@@ -127,6 +163,7 @@ Keyed connectors (JST-XH or screw terminals) between boards so each stage can be
 3. Keep audio conditioning on B away from the 5 V LED feed and the LED data wire.
 4. AHCT125 sits next to the ESP32. The 330 ohm sits at the strip end of the data wire.
 5. Relay coil supply and the LED strip share the LED rail; the relay contacts carry only speaker signals.
+6. Pin assignments follow the placement (see Header-row partition under the ESP32 pin map): each signal uses the header pin nearest its part, so no wire crosses the module. The audio bias network sits at VP and VN, the AHCT125 near GPIO4 and 16, the optocouplers near 17 to 19, the GY-45 near 21 to 23.
 
 ## Requirements
 
@@ -194,8 +231,8 @@ The amp board plays Chinese voice prompts that cannot be disabled, so the speake
 
 | ID | Requirement | Verified by | Tier | Status |
 |----|-------------|-------------|------|--------|
-| M-001 | On boot, and while the ESP32 is resetting, the speakers are muted (GPIO23 high or floating). [owner] | Scope or meter on relay inputs through a reset | bench | todo |
-| M-002 | Sound is enabled (GPIO23 low) only after the Bluetooth LED has been solid for 2.5 s. [owner] | Time-stepped state test on a fake LED input | host | todo |
+| M-001 | On boot, and while the ESP32 is resetting, the speakers are muted (GPIO4 high or floating). [owner] | Scope or meter on relay inputs through a reset | bench | todo |
+| M-002 | Sound is enabled (GPIO4 low) only after the Bluetooth LED has been solid for 2.5 s. [owner] | Time-stepped state test on a fake LED input | host | todo |
 | M-003 | Any off-blink of the Bluetooth LED mutes immediately. [owner] | Same | host | todo |
 | M-004 | The power-on thump and prompt and the connect prompt are inaudible on the speakers. [owner] | Listen on three power-ups and three connects | hand | todo |
 
@@ -238,15 +275,15 @@ A separate small firmware, serial 115200, single-character commands. It exists t
 Ordered by how much they block.
 
 1. **LED cap method.** The existing bring-up sketch applies a hand-written cap because the library limiter "did not hold" on an earlier build, and notes real current of 1.8 to 2.2 times the modelled value. R-030 is therefore stated as a measured current, not a library setting.
-2. **Amp board key type.** The board is in hand. The three keys may be a resistor ladder (three different resistor values). Pad voltages are to be measured before the optocoupler path is designed.
-3. **VU audio feed** to GPIO36 and 39. Either (a) the amp board's input-capacitor pads on the Bluetooth side, or (b) one leg of each speaker output after the board's output filter, through 100 nF and about 330 k into the existing 100 k and 100 k bias, with 220 pF to ground at the pin. Not decided.
+2. **Amp board key type.** The board is in hand. The three keys may be a resistor ladder (three different resistor values). Pad voltages are to be measured before the optocouplers are wired (circuit is decided, see Key presses into the amp).
+3. **VU audio feed** is decided: speaker-output tap, see VU audio tap. Open: verify the bias and level at the pin on the bench.
 4. **Auto-scale method.** Ballistics are decided (R-041 to R-046). The gain-follow and noise-gate algorithm is still to be specified.
 5. **Spectrum.** FFT size, window, 32 band edges, and layout across LEDs.
 6. **Noise floor value** for standby (R-048). Placeholder 0.05 normalised level (about -38 dB) until measured with real audio.
 7. **Fault behaviour.** Bluetooth disconnect, LED strip failure, accelerometer missing or wrong ID.
 8. **Orientation teach.** How O1 and O2 are chosen, and confirmation feedback.
 9. **"Stable" definition** for the gravity vector (threshold on change per second).
-10. **Mute behaviour.** Rule is set (M-002, M-003). Open: the sense point on the amp board, the ESP32 pin, and the disconnect prompt, which the LED rule cannot catch (an idle mute could).
+10. **Mute behaviour.** Rule is set (M-002, M-003). Open: the sense point on the amp board (the ESP32 pin is GPIO34), and the disconnect prompt, which the LED rule cannot catch (an idle mute could).
 11. **Libraries.** FastLED version, FFT library, accelerometer access (plain I2C registers likely).
 12. **Back-edge segments** (1 and 12) mirroring the bars.
 13. **Persistence of the selected pattern.**
@@ -256,6 +293,6 @@ Ordered by how much they block.
 17. **Amp supply polarity.** Centre pin of the amp's DC jack is expected to be positive; continuity to the input diode to be confirmed before powering from the rail.
 | H-008 | Board A alone: with B, C and D unplugged, 19.5 V rail, 5 V logic and 5 V LED read within H-001 limits. [derived] | Meter | hand | todo |
 | H-009 | Ground continuity: B ground to the star point and strip ground to the XL4015 negative are under 0.5 ohm, and no LED return current flows in B's ground wire at full white. [derived] | Meter, current clamp or series meter | hand | todo |
-| H-010 | Board B with the ESP32 on USB: the 5 V logic wire is not connected, and the ESP32 5 V pin does not back-feed A. [derived] | Meter on the logic rail with USB only | hand | todo |
-| H-011 | Board D: with GPIO23 floating or high both relays are off; with it low both are on and the contacts pass speaker signal. [owner] | Listen, meter on contacts | hand | todo |
+| H-010 | Board B with the ESP32 on USB and the 5 V logic wire connected: D2 (1N5819) is reverse biased, the MP1584 output reads unchanged, and no current flows back into A. [owner] | Meter on the logic rail with USB plugged, then with the rail powered | hand | todo |
+| H-011 | Board D: with GPIO4 floating or high both relays are off; with it low both are on and the contacts pass speaker signal. [owner] | Listen, meter on contacts | hand | todo |
 | H-012 | Each interconnect in the table is continuity-checked end to end and its connector cannot be plugged in reversed. [derived] | Meter, visual | hand | todo |
