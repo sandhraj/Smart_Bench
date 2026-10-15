@@ -1,24 +1,22 @@
-Refs,Qty,Value / part,Package / note
-"C1, C4",2,100uF 16V,"radial electrolytic, 5 mm dia, 2.5 mm lead pitch"
-"C2, C3, C5, C6",4,100nF,"ceramic disc/MLCC, 5.08 mm lead pitch (C5, C6: 25 V or more; 1 nF: C0G or X7R)"
-"C7, C8",2,1nF,"ceramic disc/MLCC, 5.08 mm lead pitch (C5, C6: 25 V or more; 1 nF: C0G or X7R)"
-D1,1,1N4148,DO-35
-D2,1,1N5819,DO-41
-J1,1,"5V logic in (from MP1584), 5.08 mm screw terminal",2-pin 5.08 mm screw terminal block
-J2,1,"5V LED rail in (from XL4015), 5.08 mm screw terminal",2-pin 5.08 mm screw terminal block
-J3,1,"Relay board IN1..IN4, JST-XH 6-pin",1x6 JST-XH or 2.54 mm header
-J4,1,"LED strip data, 5.08 mm screw terminal",2-pin 5.08 mm screw terminal block
-J5,1,"Speaker-leg audio sense, JST-XH 3-pin",1x3 JST-XH or 2.54 mm header
-J6,1,"Panel buttons, JST-XH 5-pin",1x5 JST-XH or 2.54 mm header
-J7,1,"Amp blue-LED sense, JST-XH 2-pin",1x2 JST-XH or 2.54 mm header
-J8,1,"Key-press outputs to amp pads, JST-XH 6-pin",1x6 JST-XH or 2.54 mm header
-R1,1,330R,"1/4 W axial, 7.62 mm span"
-"R11, R12, R13",3,1k,"1/4 W axial, 7.62 mm span"
-"R2, R9",2,10k,"1/4 W axial, 7.62 mm span"
-"R3, R4, R10",3,100k,"1/4 W axial, 7.62 mm span"
-"R5, R6, R7, R8",4,22k,"1/4 W axial, 7.62 mm span"
-U1,1,ESP32 DevKit 30-pin on 2x15 sockets,2 x 15-way female 2.54 mm sockets
-U2,1,SN74AHCT125N DIP-14 in socket,DIP-14 socket + IC
-U3,1,"GY-45 MMA8452Q accelerometer, 1x8 header",1x8 header 2.54 mm
-U4,1,PC827 dual optocoupler in DIP-8 socket,DIP-8 socket + IC
-U5,1,PC817 optocoupler in DIP-4 socket,DIP-4 socket + IC
+Part,Value,Qty,Refs,Note
+Resistor 1/4 W,330R,1,R1,"LED data series, near the strip terminal"
+Resistor 1/4 W,1k,3,R11 R12 R13,optocoupler LED series
+Resistor 1/4 W,10k,2,R2 R9,mute pull-up to 3V3; BT LED sense series
+Resistor 1/4 W,22k,4,R5 R6 R7 R8,"VU tap bias, two per channel"
+Resistor 1/4 W,100k,3,R3 R4 R10,VU tap series; sense pulldown
+Capacitor ceramic 50 V,100nF,4,C2 C3 C5 C6,"2.54 mm lead pitch; C5, C6 see 25 V or more"
+Capacitor ceramic,1nF,2,C7 C8,VU tap high cut
+Capacitor electrolytic 16 V,100uF,1,C1,ahead of D2 on the 5 V logic input
+Diode 1N5819,1N5819,1,D2,"Schottky, band toward VIN"
+Diode 1N4148,1N4148,1,D1,BT LED sense
+IC SN74AHCT125N,DIP-14,1,U2,with DIP-14 socket
+Optocoupler PC827,DIP-8,1,U4,with DIP-8 socket
+Optocoupler PC817,DIP-4,1,U5,with DIP-4 socket
+ESP32 DevKit 30-pin,1,1,U1,"2 x 15 pin 2.54 mm female headers, rows 25.4 mm apart"
+GY-45 MMA8452Q,1,1,U3,"1 x 8 pin 2.54 mm header, GY-45 on top of it"
+Screw terminal 5.08 mm 2P,,3,CN1 CN2 CN4,"power in x2, strip data"
+JST-XH header 4P,,2,CN3 CN5,relay module; amp tap (top entry)
+JST-XH header 5P,,1,CN6,panel buttons (top entry)
+Pin header 1x6 2.54 mm,,1,CN7,amp key outputs; a JST-XH housing would sit on the DIP-8 socket
+Insulated hookup wire 28-30 AWG,,2,T1..T20 S1..S32,"20 top jumpers, 32 under-board jumps; short offcuts"
+Perfboard 97.8 x 59.8 mm,38 x 23 holes,1,B,same outline as the power board

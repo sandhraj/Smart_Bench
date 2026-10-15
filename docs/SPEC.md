@@ -105,9 +105,11 @@ PC827 (dual) and PC817 (single) optocouplers in sockets, no power pin. Per chann
 
 | Channel | Optocoupler pins (A, K, C, E) | Button |
 |---|---|---|
-| 1 (GPIO18) | PC827 1, 2, 8, 7 | Play/pause |
-| 2 (GPIO19) | PC827 3, 4, 6, 5 | Volume-/previous |
-| 3 (GPIO17) | PC817 1, 2, 4, 3 | Volume+/next |
+| 1 (GPIO18) | PC827 3, 4, 6, 5 | Play/pause |
+| 2 (GPIO19) | PC817 1, 2, 4, 3 | Volume-/previous |
+| 3 (GPIO17) | PC827 1, 2, 8, 7 | Volume+/next |
+
+The device-to-channel mapping follows the header order on the control board (GPIO17, 18 and 19 sit side by side, so the dual part takes 17 and 18 and the single part takes 19); the GPIO to button function is unchanged.
 
 A tap gives a short pulse for next and previous; a hold gives timed volume steps, capped below maximum volume (where the amp beeps and skips a track). Measure the amp's key-pad voltages, powered, before wiring to identify the ground side of each button.
 
@@ -129,7 +131,7 @@ No custom PCB. One existing perf board and one new perf board carry the discrete
 | Board | Contents | Build |
 |---|---|---|
 | A Power | DC jack, rocker switch, fuse, SR560, TVS, bulk and bypass caps, MP1584, XL4015, star ground. Outputs: 19.5 V, 5 V logic, 5 V LED | Existing perf board, unchanged |
-| B Control | ESP32 devkit on a socket, 1N5819 Schottky on VIN with bulk and bypass caps ahead of it, AHCT125 with 100 nF, 330 ohm data resistor, mute pull-up, Bluetooth LED sense, VU tap parts for L and R, PC827 and PC817 key optocouplers with 1 k series resistors, connectors | New perf board, same outline as A: 97.8 x 59.8 mm, mounting holes 3 mm at 75 x 54.7 mm centres. Edge connectors: 5.08 mm screw terminals for power and strip data, JST-XH for signals. Layout, wiring list and BOM in `hardware/control-board/` |
+| B Control | ESP32 devkit on a socket, 1N5819 Schottky on VIN with bulk and bypass caps ahead of it, AHCT125 with 100 nF, 330 ohm data resistor next to the strip terminal, mute pull-up, Bluetooth LED sense, VU tap parts for L and R, PC827 and PC817 key optocouplers with 1 k series resistors, connectors | New perf board, same outline as A: 97.8 x 59.8 mm, mounting holes 3 mm at 75 x 54.7 mm centres. Landscape, ESP32 USB end at the left. Edge connectors: 5.08 mm screw terminals for the two 5 V inputs and strip data (left edge), JST-XH for the relay module (left), panel buttons (top) and amp tap (top right), a 1x6 header for the key outputs (bottom). Layout, wiring list, BOM and the KiCad perfboard footprint and placement in `hardware/control-board/` |
 | C Amp | XH-M548 | Off the shelf |
 | D Relay | 4-channel module, 2 channels used | Off the shelf, mounted beside the amp speaker terminals |
 | E Accelerometer | GY-45 | Off the shelf, fixed rigidly to the box on a short lead |
